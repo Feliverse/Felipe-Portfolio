@@ -1,0 +1,23 @@
+{
+  "name": "felipe-portfolio",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feliverse/Felipe-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feliverse/Felipe-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Feliverse/Felipe-Portfolio#readme",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
+}

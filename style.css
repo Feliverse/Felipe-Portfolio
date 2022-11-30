@@ -1,20 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(images/image_geometry_1.png);
   background-repeat: no-repeat;
 }
-  
+
 #toolbar {
   display: flex;
   justify-content: flex-end;
   margin: 16px;
 }
-  
+
 .name {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
@@ -26,7 +26,7 @@ body {
   margin-top: 50px;
   color: #1a2236;
 }
-  
+
 #headline {
   width: 90%;
   height: 126px;
@@ -38,8 +38,8 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 40px;
-  }
-  
+}
+
 .textBoton {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -57,7 +57,7 @@ body {
   color: #fff;
   margin-bottom: 32px;
 }
-  
+
 .imagebox {
   display: block;
   height: 160px;

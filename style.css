@@ -64,3 +64,152 @@ body {
   height: 160px;
   background-image: url(images/image_geometry_2.png);
 }
+
+/*projects section*/
+
+
+.gallery {
+  display: grid;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5em;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 16px;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: 40px 0 2rem;
+  background: #fff;
+  background-color: transparent;
+}
+
+.card {
+display: flex;
+flex-wrap: wrap;
+width: 100sw;
+}
+
+.pData {
+  width: 100vw;
+  height: 156px;
+  background: #1a2236;
+  padding-left: 16px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 300%;
+  color: #fff;
+}
+
+.projectUl {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  list-style-type: none;
+  padding: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 314px;
+}
+
+.projectLi {
+  font-size: 10.33px;
+  background-color: #98dede;
+  float: left;
+  text-align: center;
+  margin-right: 10px;
+  padding: 6px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+}
+
+.see {
+  background: none;
+  border: #fff solid 0.5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+
+}
+
+/*about section*/
+
+.textAbout {
+  width: 90%;
+  height: fit-content;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a2236;
+  padding: 16px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.boxL {
+  padding: 16px;
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  grid-auto-rows: 19.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  padding-left: 50px;
+  width: 289px;
+  height: 289px;
+}
+
+.lan {
+  background-image: url(images/lfs/back/blue.png);
+  background-size: contain;
+  margin-top: 0;
+}
+
+.fra {
+  background-image: url(images/lfs/back/red.png);
+  background-size: contain;
+  margin-top: 0;
+}
+
+.ski {
+  background-image: url(images/lfs/back/yellow.png);
+  background-size: contain;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.inBox {
+  color: #fff;
+  list-style-position: inside;
+  justify-self: center;
+}
+
+button {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 72, 0, 0.945);
+  border-color: rgba(255, 72, 0, 0.945);
+  border-width: 0.3rem;
+}

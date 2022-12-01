@@ -65,8 +65,7 @@ body {
   background-image: url(images/image_geometry_2.png);
 }
 
-/*projects section*/
-
+/* projects section */
 
 .gallery {
   display: grid;
@@ -88,9 +87,9 @@ h2 {
 }
 
 .card {
-display: flex;
-flex-wrap: wrap;
-width: 100sw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 
 .pData {
@@ -137,10 +136,9 @@ h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 7px 10px;
-
 }
 
-/*about section*/
+/* about section */
 
 .textAbout {
   width: 90%;

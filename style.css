@@ -108,7 +108,8 @@ h3 {
 }
 
 .projectUl {
-  display: flex;
+  display: block;
+  float: inline-start;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 300;

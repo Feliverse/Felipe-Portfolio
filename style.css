@@ -211,3 +211,102 @@ button:hover {
   border-color: rgba(255, 72, 0, 0.945);
   border-width: 0.3rem;
 }
+
+/* formulary section */
+
+.formulary {
+  background: #f9f9fa;
+  background-image: url(images/image_geometry_1.png);
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.space {
+  height: 106px;
+}
+
+.cont-form {
+  width: 320px;
+}
+
+.getStar {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.rsFooter {
+  float: left;
+  background: #1a2236;
+  text-align: center;
+  margin: 0;
+  width: 260px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rrss {
+  background-color: #1a2236;
+  list-style: none;
+}
+
+.form-name {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfe0;
+  height: 46px;
+  margin: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  padding-left: 16px;
+  padding-top: 4px;
+}
+
+.form-name-contend {
+  border: none;
+  background: #fff;
+}
+
+.form-text {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #dfdfe0;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 18px;
+  height: 90px;
+  min-width: 288px;
+  max-width: 400px;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+.resume {
+  border: transparent;
+  color: #92dcdc;
+  flex-grow: 2;
+  padding-left: 16px;
+}
+
+.contenfoo {
+  background: #1a2236;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  border-radius: 4px;
+  border: none;
+  background: #fff;
+}

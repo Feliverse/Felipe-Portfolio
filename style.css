@@ -140,6 +140,11 @@ h3 {
 
 /* about section */
 
+.about {
+display: flex;
+flex-direction: column;
+}
+
 .textAbout {
   width: 90%;
   height: fit-content;
@@ -154,11 +159,15 @@ h3 {
 }
 
 .boxL {
+  
   padding: 16px;
   font-family: 'Poppins', sans-serif;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   grid-auto-rows: 19.2rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  /* border: #1a2236 dotted 1px; */
 }
 
 .Box {
@@ -167,26 +176,33 @@ h3 {
   justify-content: center;
   padding: 0;
   padding-left: 50px;
-  width: 289px;
+  padding-right: 50px;
   height: 289px;
+  width: 289px;
+  margin: 9px auto;
 }
 
 .lan {
-  background-image: url(images/lfs/back/blue.png);
-  background-size: contain;
-  margin-top: 0;
+  background: #1c528c;
+  background-image: url("./images/lfs/hast.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .fra {
-  background-image: url(images/lfs/back/red.png);
-  background-size: contain;
-  margin-top: 0;
+  background-color: #e2505c;
+  background-image: url("images/lfs/cuadrado.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 33%;
 }
 
 .ski {
-  background-image: url(images/lfs/back/yellow.png);
-  background-size: contain;
-  margin-top: 0;
+  background-color: #febf52;
+  background-image: url("images/lfs/foco.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 35%;
 }
 
 h4 {
@@ -202,57 +218,49 @@ h4 {
 }
 
 button {
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
   cursor: pointer;
 }
 
 button:hover {
   background: rgba(255, 72, 0, 0.945);
-  border-color: rgba(255, 72, 0, 0.945);
-  border-width: 0.3rem;
+  border-color: transparent;
+  border-width: 1px;
 }
 
 /* formulary section */
 
 .formulary {
+  display: flex;
+  flex-direction: column;
   background: #f9f9fa;
   background-image: url(images/image_geometry_1.png);
   background-repeat: no-repeat;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 1px;  
 }
 
 .space {
   height: 106px;
+  /* border: #1a2236 dotted 1px; */
 }
 
 .cont-form {
   width: 320px;
+  /* border: #1a2236 dotted 1px; */
+  align-self: center;
+}
+
+.form-header {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .getStar {
-  margin-top: 0;
+  margin:;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 50px;
-}
-
-.rsFooter {
-  float: left;
-  background: #1a2236;
-  text-align: center;
-  margin: 0;
-  width: 260px;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.rrss {
-  background-color: #1a2236;
-  list-style: none;
 }
 
 .form-name {
@@ -260,13 +268,14 @@ button:hover {
   flex-direction: column;
   border: 1px solid #dfdfe0;
   height: 46px;
-  margin: 18px;
+  margin: 8px 18px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   padding-left: 16px;
   padding-top: 4px;
+  color: darkgray;
 }
 
 .form-name-contend {
@@ -283,30 +292,56 @@ button:hover {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  margin-left: 18px;
+  margin: 8px 18px;
   height: 90px;
-  min-width: 288px;
+  min-width: 89%;
   max-width: 400px;
   padding-left: 16px;
   padding-top: 8px;
-}
-
-.resume {
-  border: transparent;
-  color: #92dcdc;
-  flex-grow: 2;
-  padding-left: 16px;
-}
-
-.contenfoo {
-  background: #1a2236;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  
 }
 
 label {
   border-radius: 4px;
   border: none;
   background: #fff;
+}
+
+.contenfoo {
+  background: #1a2236;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content : space-between;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  border: transparent;
+  color: #92dcdc;
+  flex-grow: 2;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.rsFooter {
+ align-self: center;
+  background: #1a2236;
+  width: 100vw;
+  max-width: 320px;
+  padding: 20px 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rrss {
+  background-color: transparent;
+  list-style: none;
+  transition-duration: 1.7s;
+  cursor: pointer;
+}
+
+.rrss:hover {
+  zoom: 1.15;
 }

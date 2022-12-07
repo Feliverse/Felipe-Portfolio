@@ -374,7 +374,7 @@ label {
 }
 
 @media only screen and (min-width: 768px) {
-  /* Header change nav*/
+  /* Header change nav */
 
   #toolbar {
     display: none;
@@ -411,107 +411,105 @@ label {
     color: #1a2236;
   }
 
-/* hello section */
+  /* hello section */
 
-.hello {
-  display: grid;
-  grid: 1rem;
-  grid-template-columns: 2fr 2fr;
-  justify-content: center;
-  margin: 0 auto;
-}
+  .hello {
+    display: grid;
+    grid: 1rem;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
-.headline {
-  font-size: 1.5vw;
-  line-height: 2;
-  height: fit-content;
-}
+  .headline {
+    font-size: 1.5vw;
+    line-height: 2;
+    height: fit-content;
+  }
 
-.hello-text {
-  display: flex;
-  flex-direction: column;
-  padding-left: 8em;
-  background-image: url(images/project/image_dots.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  height: 93.5vh;
-  justify-content: center;
-}
+  .hello-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8em;
+    background-image: url(images/project/image_dots.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 93.5vh;
+    justify-content: center;
+  }
 
-.bigimage {
-  background-image: url("./images/image-big.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  .bigimage {
+    background-image: url("./images/image-big.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
-.blackBoton {
-  width: 254px;
-}
+  .blackBoton {
+    width: 254px;
+  }
 
-.see {
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background: #fff;
-  color: #1a2236;
-}
+  .see {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background: #fff;
+    color: #1a2236;
+  }
 
-.see:hover {
-  background: #1a2236;
-  border-color: #fff;
-  border-width: 1px;
-  color: #fff;
-}
+  .see:hover {
+    background: #1a2236;
+    border-color: #fff;
+    border-width: 1px;
+    color: #fff;
+  }
 
-.see:active {
-  border-width: 2px;
-}
+  .see:active {
+    border-width: 2px;
+  }
 
-/* about responsive */
-.about {
-  zoom: 1vh;
-}
+  /* about responsive */
+  .about {
+    zoom: 1vh;
+  }
 
-h2 {
-  font-size: 5em;
-}
+  h2 {
+    font-size: 5em;
+  }
 
-.about-cont {
-  margin: 10%;
-  display: flex;
-  flex-direction: row-reverse;
-}
+  .about-cont {
+    margin: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-.about-head {
-  display: flex;
-  flex-direction: column;
-  padding-left: 4em;
-  width: 50%;
-}
+  .about-head {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    width: 50%;
+  }
 
-.textAbout {
-  height: fit-content;
-}
+  .textAbout {
+    height: fit-content;
+  }
 
-.boxL {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 50%;
-  width: fit-content;
-}
+  .boxL {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 50%;
+    width: fit-content;
+  }
 
-.image-about {
-  display: block;
-  background-image: url("./images/lfs/about/image_dots_with_teal.png");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
+  .image-about {
+    display: block;
+    background-image: url("./images/lfs/about/image_dots_with_teal.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
 
-.box {
-  width: 50%;
-}
-
-
+  .box {
+    width: 50%;
+  }
 }

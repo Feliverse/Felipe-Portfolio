@@ -17,6 +17,12 @@ body {
   margin: 16px;
 }
 
+.desk,
+.bigmage,
+.form-name-message p {
+  display: none;
+}
+
 .name {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
@@ -217,15 +223,24 @@ h4 {
   justify-self: center;
 }
 
+.image-about {
+  display: none;
+}
+
 button {
-  transition-duration: 0.7s;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
 
 button:hover {
-  background: rgba(255, 72, 0, 0.945);
-  border-color: transparent;
+  background: #fff;
+  border-color: black;
   border-width: 1px;
+  color: #1a2236;
+}
+
+button:active {
+  border-width: 4px;
 }
 
 /* formulary section */
@@ -280,6 +295,7 @@ button:hover {
 }
 
 /* hover effect for input field */
+
 .form-name:hover {
   border: 1px solid black;
 }
@@ -315,6 +331,8 @@ label {
   border: none;
   background: #fff;
 }
+
+/* footer section */
 
 .contenfoo {
   background: #1a2236;
@@ -353,4 +371,147 @@ label {
 
 .rrss:hover {
   zoom: 1.15;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Header change nav*/
+
+  #toolbar {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .imagebox,
+  .space {
+    display: none;
+  }
+
+  .desk {
+    display: block;
+    border-bottom: 1px solid #dddfe6;
+    line-height: 4;
+  }
+
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .menu a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 24px;
+    color: #1a2236;
+  }
+
+/* hello section */
+
+.hello {
+  display: grid;
+  grid: 1rem;
+  grid-template-columns: 2fr 2fr;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 1.5vw;
+  line-height: 2;
+  height: fit-content;
+}
+
+.hello-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8em;
+  background-image: url(images/project/image_dots.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  height: 93.5vh;
+  justify-content: center;
+}
+
+.bigimage {
+  background-image: url("./images/image-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blackBoton {
+  width: 254px;
+}
+
+.see {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background: #fff;
+  color: #1a2236;
+}
+
+.see:hover {
+  background: #1a2236;
+  border-color: #fff;
+  border-width: 1px;
+  color: #fff;
+}
+
+.see:active {
+  border-width: 2px;
+}
+
+/* about responsive */
+.about {
+  zoom: 1vh;
+}
+
+h2 {
+  font-size: 5em;
+}
+
+.about-cont {
+  margin: 10%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.about-head {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4em;
+  width: 50%;
+}
+
+.textAbout {
+  height: fit-content;
+}
+
+.boxL {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 50%;
+  width: fit-content;
+}
+
+.image-about {
+  display: block;
+  background-image: url("./images/lfs/about/image_dots_with_teal.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.box {
+  width: 50%;
+}
+
+
 }

@@ -419,6 +419,8 @@ label {
     grid-template-columns: 2fr 2fr;
     justify-content: center;
     margin: 0 auto;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   .headline {
@@ -469,6 +471,8 @@ label {
   /* about responsive */
   .about {
     zoom: 1vh;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   h2 {
@@ -509,7 +513,115 @@ label {
     background-position: bottom right;
   }
 
-  .box {
-    width: 50%;
+  .Box {
+    margin: 0;
   }
+
+  .formulary {
+    background-image:
+      url(images/image-geometry_6.png),
+      url(images/image-geometry_7.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    display: flex;
+    background-size: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 87.5vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .getStar {
+    font-size: 5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-hello {
+    width: 548px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+  }
+
+  .cont-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+  }
+
+  .form-header {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxForm {
+    width: 548px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 35px;
+  }
+
+  .form-name {
+    border: none;
+    background: none;
+    margin: 60px 0;
+    padding: 0;
+    line-height: 2;
+    font-size: 12px;
+    margin-bottom: 42px;
+  }
+
+  .form-name-contend {
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  .form-name-message {
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1a2236;
+  }
+
+  .boxForm label:nth-child(3) {
+    grid-column: 1 / 3;
+    background: none;
+  }
+
+  .form-text {
+    width: 100%;
+    margin: 0;
+    min-width: none;
+    max-width: none;
+    height: 115px;
+    padding: 18px auto auto 20px;
+    font-size: 16px;
+  }
+
+  .botonform {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-form {
+    height: 70px;
+    width: 254px;
+  }
+
 }

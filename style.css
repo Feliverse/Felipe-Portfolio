@@ -141,8 +141,8 @@ h3 {
 /* about section */
 
 .about {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .textAbout {
@@ -159,7 +159,6 @@ flex-direction: column;
 }
 
 .boxL {
-  
   padding: 16px;
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -167,6 +166,7 @@ flex-direction: column;
   align-content: center;
   grid-auto-rows: 19.2rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+
   /* border: #1a2236 dotted 1px; */
 }
 
@@ -236,28 +236,29 @@ button:hover {
   background: #f9f9fa;
   background-image: url(images/image_geometry_1.png);
   background-repeat: no-repeat;
-  padding: 1px;  
+  padding: 1px;
 }
 
 .space {
   height: 106px;
+
   /* border: #1a2236 dotted 1px; */
 }
 
 .cont-form {
   width: 320px;
+
   /* border: #1a2236 dotted 1px; */
   align-self: center;
 }
 
 .form-header {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .getStar {
-  margin:;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 50px;
@@ -277,17 +278,21 @@ button:hover {
   padding-top: 4px;
   color: darkgray;
 }
+
 /* hover effect for input field */
-.form-name:hover{
-    border: 1px solid black;
+.form-name:hover {
+  border: 1px solid black;
 }
+
 .form-name-contend {
   border: none;
   background: #fff;
 }
-.form-name-contend:active{
-    border: white;
+
+.form-name-contend:active {
+  border: white;
 }
+
 .form-text {
   display: flex;
   flex-direction: column;
@@ -303,8 +308,8 @@ button:hover {
   max-width: 400px;
   padding-left: 16px;
   padding-top: 8px;
-  
 }
+
 label {
   border-radius: 4px;
   border: none;
@@ -316,7 +321,7 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content : space-between;
+  justify-content: space-between;
 }
 
 .resume {
@@ -330,7 +335,7 @@ label {
 }
 
 .rsFooter {
- align-self: center;
+  align-self: center;
   background: #1a2236;
   width: 100vw;
   max-width: 320px;

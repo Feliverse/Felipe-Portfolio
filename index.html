@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,9 +28,7 @@
         <div class="imagebox"></div>
         <div class="bigimage"></div>
     </section>
-
-
-
+<!-- project section -->
     <section class="Projects">
         <h2 class="project-title">Projects</h2>
 
@@ -133,13 +129,13 @@
         </div>
     </section>
 
-
+<!-- about section -->
 
     <section class="about">
 
         <h2>About</h2>
         
-        <p class="textAbout">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea eiusmod</p>
+        <p class="textAbout">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea eiusmod</p>
             
         <button class="blackBoton">
                 <a class="textBoton" href="#"> Get my CV &nbsp</a>
@@ -173,6 +169,59 @@
                 <li class="inBox">Terminal</li>
             </ul>
         </div> 
+
+        <!-- form section  -->
+
+        <section class="formulary">
+            <div class="space"></div>
+            <div class="cont-form">
+            <div class="form-header">
+                <h2 class="getStar">Get started</h2>
+                <p class="textAbout">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it .</p>
+            </div>    
+            <form class="b" action="https://formspree.io/f/xnqrlgak" method="post">
+                <div class="boxForm">
+                    <label class="form-name" for="name"> 
+                        Your name
+                        <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
+                    </label>
+                    <label class="form-name" for="email">
+                        Your email
+                        <input class="form-name-contend" type="email" id="mail" name="user_email" required>
+                    </label>
+                    <label class="form-name-contend">
+                        <textarea class="form-text" name="user_message" placeholder="Enter your message here..." maxlength="500" required></textarea>
+                    </label>
+                </div>
+                <div class="button botonform">
+                    <button class="blackBoton textBoton" type="submit">
+                        Star collaboration
+                    </button>
+                </div>
+            </form>
+
+        </div>
+        </section> 
+
+        <!--footer section-->
+
+    <footer class="contenfoo">
+        <div>
+            <button class="blackBoton resume">
+                Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png"></a>
+            </button>
+        </div>
+        <div>
+            <ul class="rsFooter" >
+                <li class="rrss"><img src="images/redes sociales/Vector (3).png" alt="GitHUB link"> </li>
+                <li class="rrss"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></li>
+                <li class="rrss"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></li>
+                <li class="rrss"><img src="images/redes sociales/Vector (6).png" alt="M link"></li>
+                <li class="rrss"><img src="images/redes sociales/Vector (7).png" alt="RabitHand link"></li>
+            </ul>
+        </div>
+    </footer>
+
 </section> 
 </body>
 </html>

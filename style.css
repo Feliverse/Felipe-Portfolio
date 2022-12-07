@@ -277,12 +277,17 @@ button:hover {
   padding-top: 4px;
   color: darkgray;
 }
-
+/* hover effect for input field */
+.form-name:hover{
+    border: 1px solid black;
+}
 .form-name-contend {
   border: none;
   background: #fff;
 }
-
+.form-name-contend:active{
+    border: white;
+}
 .form-text {
   display: flex;
   flex-direction: column;
@@ -300,7 +305,6 @@ button:hover {
   padding-top: 8px;
   
 }
-
 label {
   border-radius: 4px;
   border: none;

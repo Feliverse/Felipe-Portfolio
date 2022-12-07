@@ -183,14 +183,15 @@
                 <div class="boxForm">
                     <label class="form-name" for="name"> 
                         Your name
-                        <input class="form-name-contend" type="text" id="name" name="user-name" >
+                        <input class="form-name-contend" type="text" id="name" name="user-name"
+                        maxlength="30" required>
                     </label>
                     <label class="form-name" for="email">
                         Your email
-                        <input class="form-name-contend" type="email" id="mail" name="user_email" >
+                        <input class="form-name-contend" type="email" id="mail" name="user_email" required>
                     </label>
                     <label class="form-name-contend">
-                        <textarea class="form-text" name="user_message" placeholder="Enter your message here..." ></textarea>
+                        <textarea class="form-text" name="user_message" placeholder="Enter your message here..." maxlength="500" required></textarea>
                     </label>
                 </div>
                 <div class="button botonform">

@@ -17,6 +17,12 @@ body {
   margin: 16px;
 }
 
+.desk,
+.bigmage,
+.form-name-message p {
+  display: none;
+}
+
 .name {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
@@ -51,6 +57,7 @@ body {
 }
 
 .blackBoton {
+  font-family: 'Poppins', sans-serif;
   margin: 16px 16px;
   width: 90%;
   height: 50px;
@@ -93,10 +100,11 @@ h2 {
 }
 
 .pData {
-  width: 100vw;
+  width: 100%;
   height: 156px;
   background: #1a2236;
   padding-left: 16px;
+  bottom: 0;
 }
 
 h3 {
@@ -136,6 +144,7 @@ h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 7px 10px;
+  color: #dddfe6;
 }
 
 /* about section */
@@ -217,15 +226,24 @@ h4 {
   justify-self: center;
 }
 
+.image-about {
+  display: none;
+}
+
 button {
-  transition-duration: 0.7s;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
 
 button:hover {
-  background: rgba(255, 72, 0, 0.945);
-  border-color: transparent;
+  background: #fff;
+  border-color: black;
   border-width: 1px;
+  color: #1a2236;
+}
+
+button:active {
+  border-width: 4px;
 }
 
 /* formulary section */
@@ -280,6 +298,7 @@ button:hover {
 }
 
 /* hover effect for input field */
+
 .form-name:hover {
   border: 1px solid black;
 }
@@ -316,12 +335,14 @@ label {
   background: #fff;
 }
 
+/* footer section */
+
 .contenfoo {
   background: #1a2236;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .resume {
@@ -330,8 +351,10 @@ label {
   border: transparent;
   color: #92dcdc;
   flex-grow: 2;
-  margin-bottom: 0;
   font-size: 16px;
+  background: #1a2236;
+  justify-content: center;
+  margin: 21px 16px;
 }
 
 .rsFooter {
@@ -353,4 +376,486 @@ label {
 
 .rrss:hover {
   zoom: 1.15;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Header change nav */
+
+  #toolbar {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .imagebox,
+  .space {
+    display: none;
+  }
+
+  .desk {
+    display: block;
+    border-bottom: 1px solid #dddfe6;
+    line-height: 4;
+  }
+
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .menu a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 24px;
+    color: #1a2236;
+  }
+
+  /* hello section */
+
+  .hello {
+    display: grid;
+    grid: 1rem;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .headline {
+    font-size: 1vw;
+    line-height: 1.5;
+    height: fit-content;
+    letter-spacing: -0.01em;
+  }
+
+  .hello-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8em;
+    background-image: url(images/project/image_dots.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: bottom right;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: calc(10vw - 3vw);
+  }
+
+  .bigimage {
+    background-image: url("./images/image-big.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .blackBoton {
+    width: 60%;
+  }
+
+  .textBoton {
+    font-size: 100%;
+  }
+
+  .see {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background: #fff;
+    color: #1a2236;
+  }
+
+  .see:hover {
+    background: #1a2236;
+    border-color: #fff;
+    border-width: 1px;
+    color: #fff;
+  }
+
+  .see:active {
+    border-width: 2px;
+  }
+
+  /* project section descktop */
+
+  .projects {
+    display: flex;
+    max-width: 1280px;
+    margin: 17vh auto;
+  }
+
+  .pData {
+    position: absolute;
+    visibility: hidden;
+    zoom: 0.9;
+    opacity: 0%;
+    transition: all 180ms cubic-bezier(0.225, 0.595, 0.88, 0.39); /* custom */
+    transition-timing-function: cubic-bezier(0.225, 0.595, 0.88, 0.39); /* custom */
+  }
+
+  .card .pData h3 {
+    font-weight: 700;
+  }
+
+  .card2 .pData h3 {
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1.75fr 1.1fr 0.58fr 1.75fr;
+    grid-template-rows: 1.8fr 1fr 0.33fr 0.48fr 1fr 0.8fr;
+    gap: 0;
+    justify-content: stretch;
+  }
+
+  .card {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .card4,
+  .card7,
+  .card8,
+  .form-name-message p {
+    display: block;
+  }
+
+  .card1 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .caja1-1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(images/project/image_dots.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    transform: rotate(270deg);
+    font-size: 3.5em;
+    align-items: center;
+  }
+
+  .card2 {
+    width: 100%;
+    grid-column: 2 / 5;
+    grid-row: 1;
+  }
+
+  .card2 img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card2 .pData,
+  .card6 .pData {
+    zoom: 1.5;
+  }
+
+  .card3 {
+    display: grid;
+    align-content: end;
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .card3 img {
+    align-items: end;
+    width: 100%;
+  }
+
+  .card4 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-image: url(images/project/image-geometry_2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  .cardx {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .cardx img {
+    width: 100%;
+  }
+
+  .card5 {
+    grid-column: 4;
+    grid-row: 3 / 5;
+  }
+
+  .card5 img {
+    width: 100%;
+  }
+
+  .card img {
+    cursor: pointer;
+  }
+
+  .card6 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+  }
+
+  .card6 img {
+    width: 100%;
+  }
+
+  .card7 {
+    grid-column: 3 / 5;
+    grid-row: 5 / 6;
+    background-image: url(images/project/image-geometry_3.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  .card8 {
+    grid-column: 1 / 3;
+    grid-row: 6;
+    background-image:
+      url(images/project/image-geometry_4.png),
+      url(images/project/image-geometry_5.png);
+    background-repeat: no-repeat;
+    background-position: top right, top left;
+    zoom: 110%;
+    height: 100%;
+  }
+
+  .card9 {
+    grid-column: 3 / 5;
+    grid-row: 6;
+  }
+
+  .card9 img {
+    width: 70%;
+  }
+
+  .card9 .pData {
+    width: 70%;
+  }
+
+  .card:hover .pData {
+    visibility: visible;
+    opacity: 100%;
+  }
+
+  /* about responsive */
+
+  .about {
+    max-width: 1280px;
+    margin: 0 auto;
+    zoom: 70%;
+  }
+
+  h2 {
+    font-size: 5em;
+  }
+
+  .about-cont {
+    margin: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .about-head {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    width: 50%;
+  }
+
+  .textAbout {
+    height: fit-content;
+  }
+
+  .boxL {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 50%;
+    width: fit-content;
+  }
+
+  .image-about {
+    display: block;
+    background-image: url("./images/lfs/about/image_dots_with_teal.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  .Box {
+    margin: 0;
+  }
+
+  /* form responsive */
+  .formulary {
+    background-image:
+      url(images/image-geometry_6.png),
+      url(images/image-geometry_7.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    display: flex;
+    background-size: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .getStar {
+    font-size: 110px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-hello {
+    width: 548px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+  }
+
+  .cont-form {
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    align-items: center;
+    zoom: 80%;
+  }
+
+  .form-header {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxForm {
+    width: 548px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    column-gap: 18px;
+  }
+
+  .form-name {
+    border: none;
+    background: none;
+    margin: 2em 0;
+    padding: 0;
+    line-height: 2;
+    font-size: 12px;
+    margin-bottom: 42px;
+  }
+
+  .form-name-contend {
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 48px;
+    border: 1px solid #e0e0e0;
+    padding: 0;
+  }
+
+  .form-name-message {
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1a2236;
+  }
+
+  .boxForm label:nth-child(3) {
+    grid-column: 1 / 3;
+    background: none;
+  }
+
+  .form-text {
+    width: 100%;
+    margin: 0;
+    min-width: none;
+    max-width: none;
+    height: 115px;
+    padding: 18px auto auto 20px;
+    font-size: 16px;
+    color: lightgray;
+  }
+
+  .botonform {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-form {
+    height: 70px;
+    width: 254px;
+  }
+
+  .form-name:hover {
+    border: 0 solid black;
+  }
+
+  .form-name-contend:hover {
+    border: #1a2236 2px solid;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about {
+    zoom: 100%;
+  }
+
+  .contenfoo {
+    height: 123px;
+    align-items: center;
+  }
+
+  .card .pData {
+    zoom: 1.4;
+  }
+
+  .card2 .pData {
+    zoom: 2;
+  }
+
+  .card6 .pData {
+    zoom: 1.8;
+  }
+
+  .card9 .pData {
+    zoom: 1;
+  }
 }

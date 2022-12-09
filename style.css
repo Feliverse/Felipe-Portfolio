@@ -492,10 +492,10 @@ label {
   .pData {
     position: absolute;
     visibility: hidden;
-    zoom: .9;
+    zoom: 0.9;
     opacity: 0%;
-    transition: all 180ms cubic-bezier(0.225, 0.595, 0.880, 0.390); /* custom */
-    transition-timing-function: cubic-bezier(0.225, 0.595, 0.880, 0.390); /* custom */
+    transition: all 180ms cubic-bezier(0.225, 0.595, 0.88, 0.39); /* custom */
+    transition-timing-function: cubic-bezier(0.225, 0.595, 0.88, 0.39); /* custom */
   }
 
   .card .pData h3 {
@@ -509,7 +509,7 @@ label {
 
   .gallery {
     display: grid;
-    grid-template-columns: 1.75fr 1.10fr 0.58fr 1.75fr;
+    grid-template-columns: 1.75fr 1.1fr 0.58fr 1.75fr;
     grid-template-rows: 1.8fr 1fr 0.33fr 0.48fr 1fr 0.8fr;
     gap: 0;
     justify-content: stretch;
@@ -541,7 +541,7 @@ label {
     background-image: url(images/project/image_dots.png);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 25%;  
+    background-size: 25%;
   }
 
   .project-title {
@@ -595,7 +595,6 @@ label {
   .cardx {
     grid-column: 4;
     grid-row: 2;
-    
   }
 
   .cardx img {
@@ -609,10 +608,6 @@ label {
 
   .card5 img {
     width: 100%;
-  }
-
-  .card5 .pData {
-    
   }
 
   .card img {
@@ -717,7 +712,7 @@ label {
     margin: 0;
   }
 
-  /* form responsive*/
+  /* form responsive */
   .formulary {
     background-image:
       url(images/image-geometry_6.png),
@@ -839,7 +834,6 @@ label {
 }
 
 @media only screen and (min-width: 992px) {
-  
   .about {
     zoom: 100%;
   }
@@ -856,7 +850,7 @@ label {
   .card2 .pData {
     zoom: 2;
   }
-  
+
   .card6 .pData {
     zoom: 1.8;
   }

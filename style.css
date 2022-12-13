@@ -483,10 +483,10 @@ label {
 
   /* project section descktop */
 
-  .projects {
+  .Projects {
     display: flex;
     max-width: 1280px;
-    margin: 17vh auto;
+    margin: 15vh auto;
   }
 
   .pData {
@@ -510,7 +510,7 @@ label {
   .gallery {
     display: grid;
     grid-template-columns: 1.75fr 1.1fr 0.58fr 1.75fr;
-    grid-template-rows: 1.8fr 1fr 0.33fr 0.48fr 1fr 0.8fr;
+    grid-template-rows: 1.8fr 1fr 0.33fr 0.6fr 1fr 0.8fr;
     gap: 0;
     justify-content: stretch;
   }

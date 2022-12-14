@@ -199,7 +199,7 @@ h3 {
 }
 
 .fra {
-  background-color: red;
+  background-color: #e2505c;
   background-image: url("images/lfs/cuadrado.png");
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -207,7 +207,7 @@ h3 {
 }
 
 .ski {
-  background-color: orange;
+  background-color: #febf52;
   background-image: url("images/lfs/foco.png");
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -222,19 +222,8 @@ h4 {
 
 .inBox {
   color: #fff;
-  text-shadow: 2px 2px black;
   list-style-position: inside;
   justify-self: center;
-}
-
-.inBox1 {
-  color: #000;
-  list-style-position: inside;
-  justify-self: center;
-}
-
-.black {
-  color: #000;
 }
 
 .image-about {
@@ -779,7 +768,6 @@ label {
   }
 
   .form-name {
-    color: #000;
     border: none;
     background: none;
     margin: 2em 0;

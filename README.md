@@ -88,6 +88,7 @@ HTML5  CSS3
 > Add a link to your deployed project.
 
 - [Live Demo Link](https://feliverse.github.io/Felipe-Portfolio/#)
+- [Video Presentation Link](https://www.loom.com/share/bfc5c15b71f74e70aa311af2bf8c5001)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

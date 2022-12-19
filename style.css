@@ -380,7 +380,10 @@ label {
 
 @media only screen and (min-width: 768px) {
   /* Header change nav */
-
+  .img-mobile-container {
+    display: none;
+  }
+  
   #toolbar {
     display: none;
   }

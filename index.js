@@ -1,5 +1,5 @@
 const menuContainer = document.getElementById('toolbar');
-const iconImage = menuContainer.querySelector("img");
+const iconImage = menuContainer.querySelector('img');
 let controller = false;
 menuContainer.addEventListener('click', () => {
   if (!controller) {

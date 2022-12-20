@@ -69,3 +69,116 @@ cancela.forEach((a) => {
     iconImage.src = 'images/ic_menu.svg';
   });
 });
+
+const projectInfo = [
+  {
+    id: 1,
+    name: 'Project name goes here',//to change
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project1.png',// actualiza direcciones 
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript',
+    ],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 2,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project2.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 3,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project3.png',
+    alt: 'laptop',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 4,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project4.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 5,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project5.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 6,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project6.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+];
+
+const gall = document.querySelector('.gallery')
+let cardContainer = "" 
+
+projectInfo.map((project, index) => {
+  const projectId = project.id;
+  const projectName = project.name;
+  const projectDescripton = project.description;
+  const projectImage = project.image;
+  const projectTech = project.technologies;
+  const projectLive = project.liveVersion;
+  const projectSouce = project.source;
+  const projectImgAlt = project.alt;
+
+
+  cardContainer += 
+`<article class="card  card${index +1}">
+<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+<div class="pData">
+    <h3>${projectName}</h3>
+    <ul class="projectUl">
+        <li class="projectLi">${projectTech[0]}</li>
+        <li class="projectLi">${projectTech[1]}</li>
+        <li class="projectLi">${projectTech[2]}</li>
+    </ul>
+    <button class="see">
+        See this project &nbsp →
+    </button>
+</div>
+</article>`
+
+
+})
+gall.innerHTML = cardContainer;

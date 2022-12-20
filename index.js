@@ -9,7 +9,8 @@ menuContainer.addEventListener('click', function cli() {
   document.querySelector('.desk').style.height = '100%';
   document.querySelector('.desk').style.top = '0';
 
-  document.getElementById('top-img').style.background = 'url('images/menu mobile/image_geometry_menu_1.jpg')';
+  document.getElementById('top-img').style.background = 
+  'url('images/menu_mobile/image_geometry_menu_1.jpg')';
   document.getElementById('top-img').style.position = 'absolute';
   document.getElementById('top-img').style.width = '263px';
   document.getElementById('top-img').style.height = '114px';
@@ -18,7 +19,7 @@ menuContainer.addEventListener('click', function cli() {
   document.getElementById('top-img').style.zoom = '1.2';
 
   document.getElementById('bottom-img').style.background =
-  'url('images/menu mobile/image_geometry_menu_2.jpg')';
+  'url('images/menu_mobile/image_geometry_menu_2.jpg')';
   document.getElementById('bottom-img').style.position = 'absolute';
   document.getElementById('bottom-img').style.width = '100%';
   document.getElementById('bottom-img').style.height = '220px';

@@ -150,7 +150,8 @@ const projectInfo = [
 ];
 
 const gall = document.querySelector('.gallery')
-let cardContainer = "" 
+let cardContainer = `<h2 class="project-title card1">Projects</h2>
+                    <div class="caja1-1 card" ></div>`;
 
 projectInfo.map((project, index) => {
   const projectId = project.id;
@@ -177,7 +178,9 @@ projectInfo.map((project, index) => {
         See this project &nbsp →
     </button>
 </div>
-</article>`
+</article>
+<div class="card card-back${index+2}"></div>
+`;
 
 
 })

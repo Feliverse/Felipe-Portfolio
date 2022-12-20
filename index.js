@@ -10,7 +10,7 @@ menuContainer.addEventListener('click', function cli() {
   document.querySelector('.desk').style.top = '0';
 
   document.getElementById('top-img').style.background =
-    'url('images/menu mobile/image_geometry_menu_1.jpg')';
+  'url('images/menu mobile/image_geometry_menu_1.jpg')';
   document.getElementById('top-img').style.position = 'absolute';
   document.getElementById('top-img').style.width = '263px';
   document.getElementById('top-img').style.height = '114px';

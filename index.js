@@ -164,7 +164,7 @@ projectInfo.map((project, index) => {
 
 
   cardContainer += 
-`<article class="card  card${index +1}">
+`<article class="card  card${index +2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>

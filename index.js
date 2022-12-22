@@ -166,7 +166,7 @@ projectInfo.map((project, index) => {
   const projectImage = project.image;
   const projectTech = project.technologies;
   const projectImgAlt = project.alt;
-  cardContainer+=;
+  cardContainer+=
     `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">

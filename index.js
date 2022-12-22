@@ -1,5 +1,8 @@
+// mobile menu
+
 const menuContainer = document.getElementById('toolbar');
 const iconImage = menuContainer.querySelector('img');
+
 let controller = false;
 menuContainer.addEventListener('click', () => {
   if (!controller) {
@@ -69,6 +72,8 @@ cancela.forEach((a) => {
     iconImage.src = 'images/ic_menu.svg';
   });
 });
+
+// array for projects information
 
 const projectInfo = [
   {
@@ -149,9 +154,11 @@ const projectInfo = [
   },
 ];
 
+// project seccion dynamic Html
+
 const gall = document.querySelector('.gallery')
 let cardContainer = `<h2 class="project-title card1">Projects</h2>
-                    <div class="caja1-1 card" ></div>`;
+  <div class="caja1-1 card" ></div>`;
 
 projectInfo.map((project, index) => {
   const projectId = project.id;
@@ -174,7 +181,7 @@ projectInfo.map((project, index) => {
         <li class="projectLi">${projectTech[1]}</li>
         <li class="projectLi">${projectTech[2]}</li>
     </ul>
-    <button class="see">
+    <button class="see myBtn" id="btn${projectId}">
         See this project &nbsp →
     </button>
 </div>
@@ -182,6 +189,47 @@ projectInfo.map((project, index) => {
 <div class="card card-back${index+2}"></div>
 `;
 
-
 })
 gall.innerHTML = cardContainer;
+
+function data() {
+  for(var i=0;i<projectInfo.length;i++){
+  var proId = projectInfo[i].id;
+  var seeId = "btn"+ proId;  
+  var button = document.createElementById(seeId);
+    button.onclick = function(){
+    console.log("event on button{proId}"+proId);
+  }
+  document.body.appendChild(button);
+}
+}
+
+
+
+
+
+// // Get the modal
+// var modal = document.getElementById("myMOdal");
+
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }

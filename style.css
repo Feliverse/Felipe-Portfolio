@@ -21,7 +21,7 @@ body {
   top: 0;
 }
 
-.menu ul li {
+.menues {
   font-size: 21px;
 }
 
@@ -408,15 +408,14 @@ button:active {
 .alert {
   display: flex;
   justify-content: space-between;
- }
+}
 
- .error-message {
+.error-message {
   display: none;
-  color:#eb1b2d;
+  color: #e2505c;
   padding-right: 10px;
-  font-weight:bolder;
-  font
- }
+  font-weight: bolder;
+}
 
 /* hover effect for input field */
 
@@ -518,9 +517,10 @@ label {
     display: none;
   }
 
-  .menu ul li {
+  .menues {
     font-size: 1rem;
   }
+
   .desk {
     display: block;
     border-bottom: 1px solid #dddfe6;

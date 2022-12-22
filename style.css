@@ -21,6 +21,10 @@ body {
   top: 0;
 }
 
+.menues {
+  font-size: 21px;
+}
+
 .desk,
 .bigmage,
 .form-name-message p {
@@ -149,6 +153,106 @@ h3 {
   margin-bottom: 20px;
   padding: 7px 10px;
   color: #dddfe6;
+}
+
+/* Popup Project Mobile */
+
+.next-prev-proj {
+  display: none;
+}
+
+.modal-container {
+  display: none; /* to none */
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+  visibility: visible;
+  width: 100%;
+  max-height: 100%;
+  overflow-x: scroll;
+}
+
+.close-modal {
+  align-self: flex-end;
+  font-family: inherit;
+  font-size: 40px;
+  color: #1a2236;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.project-title-modal {
+  padding-left: 20px;
+  color: #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 80%;
+}
+
+.card-tech-modal {
+  display: flex;
+  gap: 5px;
+  padding: 0 0 0 20px;
+}
+
+.project-image {
+  align-self: center;
+  width: 90%;
+}
+
+.card-tech-modal li {
+  padding: 5px 10px 5px 10px;
+  list-style: none;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.3334px;
+  line-height: 80%;
+}
+
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #1a2236;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+.btns-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-modal {
+  align-self: center;
+  background: none;
+  margin-top: 10px;
+  width: 250px;
+  height: 51px;
+  border: 1px solid #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #1a2236;
+  margin-bottom: 30px;
+}
+
+.iconModal {
+  float: right;
+  padding-right: 14px;
 }
 
 /* about section */
@@ -301,6 +405,18 @@ button:active {
   color: darkgray;
 }
 
+.alert {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  display: none;
+  color: #e2505c;
+  padding-right: 10px;
+  font-weight: bolder;
+}
+
 /* hover effect for input field */
 
 .form-name:hover {
@@ -399,6 +515,10 @@ label {
   .imagebox,
   .space {
     display: none;
+  }
+
+  .menues {
+    font-size: 1rem;
   }
 
   .desk {
@@ -529,9 +649,9 @@ label {
     position: relative;
   }
 
-  .card4,
-  .card7,
-  .card8,
+  .card-back2,
+  .card-back3,
+  .card-back4,
   .form-name-message p {
     display: block;
   }
@@ -556,7 +676,7 @@ label {
     justify-content: end;
     padding: 0;
     transform: rotate(270deg);
-    font-size: 3.5em;
+    font-size: 5em;
     align-items: center;
   }
 
@@ -574,7 +694,7 @@ label {
   }
 
   .card2 .pData,
-  .card6 .pData {
+  .card4 .pData {
     zoom: 1.5;
   }
 
@@ -590,7 +710,7 @@ label {
     width: 100%;
   }
 
-  .card4 {
+  .card-back2 {
     grid-column: 2 / 4;
     grid-row: 2 / 4;
     background-image: url(images/project/image-geometry_2.png);
@@ -599,7 +719,7 @@ label {
     background-size: contain;
   }
 
-  .cardx {
+  .card7 {
     grid-column: 4;
     grid-row: 2;
   }
@@ -621,16 +741,16 @@ label {
     cursor: pointer;
   }
 
-  .card6 {
+  .card4 {
     grid-column: 1 / 3;
     grid-row: 4 / 6;
   }
 
-  .card6 img {
+  .card4 img {
     width: 100%;
   }
 
-  .card7 {
+  .card-back3 {
     grid-column: 3 / 5;
     grid-row: 5 / 6;
     background-image: url(images/project/image-geometry_3.png);
@@ -639,7 +759,7 @@ label {
     background-size: contain;
   }
 
-  .card8 {
+  .card-back4 {
     grid-column: 1 / 3;
     grid-row: 6;
     background-image:
@@ -651,22 +771,109 @@ label {
     height: 100%;
   }
 
-  .card9 {
+  .card6 {
     grid-column: 3 / 5;
     grid-row: 6;
   }
 
-  .card9 img {
+  .card6 img {
     width: 70%;
   }
 
-  .card9 .pData {
+  .card6 .pData {
     width: 70%;
   }
 
   .card:hover .pData {
     visibility: visible;
     opacity: 100%;
+  }
+
+  /* Modal POPUP */
+
+  .modal-container {
+    border: 40px solid #1a2236;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    transform: translate(0%, -50%);
+    visibility: visible;
+    box-sizing: border-box;
+    max-height: 100%;
+  }
+
+  .project-title-modal {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 80%;
+    margin-left: 20px;
+  }
+
+  .project-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #1a2236;
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 700px;
+    align-self: center;
+  }
+
+  .card-tech-modal li {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 80%;
+    margin-left: 20px;
+    gap: 10px;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .btns-modal {
+    font-size: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-modal {
+    margin-top: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  .btn-modal:hover {
+    background-color: #1a2236;
+    color: white;
+  }
+
+  .next-prev-proj {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 220px;
+  }
+
+  .prev-btn {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 
   /* about responsive */
@@ -818,7 +1025,6 @@ label {
     height: 115px;
     padding: 18px auto auto 20px;
     font-size: 16px;
-    color: lightgray;
   }
 
   .botonform {
@@ -858,11 +1064,11 @@ label {
     zoom: 2;
   }
 
-  .card6 .pData {
+  .card4 .pData {
     zoom: 1.8;
   }
 
-  .card9 .pData {
+  .card6 .pData {
     zoom: 1;
   }
 

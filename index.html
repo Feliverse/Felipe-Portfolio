@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav id="toolbar">
-            <img src="images/ic_menu.svg" alt="Menu" id="mobile-nav"> 
+            <img src="images/ic_menu.svg" alt="Menu" id="mobile-nav">
         </nav>
     </header>
 
-     <!-- descktop version -->   
+    <!-- descktop version -->
 
-     <header class="desk">
+    <header class="desk">
         <div id="top-img" class="img-mobile-container"></div>
         <div id="bottom-img" class="img-mobile-container"></div>
         <nav class="menu">
-          <ul>
-            <li><a href="#hello">Hello</a></li>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+            <ul>
+                <li class="menues"><a href="#hello">Hello</a></li>
+                <li class="menues"><a href="#projects">Portfolio</a></li>
+                <li class="menues"><a href="#about">About</a></li>
+                <li class="menues"><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="hello" id="hello">
         <div class="hello-text">
-          <header>
-            <h1 class="name">Felipe Haybar</h1>
-          </header>
-          <p class="headline">Hello! I am a software developer! I can help you build a product, feature or website. Taka a look of my works.
-          <br>If you like what you see and have a project you need coded, don’t hesitate and contact me.</p>
-          <button class="blackBoton">
-             Start collaboration
-          </button>
+            <header>
+                <h1 class="name">Felipe Haybar</h1>
+            </header>
+            <p class="headline">Hello! I am a software developer! I can help you build a product, feature or website.
+                Taka a look of my works.
+                <br>If you like what you see and have a project you need coded, don’t hesitate and contact me.
+            </p>
+            <button class="blackBoton" href="#contact">
+                Start collaboration
+            </button>
         </div>
         <div class="imagebox"></div>
         <div class="bigimage"></div>
     </section>
-<!-- project section -->
-    <section class="Projects" id="projects">       
-        <div class="gallery">
-<h2 class="project-title card1">Projects</h2>
+    <!-- project section -->
+    <section class="Projects" id="projects">
+        <div class="gallery" id="gallery">
 
-            <div class="caja1-1" card></div> 
-            <article class="card card2">
+            <!-- <article class="card card2">
                 <img class="imgp" src="images/project1.png" alt="Laptop 1" width="100%">
                 <div class="pData">
                     <h3>Project name goes here</h3>
@@ -64,7 +68,7 @@
                     </button>
                 </div>
             </article>
-            
+
             <article class="card card3">
                 <img src="images/project2.png" alt="Macbook Pro 10" width="100%">
                 <div class="pData">
@@ -79,7 +83,7 @@
                     </button>
                 </div>
             </article>
-            <div class="card card4"></div>
+            <div class="card card-back2"></div>
             <article class="card cardx">
                 <img src="images/project6.png" alt="Laptop 2" width="100%">
                 <div class="pData">
@@ -94,7 +98,7 @@
                     </button>
                 </div>
             </article>
-            
+
             <article class="card card5">
                 <img src="images/project4.png" alt="Laptop 3" width="100%">
                 <div class="pData">
@@ -123,8 +127,8 @@
                     </button>
                 </div>
             </article>
-            <div class="card card7"></div>
-            <div class="card card8"></div>
+            <div class="card card-back3"></div>
+            <div class="card card-back4"></div>
             <article class="card card9">
                 <img src="images/project5.png" alt="Laptop 4" width="100%">
                 <div class="pData">
@@ -138,99 +142,136 @@
                         See this project &nbsp →
                     </button>
                 </div>
-            </article>
-            </div>
+            </article> -->
+        </div>
     </section>
 
-<!-- about section -->
+    <!-- Modal popup -->
+    <section class="modal-container modal" id="myMOdal">
+        <div class="modal-content">
+            <span class="close-modal close">&times</span>
+            <h3 class="project-title-modal"></h3>
+            <ul class="card-tech-modal">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <img class="project-image" src="">
+            <p class="project-description"></p>
+            <div class="btns-modal">
+                <button class="btn-modal seeLive" src=${projectInfo[i].liveVersion}>See live
+                    <img class="iconModal" src="./images/Union (8).png">
+                </button>
+                <button class="btn-modal seeSource" src=${projectInfo[i].source}>See source
+                    <img class="iconModal" src="./images/redes sociales/Vector (8).png">
+                </button>
+            </div>
+            <div class="next-prev-proj">
+                <button class="prev-btn"> &larr; Previous project</button>
+                <button class="prev-btn">Next Project &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- about section -->
 
     <section class="about" id="about">
         <div class="about-cont">
 
-      <div class="about-head">
-        <h2>About</h2>
-        
-        <p class="textAbout">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea eiusmod</p>
-            
-        <button class="blackBoton">
-                Get my CV &nbsp
-                <img class="get-my-resume-image" src="./images/ic_download.svg" alt="Download arrow">
-        </button>
-      </div>
-        <div class="boxL">
-            <ul class="Box lan">
-                <h4>Languages</h4>   
-                <li class="inBox">JavaScript(ES5/ES6)</li>
-                <li class="inBox">Ruby</li>
-                <li class="inBox">HTML</li>
-                <li class="inBox">CSS</li>
-            </ul>
+            <div class="about-head">
+                <h2>About</h2>
 
-            <ul class="Box fra">
-                <h4>Frameworks</h4>  
-                <li class="inBox">Bootstrap</li>
-                <li class="inBox">Ruby on rails</li>
-                <li class="inBox">RSpec</li>
-                <li class="inBox">Capibara</li>
-                <li class="inBox">Selenium</li>
-            </ul>
-            
-            <ul class="Box ski">
-                <h4>Skills</h4>   
-                <li class="inBox">Codekit</li>
-                <li class="inBox">Codepen</li>
-                <li class="inBox">GitHub</li>
-                <li class="inBox">CitLAb</li>
-                <li class="inBox">Terminal</li>
-            </ul>
-          <div class="Box image-about"></div>
-        </div> 
-      </div>
-    </section> 
+                <p class="textAbout">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ea eiusmod</p>
 
-        <!-- form section  -->
+                <button class="blackBoton">
+                    Get my CV &nbsp
+                    <img class="get-my-resume-image" src="./images/ic_download.svg" alt="Download arrow">
+                </button>
+            </div>
+            <div class="boxL">
+                <ul class="Box lan">
+                    <h4>Languages</h4>
+                    <li class="inBox">JavaScript(ES5/ES6)</li>
+                    <li class="inBox">Ruby</li>
+                    <li class="inBox">HTML</li>
+                    <li class="inBox">CSS</li>
+                </ul>
 
-        <section class="formulary" id="contact">
-            <div class="space"></div>
-            <div class="cont-form">
+                <ul class="Box fra">
+                    <h4>Frameworks</h4>
+                    <li class="inBox">Bootstrap</li>
+                    <li class="inBox">Ruby on rails</li>
+                    <li class="inBox">RSpec</li>
+                    <li class="inBox">Capibara</li>
+                    <li class="inBox">Selenium</li>
+                </ul>
+
+                <ul class="Box ski">
+                    <h4>Skills</h4>
+                    <li class="inBox">Codekit</li>
+                    <li class="inBox">Codepen</li>
+                    <li class="inBox">GitHub</li>
+                    <li class="inBox">CitLAb</li>
+                    <li class="inBox">Terminal</li>
+                </ul>
+                <div class="Box image-about"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- form section  -->
+
+    <section class="formulary" id="contact">
+        <div class="space"></div>
+        <div class="cont-form">
             <div class="form-header">
                 <h2 class="getStar">Get started</h2>
-                <p class="textAbout">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it .</p>
-            </div>    
+                <p class="textAbout">If you have an application you are interested in developing, a feature that you
+                    need built or a project that needs coding. I’d love to help with it .</p>
+            </div>
             <form class="b" action="https://formspree.io/f/xnqrlgak" method="post">
                 <div class="boxForm">
-                    <label class="form-name" for="name"> 
+                    <label class="form-name" for="name">
                         Your name
                         <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
                     </label>
                     <label class="form-name" for="email">
-                        Your email
+                        <div class="alert">
+                            <p>Your email</p> 
+                            <p class="error-message">Ups, use only lower case</p>
+                        </div>
                         <input class="form-name-contend" type="email" id="mail" name="user_email" required>
                     </label>
                     <label class="form-name-text">
-                        <textarea class="form-text" name="user_message" placeholder="Enter your message here..." maxlength="500" required></textarea>
+                        <textarea class="form-text" name="user_message" placeholder="Enter your message here..."
+                            maxlength="500" required></textarea>
                     </label>
                 </div>
+                
                 <div class="button botonform">
                     <button class="blackBoton textBoton" type="submit">
                         Star collaboration
                     </button>
                 </div>
+                
             </form>
-
         </div>
-        </section> 
+    </section>
 
-        <!--footer section-->
+    <!--footer section-->
 
     <footer class="contenfoo">
         <div>
             <button class="resume">
-                Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png" alt="Top right arrow"></a>
+                Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png"
+                    alt="Top right arrow"></a>
             </button>
         </div>
         <div>
-            <ul class="rsFooter" >
+            <ul class="rsFooter">
                 <li class="rrss"><img src="images/redes sociales/Vector (3).png" alt="GitHUB link"> </li>
                 <li class="rrss"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></li>
                 <li class="rrss"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></li>
@@ -240,8 +281,9 @@
         </div>
     </footer>
 
-</section> 
+    </section>
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

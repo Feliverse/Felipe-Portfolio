@@ -1,5 +1,8 @@
+// mobile menu
+
 const menuContainer = document.getElementById('toolbar');
 const iconImage = menuContainer.querySelector('img');
+
 let controller = false;
 menuContainer.addEventListener('click', () => {
   if (!controller) {
@@ -68,4 +71,129 @@ cancela.forEach((a) => {
     document.querySelector('.desk').style.display = 'none';
     iconImage.src = 'images/ic_menu.svg';
   });
+});
+
+// array for projects information
+
+const projectInfo = [
+  {
+    id: 1,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project1.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript',
+    ],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 2,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project2.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 3,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project3.png',
+    alt: 'laptop',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 4,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project4.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 5,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project5.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+  {
+    id: 6,
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    image: './images/project6.png',
+    alt: 'laptop',
+    technologies: [
+      'HTML/CSS',
+      'Ruby on Rails',
+      'Javascript'],
+    liveVersion: '#',
+    source: '#',
+  },
+];
+
+// project seccion dynamic Html
+
+const gall = document.querySelector('.gallery');
+let cardContainer = `<h2 class="project-title card1">Projects</h2>
+  <div class="caja1-1 card" ></div>`;
+
+projectInfo.forEach((project, index) => {
+  const projectId = project.id;
+  const projectName = project.name;
+  const projectImage = project.image;
+  const projectTech = project.technologies;
+  const projectImgAlt = project.alt;
+  cardContainer += `<article class="card  card${index + 2}">
+<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+<div class="pData">
+    <h3>${projectName}</h3>
+    <ul class="projectUl">
+        <li class="projectLi">${projectTech[0]}</li>
+        <li class="projectLi">${projectTech[1]}</li>
+        <li class="projectLi">${projectTech[2]}</li>
+    </ul>
+    <button class="see myBtn" id="btn${projectId}">
+        See this project &nbsp →
+    </button>
+</div>
+</article>
+<div class="card card-back${index + 2}"></div>`;
+});
+gall.innerHTML = cardContainer;
+
+// form validation
+
+const errorMessage = document.querySelector('.error-message');
+const form = document.getElementById('contact');
+const email = document.getElementById('mail');
+const emailRegex = /^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z0-9_.]+$/;
+
+form.addEventListener('submit', (e) => {
+  if (!emailRegex.test(email.value)) {
+    e.preventDefault();
+    errorMessage.style.display = 'block';
+  }
 });

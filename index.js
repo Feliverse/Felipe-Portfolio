@@ -166,7 +166,7 @@ projectInfo.forEach((project, index) => {
   const projectImage = project.image;
   const projectTech = project.technologies;
   const projectImgAlt = project.alt;
-  return cardContainer += `<article class="card  card${index + 2}">
+  cardContainer += `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>

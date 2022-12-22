@@ -158,7 +158,7 @@ h3 {
 }
 
 .modal-container {
-  display: none; /*to none*/
+  display: none; /* to none */
   flex-direction: column;
   gap: 10px;
   background-color: white;

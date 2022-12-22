@@ -78,9 +78,9 @@ cancela.forEach((a) => {
 const projectInfo = [
   {
     id: 1,
-    name: 'Project name goes here',//to change
+    name: 'Project name goes here',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project1.png',// actualiza direcciones 
+    image: './images/project1.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
@@ -171,8 +171,8 @@ projectInfo.map((project, index) => {
   const projectImgAlt = project.alt;
 
 
-  cardContainer += 
-`<article class="card  card${index +2}">
+  cardContainer +=
+    `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>
@@ -186,50 +186,20 @@ projectInfo.map((project, index) => {
     </button>
 </div>
 </article>
-<div class="card card-back${index+2}"></div>
+<div class="card card-back${index + 2}"></div>
 `;
 
 })
 gall.innerHTML = cardContainer;
 
 function data() {
-  for(var i=0;i<projectInfo.length;i++){
-  var proId = projectInfo[i].id;
-  var seeId = "btn"+ proId;  
-  var button = document.createElementById(seeId);
-    button.onclick = function(){
-    console.log("event on button{proId}"+proId);
+  for (var i = 0; i < projectInfo.length; i++) {
+    var proId = projectInfo[i].id;
+    var seeId = `btn${proId}`;
+    var button = document.createElementById(seeId);
+    button.onclick = function () {
+      console.log(`event on button{proId}${proId}`);
+    }
+    document.body.appendChild(button);
   }
-  document.body.appendChild(button);
 }
-}
-
-
-
-
-
-// // Get the modal
-// var modal = document.getElementById("myMOdal");
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }

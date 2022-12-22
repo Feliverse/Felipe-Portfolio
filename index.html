@@ -43,7 +43,7 @@
                 Taka a look of my works.
                 <br>If you like what you see and have a project you need coded, don’t hesitate and contact me.
             </p>
-            <button class="blackBoton">
+            <button class="blackBoton" href="#contact">
                 Start collaboration
             </button>
         </div>
@@ -239,7 +239,10 @@
                         <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
                     </label>
                     <label class="form-name" for="email">
-                        Your email
+                        <div class="alert">
+                            <p>Your email</p> 
+                            <p class="error-message">Ups, use only lower case</p>
+                        </div>
                         <input class="form-name-contend" type="email" id="mail" name="user_email" required>
                     </label>
                     <label class="form-name-text">
@@ -247,13 +250,14 @@
                             maxlength="500" required></textarea>
                     </label>
                 </div>
+                
                 <div class="button botonform">
                     <button class="blackBoton textBoton" type="submit">
                         Star collaboration
                     </button>
                 </div>
+                
             </form>
-
         </div>
     </section>
 

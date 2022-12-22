@@ -21,6 +21,10 @@ body {
   top: 0;
 }
 
+.menu ul li {
+  font-size: 21px;
+}
+
 .desk,
 .bigmage,
 .form-name-message p {
@@ -401,6 +405,19 @@ button:active {
   color: darkgray;
 }
 
+.alert {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .error-message {
+  display: none;
+  color:#eb1b2d;
+  padding-right: 10px;
+  font-weight:bolder;
+  font
+ }
+
 /* hover effect for input field */
 
 .form-name:hover {
@@ -501,6 +518,9 @@ label {
     display: none;
   }
 
+  .menu ul li {
+    font-size: 1rem;
+  }
   .desk {
     display: block;
     border-bottom: 1px solid #dddfe6;
@@ -656,7 +676,7 @@ label {
     justify-content: end;
     padding: 0;
     transform: rotate(270deg);
-    font-size: 3.5em;
+    font-size: 5em;
     align-items: center;
   }
 
@@ -1005,7 +1025,6 @@ label {
     height: 115px;
     padding: 18px auto auto 20px;
     font-size: 16px;
-    color: lightgray;
   }
 
   .botonform {

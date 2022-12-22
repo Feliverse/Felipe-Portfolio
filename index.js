@@ -183,3 +183,17 @@ projectInfo.forEach((project, index) => {
 <div class="card card-back${index + 2}"></div>`;
 });
 gall.innerHTML = cardContainer;
+
+// form validation
+
+const errorMessage = document.querySelector('.error-message');
+const form = document.getElementById('contact');
+const email = document.getElementById('mail');
+const emailRegex = /^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z0-9_.]+$/;
+
+form.addEventListener('submit', (e) => {
+  if (!emailRegex.test(email.value)) {
+    e.preventDefault();
+    errorMessage.style.display = 'block';
+  }
+});

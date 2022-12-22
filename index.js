@@ -160,14 +160,13 @@ const gall = document.querySelector('.gallery');
 let cardContainer = `<h2 class="project-title card1">Projects</h2>
   <div class="caja1-1 card" ></div>`;
 
-projectInfo.map((project, index) => {
+projectInfo.forEach((project, index) => {
   const projectId = project.id;
   const projectName = project.name;
   const projectImage = project.image;
   const projectTech = project.technologies;
   const projectImgAlt = project.alt;
-  cardContainer+=
-    `<article class="card  card${index + 2}">
+  return cardContainer += `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>

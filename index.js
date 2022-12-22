@@ -166,11 +166,7 @@ projectInfo.map((project, index) => {
   const projectImage = project.image;
   const projectTech = project.technologies;
   const projectImgAlt = project.alt;
-  //const projectLive = project.liveVersion;
-  //const projectSource = project.source;
-  //const projectDescription = project.description;
-  
-  cardContainer+=
+  cardContainer+=;
     `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
@@ -186,5 +182,5 @@ projectInfo.map((project, index) => {
 </div>
 </article>
 <div class="card card-back${index + 2}"></div>`;
-})
+});
 gall.innerHTML = cardContainer;

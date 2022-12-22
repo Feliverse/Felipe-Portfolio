@@ -156,22 +156,21 @@ const projectInfo = [
 
 // project seccion dynamic Html
 
-const gall = document.querySelector('.gallery')
+const gall = document.querySelector('.gallery');
 let cardContainer = `<h2 class="project-title card1">Projects</h2>
   <div class="caja1-1 card" ></div>`;
 
 projectInfo.map((project, index) => {
   const projectId = project.id;
   const projectName = project.name;
-  const projectDescripton = project.description;
   const projectImage = project.image;
   const projectTech = project.technologies;
-  const projectLive = project.liveVersion;
-  const projectSouce = project.source;
   const projectImgAlt = project.alt;
-
-
-  cardContainer +=
+  //const projectLive = project.liveVersion;
+  //const projectSource = project.source;
+  //const projectDescription = project.description;
+  
+  cardContainer+=
     `<article class="card  card${index + 2}">
 <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
@@ -186,20 +185,6 @@ projectInfo.map((project, index) => {
     </button>
 </div>
 </article>
-<div class="card card-back${index + 2}"></div>
-`;
-
+<div class="card card-back${index + 2}"></div>`;
 })
 gall.innerHTML = cardContainer;
-
-function data() {
-  for (var i = 0; i < projectInfo.length; i++) {
-    var proId = projectInfo[i].id;
-    var seeId = `btn${proId}`;
-    var button = document.createElementById(seeId);
-    button.onclick = function () {
-      console.log(`event on button{proId}${proId}`);
-    }
-    document.body.appendChild(button);
-  }
-}

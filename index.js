@@ -188,13 +188,14 @@ gall.innerHTML = cardContainer;
 
 const errorMessage = document.querySelector('.error-message');
 const form = document.getElementById('contact');
-const email = document.getElementById('mail');
+const email = document.getElementById('email');
 const emailRegex = /^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z0-9_.]+$/;
 
 form.addEventListener('submit', (e) => {
   if (!emailRegex.test(email.value)) {
     e.preventDefault();
     errorMessage.style.display = 'block';
+    email.style.border = '#dd5353 2px solid';
   }
 });
 // local storage
@@ -206,7 +207,7 @@ let localData = {
 };
 
 const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('mail');
+const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('textform');
 
 function dataLocalStore() {

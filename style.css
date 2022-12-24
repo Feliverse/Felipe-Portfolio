@@ -805,16 +805,26 @@ label {
     max-height: 100%;
   }
 
+  .modal-content {
+    padding: 40px ;
+  }
+
+  .close-modal{
+    display: flex;
+    justify-content: flex-end;
+
+  }
   .project-title-modal {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
-    line-height: 80%;
-    margin-left: 20px;
+    line-height: 1.5;
+    padding: 0;
   }
 
   .project-description {
+    display: flex;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -822,18 +832,27 @@ label {
     padding-left: 120px;
     padding-right: 120px;
     width: 700px;
-    align-self: center;
+    align-items: center;
+  }
+
+  .card-tech-modal{
+    padding: 0;
   }
 
   .card-tech-modal li {
     font-weight: 300;
     font-size: 20px;
     line-height: 80%;
-    margin-left: 20px;
+    
     gap: 10px;
     padding: 10px 15px 10px 15px;
   }
 
+  .modal-img {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .btns-modal {
     font-size: 70px;
     display: flex;

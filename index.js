@@ -156,9 +156,37 @@ const projectInfo = [
 
 // project seccion dynamic Html
 
+const showModal = (projectInfo) => {
+  console.log(projectInfo)
+  const myModal = document.getElementById('myMOdal');
+  myModal.style.display = 'block';
+  const modalBody = `<div class="modal-content">
+  <span class="close-modal close">&times</span>
+  <h3 class="project-title-modal">${projectInfo.name}</h3>
+  <ul class="card-tech-modal">
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+  <img class="project-image" src="">
+  <p class="project-description"></p>
+  <div class="btns-modal">
+      <button class="btn-modal seeLive">See live
+          <img class="iconModal" src="./images/Union (8).png">
+      </button>
+      <button class="btn-modal seeSource">See source
+          <img class="iconModal" src="./images/redes sociales/Vector (8).png">
+      </button>
+  </div>
+  <div class="next-prev-proj">
+      <button class="prev-btn"> &larr; Previous project</button>
+      <button class="prev-btn">Next Project &rarr;</button>
+  </div>
+</div>`
+myModal.innerHTML = modalBody;
+}
+
 const gall = document.querySelector('.gallery');
-let cardContainer = `<h2 class="project-title card1">Projects</h2>
-  <div class="caja1-1 card" ></div>`;
 
 projectInfo.forEach((project, index) => {
   const projectId = project.id;
@@ -166,8 +194,11 @@ projectInfo.forEach((project, index) => {
   const projectImage = project.image;
   const projectTech = project.technologies;
   const projectImgAlt = project.alt;
-  cardContainer += `<article class="card  card${index + 2}">
-<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+
+  const soloArticle = document.createElement('article');
+  soloArticle.classList.add('card', `card${index + 2}`);
+
+  cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>
     <ul class="projectUl">
@@ -179,12 +210,20 @@ projectInfo.forEach((project, index) => {
         See this project &nbsp →
     </button>
 </div>
-</article>
-<div class="card card-back${index + 2}"></div>`;
+</article>`;
+soloArticle.innerHTML = `${cardContainer} <div class="card card-back${index + 2}"></div>`;
+gall.appendChild(soloArticle);
+const button = document.getElementById(`btn${projectId}`);
+button.addEventListener('click', () => {
+  showModal(project);
+})
 });
-gall.innerHTML = cardContainer;
-
+//gall.innerHTML = cardContainer;
 // form validation
+
+const getData = (project) => {
+  console.log(project);
+}
 
 const errorMessage = document.querySelector('.error-message');
 const form = document.getElementById('contact');

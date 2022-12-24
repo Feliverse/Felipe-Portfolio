@@ -164,12 +164,12 @@ const showModal = (projectInfo) => {
   <span class="close-modal close">&times</span>
   <h3 class="project-title-modal">${projectInfo.name}</h3>
   <ul class="card-tech-modal">
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>${projectInfo.technologies[0]}</li>
+      <li>${projectInfo.technologies[1]}</li>
+      <li>${projectInfo.technologies[2]}</li>
   </ul>
-  <img class="project-image" src="">
-  <p class="project-description"></p>
+  <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
+  <p class="project-description">${projectInfo.description}</p>
   <div class="btns-modal">
       <button class="btn-modal seeLive">See live
           <img class="iconModal" src="./images/Union (8).png">
@@ -218,7 +218,7 @@ button.addEventListener('click', () => {
   showModal(project);
 })
 });
-//gall.innerHTML = cardContainer;
+
 // form validation
 
 const getData = (project) => {

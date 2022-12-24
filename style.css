@@ -813,14 +813,14 @@ label {
   }
 
   .modal-content {
-    padding: 40px ;
+    padding: 40px;
   }
 
-  .close-modal{
+  .close-modal {
     display: flex;
     justify-content: flex-end;
-
   }
+
   .project-title-modal {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -841,7 +841,7 @@ label {
     align-self: center;
   }
 
-  .card-tech-modal{
+  .card-tech-modal {
     padding: 0;
   }
 
@@ -849,7 +849,6 @@ label {
     font-weight: 300;
     font-size: 20px;
     line-height: 80%;
-    
     gap: 10px;
     padding: 10px 15px 10px 15px;
   }
@@ -859,6 +858,7 @@ label {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
   .btns-modal {
     font-size: 70px;
     display: flex;

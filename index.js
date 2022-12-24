@@ -181,11 +181,16 @@ const showModal = (projectInfo) => {
       <button class="prev-btn"> &larr; Previous project</button>
       <button class="prev-btn">Next Project &rarr;</button>
   </div>
-</div>`
+</div>`;
   myModal.innerHTML = modalBody;
-}
+};
 
 const gall = document.querySelector('.gallery');
+
+const closeModal = () => {
+  const myModal = document.getElementById('myMOdal');
+  myModal.style.display = 'none';
+};
 
 projectInfo.forEach((project, index) => {
   const projectId = project.id;
@@ -197,7 +202,7 @@ projectInfo.forEach((project, index) => {
   const soloArticle = document.createElement('article');
   soloArticle.classList.add('card', `card${index + 2}`);
 
-  cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+  let cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>
     <ul class="projectUl">
@@ -215,23 +220,14 @@ projectInfo.forEach((project, index) => {
   const button = document.getElementById(`btn${projectId}`);
   button.addEventListener('click', () => {
     showModal(project);
-    const closemodalX = document.getElementById("closemodalX")
+    const closemodalX = document.getElementById('closemodalX')
     closemodalX.addEventListener('click', () => {
       closeModal();
     });
-  })
+  });
 });
 
-const closeModal = () => {
-  const myModal = document.getElementById('myMOdal');
-  myModal.style.display = 'none';
-}
-
 // form validation
-
-const getData = (project) => {
-  console.log(project);
-}
 
 const errorMessage = document.querySelector('.error-message');
 const form = document.getElementById('contact');

@@ -202,7 +202,7 @@ projectInfo.forEach((project, index) => {
   const soloArticle = document.createElement('article');
   soloArticle.classList.add('card', `card${index + 2}`);
 
-  let cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+  const cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
 <div class="pData">
     <h3>${projectName}</h3>
     <ul class="projectUl">
@@ -220,7 +220,7 @@ projectInfo.forEach((project, index) => {
   const button = document.getElementById(`btn${projectId}`);
   button.addEventListener('click', () => {
     showModal(project);
-    const closemodalX = document.getElementById('closemodalX')
+    const closemodalX = document.getElementById('closemodalX');
     closemodalX.addEventListener('click', () => {
       closeModal();
     });

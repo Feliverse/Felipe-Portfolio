@@ -157,11 +157,10 @@ const projectInfo = [
 // project seccion dynamic Html
 
 const showModal = (projectInfo) => {
-  console.log(projectInfo)
   const myModal = document.getElementById('myMOdal');
-  myModal.style.display = 'block';
+  myModal.style.display = 'flex';
   const modalBody = `<div class="modal-content">
-  <span class="close-modal close">&times</span>
+  <button id="closemodalX" class="close-modal close">&times</button>
   <h3 class="project-title-modal">${projectInfo.name}</h3>
   <ul class="card-tech-modal">
       <li>${projectInfo.technologies[0]}</li>
@@ -183,7 +182,7 @@ const showModal = (projectInfo) => {
       <button class="prev-btn">Next Project &rarr;</button>
   </div>
 </div>`
-myModal.innerHTML = modalBody;
+  myModal.innerHTML = modalBody;
 }
 
 const gall = document.querySelector('.gallery');
@@ -211,13 +210,22 @@ projectInfo.forEach((project, index) => {
     </button>
 </div>
 </article>`;
-soloArticle.innerHTML = `${cardContainer} <div class="card card-back${index + 2}"></div>`;
-gall.appendChild(soloArticle);
-const button = document.getElementById(`btn${projectId}`);
-button.addEventListener('click', () => {
-  showModal(project);
-})
+  soloArticle.innerHTML = `${cardContainer} <div class="card card-back${index + 2}"></div>`;
+  gall.appendChild(soloArticle);
+  const button = document.getElementById(`btn${projectId}`);
+  button.addEventListener('click', () => {
+    showModal(project);
+    const closemodalX = document.getElementById("closemodalX")
+    closemodalX.addEventListener('click', () => {
+      closeModal();
+    });
+  })
 });
+
+const closeModal = () => {
+  const myModal = document.getElementById('myMOdal');
+  myModal.style.display = 'none';
+}
 
 // form validation
 

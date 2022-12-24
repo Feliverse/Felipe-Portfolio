@@ -176,7 +176,8 @@ h3 {
 }
 
 .close-modal {
-  align-self: flex-end;
+  position: absolute;
+  right: 25px;
   font-family: inherit;
   font-size: 40px;
   color: #1a2236;
@@ -192,13 +193,19 @@ h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 80%;
+  line-height: 120%;
+  margin-top: 50px;
+}
+
+.modal-img {
+  width: 100%;
+  margin: 15px;
 }
 
 .card-tech-modal {
   display: flex;
   gap: 5px;
-  padding: 0 0 0 20px;
+  padding: 10px;
 }
 
 .project-image {
@@ -829,10 +836,9 @@ label {
     font-weight: 400;
     line-height: 27px;
     color: #1a2236;
-    padding-left: 120px;
-    padding-right: 120px;
-    width: 700px;
-    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-self: center;
   }
 
   .card-tech-modal{

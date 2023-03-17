@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Feliverse Porfolio</b></h3>
 
 </div>
 
@@ -67,7 +67,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-HTML5  CSS3
+HTML5  CSS3 JavaScript
 
 
 <!-- Features -->

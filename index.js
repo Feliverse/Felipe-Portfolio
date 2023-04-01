@@ -2,8 +2,8 @@
 
 const menuContainer = document.getElementById('toolbar');
 const iconImage = menuContainer.querySelector('img');
-
 let controller = false;
+
 menuContainer.addEventListener('click', () => {
   if (!controller) {
     document.querySelector('.desk').style.display = 'flex';
@@ -78,36 +78,36 @@ cancela.forEach((a) => {
 const projectInfo = [
   {
     id: 1,
-    name: 'Project name goes here',
+    name: 'Bookstore new collection',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project1.png',
+    image: './images/bookstore.png',
     alt: 'laptop',
     technologies: [
+      'React + Redux',
       'HTML/CSS',
-      'Ruby on Rails',
       'Javascript',
     ],
     liveVersion: '#',
-    source: '#',
+    source: 'https://github.com/Feliverse/BookStoreCMS',
   },
   {
     id: 2,
-    name: 'Project name goes here',
+    name: "Space Travelers' Hub",
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project2.png',
+    image: './images/space.png',
     alt: 'laptop',
     technologies: [
-      'HTML/CSS',
-      'Ruby on Rails',
-      'Javascript'],
+      'React + Redux',
+      'Javascript',
+      'HTML/CSS'],
     liveVersion: '#',
     source: '#',
   },
   {
     id: 3,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project3.png',
+    name: 'Forex - MetricsWebApp',
+    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    image: './images/metrics.png',
     alt: 'laptop',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
     liveVersion: '#',
@@ -115,9 +115,9 @@ const projectInfo = [
   },
   {
     id: 4,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project4.png',
+    name: 'Todo List',
+    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    image: './images/Todo list.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
@@ -128,9 +128,9 @@ const projectInfo = [
   },
   {
     id: 5,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project5.png',
+    name: "Today's Movies and Series",
+    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    image: './images/movies.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
@@ -141,9 +141,9 @@ const projectInfo = [
   },
   {
     id: 6,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-    image: './images/project6.png',
+    name: 'Math Magicians',
+    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    image: './images/math.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
@@ -202,20 +202,21 @@ projectInfo.forEach((project, index) => {
   const soloArticle = document.createElement('article');
   soloArticle.classList.add('card', `card${index + 2}`);
 
-  const cardContainer = `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
-<div class="pData">
-    <h3>${projectName}</h3>
-    <ul class="projectUl">
-        <li class="projectLi">${projectTech[0]}</li>
-        <li class="projectLi">${projectTech[1]}</li>
-        <li class="projectLi">${projectTech[2]}</li>
-    </ul>
-    <button class="see myBtn" id="btn${projectId}">
-        See this project &nbsp →
-    </button>
-</div>
-</article>`;
-  soloArticle.innerHTML = `${cardContainer} <div class="card card-back${index + 2}"></div>`;
+  const cardContainer =
+    `<img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+      <div class="pData">
+        <h3>${projectName}</h3>
+        <ul class="projectUl">
+          <li class="projectLi">${projectTech[0]}</li>
+          <li class="projectLi">${projectTech[1]}</li>
+          <li class="projectLi">${projectTech[2]}</li>
+        </ul>
+        <button class="see myBtn" id="btn${projectId}">
+          See this project &nbsp →
+        </button>
+      </div>
+    </article>`;
+  soloArticle.innerHTML = `${cardContainer}`;
   gall.appendChild(soloArticle);
   const button = document.getElementById(`btn${projectId}`);
   button.addEventListener('click', () => {

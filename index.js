@@ -41,13 +41,13 @@ menuContainer.addEventListener('click', () => {
       item.style.textDecoration = 'none';
       item.style.color = 'black';
       item.style.fontWeight = '400px';
-      item.style.size = '16px';
+      item.style.size = '2rem';
       item.style.fontFamily = 'Poppins';
       item.style.justifyself = 'center';
     });
 
     document.querySelectorAll('.menu li').forEach((item) => {
-      item.style.marginBottom = '30px';
+      item.style.marginBottom = '4rem';
     });
 
     document.querySelector('.desk').style.paddingTop = '50%';
@@ -99,7 +99,7 @@ const projectInfo = [
     technologies: [
       'React + Redux',
       'Javascript',
-      'HTML/CSS'],
+      'API Rest'],
     liveVersion: '#',
     source: 'https://github.com/Feliverse/Space-travel-Hub',
   },
@@ -109,7 +109,7 @@ const projectInfo = [
     description: 'Metrics Web App is a tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
     image: './images/metrics.png',
     alt: 'laptop',
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['Jest Test', 'React + Redux', 'API Rest'],
     liveVersion: '#',
     source: '#',
   },
@@ -133,8 +133,8 @@ const projectInfo = [
     image: './images/movies.png',
     alt: 'laptop',
     technologies: [
-      'HTML/CSS',
-      'Ruby on Rails',
+      'React&Redux',
+      'API Rest',
       'Javascript'],
     liveVersion: 'https://feliverse.github.io/JavaScript-Capston-Project/dist/',
     source: 'https://github.com/miltonHenschel/JavaScript-Capston-Project',
@@ -147,7 +147,7 @@ const projectInfo = [
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
-      'Ruby on Rails',
+      'React',
       'Javascript'],
     liveVersion: '#',
     source: '#',

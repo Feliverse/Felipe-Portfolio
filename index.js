@@ -79,7 +79,7 @@ const projectInfo = [
   {
     id: 1,
     name: 'Bookstore new collection',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    description: "It's a Books store where you can report how much you read and enjoy every book. <br> Was developed with React + Vite, styled in Modular CSS en tested with Jest, feel free to clic in source to clone my code. ",
     image: './images/bookstore.png',
     alt: 'laptop',
     technologies: [
@@ -93,7 +93,7 @@ const projectInfo = [
   {
     id: 2,
     name: "Space Travelers' Hub",
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis. Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    description: "Space Travel Hub's is a Web page developed with React and Redux, in the page you can reserve a rocket and choise a mission.",
     image: './images/space.png',
     alt: 'laptop',
     technologies: [
@@ -101,12 +101,12 @@ const projectInfo = [
       'Javascript',
       'HTML/CSS'],
     liveVersion: '#',
-    source: '#',
+    source: 'https://github.com/Feliverse/Space-travel-Hub',
   },
   {
     id: 3,
     name: 'Forex - MetricsWebApp',
-    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    description: 'Metrics Web App is a tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
     image: './images/metrics.png',
     alt: 'laptop',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -116,28 +116,28 @@ const projectInfo = [
   {
     id: 4,
     name: 'Todo List',
-    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    description: 'To Do List, is a tool created using webpack where you register tasks to do day by day',
     image: './images/Todo list.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
       'Ruby on Rails',
       'Javascript'],
-    liveVersion: '#',
-    source: '#',
+    liveVersion: 'https://feliverse.github.io/To-Do-List/dist/',
+    source: 'https://github.com/Feliverse/To-Do-List',
   },
   {
     id: 5,
     name: "Today's Movies and Series",
-    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
+    description: 'The JavaScript capstone project is about building our own web application based on two external APIs. First, we retrieve movies and TV Series from the TVmaze API and then record user interactions (likes and comments) using the Involvement API.',
     image: './images/movies.png',
     alt: 'laptop',
     technologies: [
       'HTML/CSS',
       'Ruby on Rails',
       'Javascript'],
-    liveVersion: '#',
-    source: '#',
+    liveVersion: 'https://feliverse.github.io/JavaScript-Capston-Project/dist/',
+    source: 'https://github.com/miltonHenschel/JavaScript-Capston-Project',
   },
   {
     id: 6,
@@ -170,12 +170,14 @@ const showModal = (projectInfo) => {
   <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
   <p class="project-description">${projectInfo.description}</p>
   <div class="btns-modal">
-      <button class="btn-modal seeLive">See live
-          <img class="iconModal" src="./images/Union (8).png">
+      <button class="btn-modal seeLive"> See live
+        <img class="iconModal" src="./images/Union (8).png">
       </button>
-      <button class="btn-modal seeSource">See source
+      <a ref="${projectInfo.source}">
+        <button class="btn-modal seeSource">See source
           <img class="iconModal" src="./images/redes sociales/Vector (8).png">
-      </button>
+        </button>
+      </a>
   </div>
   <div class="next-prev-proj">
       <button class="prev-btn"> &larr; Previous project</button>

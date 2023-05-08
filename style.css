@@ -364,8 +364,9 @@ button {
 button:hover {
   background: #fff;
   border-color: black;
-  border-width: 1px;
+  border-width: 3px;
   color: #1a2236;
+  font-weight: bold;
 }
 
 button:active {
@@ -836,6 +837,7 @@ label {
   .close-modal {
     display: flex;
     justify-content: flex-end;
+    position: fixed;
   }
 
   .project-title-modal {
@@ -1130,7 +1132,6 @@ label {
   .fotter-resume:hover {
     background-color:#1a2236;
     color:#92dcdc;
-    text
-    
+    text-decoration: underline 4px;
   }
 }

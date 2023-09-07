@@ -79,16 +79,15 @@ const projectInfo = [
   {
     id: 1,
     name: 'Bookstore new collection',
-    description: "It's a Books store where you can report how much you read and enjoy every book. <br> Was developed with React + Vite, styled in Modular CSS en tested with Jest, feel free to clic in source to clone my code. ",
-    image: './images/bookstore.png',
+    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the Front-end and Ruby on Rails in the Back-end, and it offers various functionalities like logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours",
+    image: './images/wanderpal.png',
     alt: 'laptop',
     technologies: [
-      'React + Redux',
-      'HTML/CSS',
-      'Javascript',
+      'React & Redux',
+      'Ruby on Rails',
     ],
-    liveVersion: '#',
-    source: 'https://github.com/Feliverse/BookStoreCMS',
+    liveVersion: 'https://fancy-toffee-1b590d.netlify.app',
+    source: 'https://github.com/danielamoreno699/wanderpal-frontend',
   },
   {
     id: 2,
@@ -159,31 +158,31 @@ const projectInfo = [
 const showModal = (projectInfo) => {
   const myModal = document.getElementById('myMOdal');
   myModal.style.display = 'flex';
-  const modalBody = `<div class="modal-content">
-  <button id="closemodalX" class="close-modal close">&times</button>
-  <h3 class="project-title-modal">${projectInfo.name}</h3>
-  <ul class="card-tech-modal">
-      <li>${projectInfo.technologies[0]}</li>
-      <li>${projectInfo.technologies[1]}</li>
-      <li>${projectInfo.technologies[2]}</li>
-  </ul>
-  <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
-  <p class="project-description">${projectInfo.description}</p>
-  <div class="btns-modal">
-      <button class="btn-modal seeLive"> See live
-        <img class="iconModal" src="./images/Union (8).png">
-      </button>
-      <a ref="${projectInfo.source}">
-        <button class="btn-modal seeSource">See source
-          <img class="iconModal" src="./images/redes sociales/Vector (8).png">
-        </button>
-      </a>
-  </div>
-  <div class="next-prev-proj">
-      <button class="prev-btn"> &larr; Previous project</button>
-      <button class="prev-btn">Next Project &rarr;</button>
-  </div>
-</div>`;
+  const modalBody = `
+    <div class="modal-content">
+      <button id="closemodalX" class="close-modal close">&times;</button>
+      <h3 class="project-title-modal">${projectInfo.name}</h3>
+      <ul class="card-tech-modal">
+        <li>${projectInfo.technologies[0]}</li>
+        <li>${projectInfo.technologies[1]}</li>
+        <li>${projectInfo.technologies[2]}</li>
+      </ul>
+      <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
+      <p class="project-description">${projectInfo.description}</p>
+      <div class="btns-modal">
+        <a href="${projectInfo.liveVersion}" target="_blank">
+          <button class="btn-modal seeLive">See live</button>
+        </a>
+        <a href="${projectInfo.source}" target="_blank">
+          <button class="btn-modal seeSource">See source</button>
+        </a>
+      </div>
+      <div class="next-prev-proj">
+        <button class="prev-btn"> &larr; Previous project</button>
+        <button class="prev-btn">Next Project &rarr;</button>
+      </div>
+    </div>
+  `;
   myModal.innerHTML = modalBody;
 };
 

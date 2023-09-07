@@ -155,31 +155,37 @@ const projectInfo = [
 
 // project seccion dynamic Html
 
-const showModal = (projectInfo) => {
+const showModal = (currentIndex) => {
   const myModal = document.getElementById('myMOdal');
   myModal.style.display = 'flex';
+  
+  const nextIndex = (currentIndex + 1) % projectInfo.length;
+  const prevIndex = (currentIndex - 1 + projectInfo.length) % projectInfo.length;
+
+  const project = projectInfo[currentIndex];
+
   const modalBody = `
     <div class="modal-content">
       <button id="closemodalX" class="close-modal close">&times;</button>
-      <h3 class="project-title-modal">${projectInfo.name}</h3>
+      <h3 class="project-title-modal">${project.name}</h3>
       <ul class="card-tech-modal">
-        <li>${projectInfo.technologies[0]}</li>
-        <li>${projectInfo.technologies[1]}</li>
-        <li>${projectInfo.technologies[2]}</li>
+        <li>${project.technologies[0]}</li>
+        <li>${project.technologies[1]}</li>
+        <li>${project.technologies[2]}</li>
       </ul>
-      <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
-      <p class="project-description">${projectInfo.description}</p>
+      <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
+      <p class="project-description">${project.description}</p>
       <div class="btns-modal">
-        <a href="${projectInfo.liveVersion}" target="_blank">
+        <a href="${project.liveVersion}" target="_blank">
           <button class="btn-modal seeLive">See live</button>
         </a>
-        <a href="${projectInfo.source}" target="_blank">
+        <a href="${project.source}" target="_blank">
           <button class="btn-modal seeSource">See source</button>
         </a>
       </div>
       <div class="next-prev-proj">
-        <button class="prev-btn"> &larr; Previous project</button>
-        <button class="prev-btn">Next Project &rarr;</button>
+        <button class="prev-btn" onclick="showModal(${prevIndex})"> &larr; Previous project</button>
+        <button class="prev-btn" onclick="showModal(${nextIndex})">Next Project &rarr;</button>
       </div>
     </div>
   `;
@@ -221,7 +227,8 @@ projectInfo.forEach((project, index) => {
   gall.appendChild(soloArticle);
   const button = document.getElementById(`btn${projectId}`);
   button.addEventListener('click', () => {
-    showModal(project);
+    const currentIndex = projectInfo.findIndex((project) => project.id === projectId);
+    showModal(currentIndex);
     const closemodalX = document.getElementById('closemodalX');
     closemodalX.addEventListener('click', () => {
       closeModal();

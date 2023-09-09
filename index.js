@@ -78,7 +78,7 @@ cancela.forEach((a) => {
 const projectInfo = [
   {
     id: 1,
-    name: 'Bookstore new collection',
+    name: 'WanderPal Tours',
     description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the Front-end and Ruby on Rails in the Back-end, and it offers various functionalities like logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours",
     image: './images/wanderpal.png',
     alt: 'laptop',
@@ -99,18 +99,18 @@ const projectInfo = [
       'React + Redux',
       'Javascript',
       'API Rest'],
-    liveVersion: '#',
+    liveVersion: 'https://steady-croquembouche-5dbbee.netlify.app',
     source: 'https://github.com/Feliverse/Space-travel-Hub',
   },
   {
     id: 3,
     name: 'Forex - MetricsWebApp',
-    description: 'Metrics Web App is a tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
+    description: 'Metrics Web App is a Forex tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
     image: './images/metrics.png',
     alt: 'laptop',
-    technologies: ['Jest Test', 'React + Redux', 'API Rest'],
-    liveVersion: '#',
-    source: '#',
+    technologies: ['API Rest', 'React + Redux', 'Jest Test'],
+    liveVersion: 'https://metricswebapp.netlify.app/',
+    source: 'https://github.com/Feliverse/MetricsWebApp',
   },
   {
     id: 4,
@@ -140,16 +140,16 @@ const projectInfo = [
   },
   {
     id: 6,
-    name: 'Math Magicians',
-    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
-    image: './images/math.png',
+    name: 'Conference Page',
+    description: 'IDTC2023 Industry 4.0 is a Conference date where people from 20+ countries share experiences about the digital transformation of the industry, The page was built using HTML - CSS & Vanilla JavaScript, and the speakers section is created dynamically.',
+    image: './images/conference.png',
     alt: 'laptop',
     technologies: [
-      'HTML/CSS',
-      'React',
+      'HTML',
+      'CSS',
       'Javascript'],
-    liveVersion: '#',
-    source: '#',
+    liveVersion: 'https://feliverse.github.io/conference-page/',
+    source: 'https://github.com/Feliverse/conference-page',
   },
 ];
 

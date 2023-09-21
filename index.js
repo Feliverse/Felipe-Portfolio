@@ -1,75 +1,69 @@
-// mobile menu
 
-const menuContainer = document.getElementById('toolbar');
-const iconImage = menuContainer.querySelector('img');
-let controller = false;
+const mobileNavButton = document.getElementById('mobile-nav-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const topImg = document.getElementById('top-img');
+const bottomImg = document.getElementById('bottom-img');
+const nav = document.querySelector('nav');
 
-menuContainer.addEventListener('click', () => {
-  if (!controller) {
-    document.querySelector('.desk').style.display = 'flex';
-    document.querySelector('.desk').style.background = '#fff';
-    document.querySelector('.desk').style.position = 'absolute';
-    document.querySelector('.desk').style.width = '100%';
-    document.querySelector('.desk').style.height = '100vh';
-    document.querySelector('.desk').style.top = '0px';
-    document.querySelector('.desk').style.position = 'fixed';
+mobileNavButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.style.display = 'grid';
+        mobileMenu.style.background = '#fff';
+        mobileMenu.style.justifyItems = 'center';
+        mobileMenu.style.width = '110%';
+        mobileMenu.style.height = '93vh';
+        mobileMenu.style.alignItems = 'center';
+        mobileMenu.style.alignContent = 'center';
+        mobileMenu.style.gap = '3rem';
 
-    document.getElementById('toolbar').style.zIndex = '2';
+        // Mostrar las imágenes cuando se abre el menú
+        topImg.style.background = 'url("images/menu_mobile/image_geometry_menu_1.jpg")';
+        topImg.style.display = 'block';
+        topImg.style.position = 'absolute';
+        topImg.style.width = '70vw';
+        topImg.style.height = '30vh';
+        topImg.style.top = '0px';
+        topImg.style.left = '0';
+        topImg.style.backgroundSize = '100%';
+        topImg.style.backgroundRepeat = 'no-repeat';
 
-    document.getElementById('top-img').style.background = 'url("images/menu_mobile/image_geometry_menu_1.jpg")';
-    document.getElementById('top-img').style.position = 'absolute';
-    document.getElementById('top-img').style.width = '70vw';
-    document.getElementById('top-img').style.height = '30vh';
-    document.getElementById('top-img').style.top = '0px';
-    document.getElementById('top-img').style.left = '0';
-    document.getElementById('top-img').style.backgroundSize = '100%';
-    document.getElementById('top-img').style.backgroundRepeat = 'no-repeat';
+        bottomImg.style.background = 'url("images/menu_mobile/image_geometry_menu_2.jpg")';
+        bottomImg.style.display = 'block';
+        bottomImg.style.position = 'absolute';
+        bottomImg.style.width = '100vw';
+        bottomImg.style.height = '220px';
+        bottomImg.style.bottom = '0';
+        bottomImg.style.backgroundSize = '100%';
+        bottomImg.style.backgroundRepeat = 'no-repeat';
+        nav.style.zIndex = '100';
 
-    document.getElementById('bottom-img').style.background = 'url("images/menu_mobile/image_geometry_menu_2.jpg")';
-    document.getElementById('bottom-img').style.position = 'absolute';
-    document.getElementById('bottom-img').style.width = '100vw';
-    document.getElementById('bottom-img').style.height = '220px';
-    document.getElementById('bottom-img').style.bottom = '0';
-    document.getElementById('bottom-img').style.backgroundSize = '100%';
-    document.getElementById('bottom-img').style.backgroundRepeat = 'no-repeat';
+        nav.style.backgroundColor = 'white';
+    } else {
+        mobileMenu.style.backgroundColor = '';
+        mobileMenu.style.display = 'none';
 
-    document.querySelector('.desk ul').style.listStyle = 'none';
-    document.querySelector('.desk ul').style.display = 'flex';
-    document.querySelector('.desk ul').style.flexDirection = 'column';
-    document.querySelector('.desk ul').style.alignItems = 'center';
-    document.querySelectorAll('.menu a').forEach((item) => {
-      item.style.textDecoration = 'none';
-      item.style.color = 'black';
-      item.style.fontWeight = '400px';
-      item.style.size = '2rem';
-      item.style.fontFamily = 'Poppins';
-      item.style.justifyself = 'center';
-    });
-
-    document.querySelectorAll('.menu li').forEach((item) => {
-      item.style.marginBottom = '4rem';
-    });
-
-    document.querySelector('.desk').style.paddingTop = '50%';
-    document.querySelector('.desk').style.justifyContent = 'center';
-    iconImage.src = 'images/cancel.jpg';
-
-    controller = true;
-  } else {
-    iconImage.src = 'images/ic_menu.svg';
-    document.querySelector('.desk').style.display = 'none';
-    controller = false;
-  }
+        // Ocultar las imágenes cuando se cierra el menú
+        topImg.style.display = 'none';
+        bottomImg.style.display = 'none';
+        nav.style.backgroundColor = '';
+    }
 });
 
-const cancel = document.querySelector('.menu');
-const cancela = cancel.querySelectorAll('a');
+const closeMobileMenu = () => {
+  mobileMenu.classList.add('hidden');
+  mobileMenu.style.backgroundColor = '';
+  topImg.style.display = 'none';
+  bottomImg.style.display = 'none';
+  nav.style.backgroundColor = '';
+};
 
-cancela.forEach((a) => {
-  a.addEventListener('click', () => {
-    controller = false;
-    document.querySelector('.desk').style.display = 'none';
-    iconImage.src = 'images/ic_menu.svg';
+const menuLinks = mobileMenu.querySelectorAll('a');
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    // Cierra el menú al hacer clic en un enlace
+    closeMobileMenu();
   });
 });
 
@@ -78,17 +72,16 @@ cancela.forEach((a) => {
 const projectInfo = [
   {
     id: 1,
-    name: 'Bookstore new collection',
-    description: "It's a Books store where you can report how much you read and enjoy every book. <br> Was developed with React + Vite, styled in Modular CSS en tested with Jest, feel free to clic in source to clone my code. ",
-    image: './images/bookstore.png',
+    name: 'WanderPal Tours',
+    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the Front-end and Ruby on Rails in the Back-end, and it offers various functionalities like logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours",
+    image: './images/wanderpal.png',
     alt: 'laptop',
     technologies: [
-      'React + Redux',
-      'HTML/CSS',
-      'Javascript',
+      'React & Redux',
+      'Ruby on Rails',
     ],
-    liveVersion: '#',
-    source: 'https://github.com/Feliverse/BookStoreCMS',
+    liveVersion: 'https://fancy-toffee-1b590d.netlify.app',
+    source: 'https://github.com/danielamoreno699/wanderpal-frontend',
   },
   {
     id: 2,
@@ -100,18 +93,18 @@ const projectInfo = [
       'React + Redux',
       'Javascript',
       'API Rest'],
-    liveVersion: '#',
+    liveVersion: 'https://steady-croquembouche-5dbbee.netlify.app',
     source: 'https://github.com/Feliverse/Space-travel-Hub',
   },
   {
     id: 3,
     name: 'Forex - MetricsWebApp',
-    description: 'Metrics Web App is a tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
+    description: 'Metrics Web App is a Forex tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
     image: './images/metrics.png',
     alt: 'laptop',
-    technologies: ['Jest Test', 'React + Redux', 'API Rest'],
-    liveVersion: '#',
-    source: '#',
+    technologies: ['API Rest', 'React + Redux', 'Jest Test'],
+    liveVersion: 'https://metricswebapp.netlify.app/',
+    source: 'https://github.com/Feliverse/MetricsWebApp',
   },
   {
     id: 4,
@@ -141,49 +134,55 @@ const projectInfo = [
   },
   {
     id: 6,
-    name: 'Math Magicians',
-    description: '**Math Magicians** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
-    image: './images/math.png',
+    name: 'Conference Page',
+    description: 'IDTC2023 Industry 4.0 is a Conference date where people from 20+ countries share experiences about the digital transformation of the industry, The page was built using HTML - CSS & Vanilla JavaScript, and the speakers section is created dynamically.',
+    image: './images/conference.png',
     alt: 'laptop',
     technologies: [
-      'HTML/CSS',
-      'React',
+      'HTML',
+      'CSS',
       'Javascript'],
-    liveVersion: '#',
-    source: '#',
+    liveVersion: 'https://feliverse.github.io/conference-page/',
+    source: 'https://github.com/Feliverse/conference-page',
   },
 ];
 
 // project seccion dynamic Html
 
-const showModal = (projectInfo) => {
+const showModal = (currentIndex) => {
   const myModal = document.getElementById('myMOdal');
   myModal.style.display = 'flex';
-  const modalBody = `<div class="modal-content">
-  <button id="closemodalX" class="close-modal close">&times</button>
-  <h3 class="project-title-modal">${projectInfo.name}</h3>
-  <ul class="card-tech-modal">
-      <li>${projectInfo.technologies[0]}</li>
-      <li>${projectInfo.technologies[1]}</li>
-      <li>${projectInfo.technologies[2]}</li>
-  </ul>
-  <img class="project-image modal-img" src="${projectInfo.image}" alt="${projectInfo.alt}">
-  <p class="project-description">${projectInfo.description}</p>
-  <div class="btns-modal">
-      <button class="btn-modal seeLive"> See live
-        <img class="iconModal" src="./images/Union (8).png">
-      </button>
-      <a ref="${projectInfo.source}">
-        <button class="btn-modal seeSource">See source
-          <img class="iconModal" src="./images/redes sociales/Vector (8).png">
-        </button>
-      </a>
-  </div>
-  <div class="next-prev-proj">
-      <button class="prev-btn"> &larr; Previous project</button>
-      <button class="prev-btn">Next Project &rarr;</button>
-  </div>
-</div>`;
+  
+  const nextIndex = (currentIndex + 1) % projectInfo.length;
+  const prevIndex = (currentIndex - 1 + projectInfo.length) % projectInfo.length;
+
+  const project = projectInfo[currentIndex];
+
+  const modalBody = `
+    <div class="modal-content">
+      <button id="closemodalX" class="close-modal close">&times;</button>
+      <h3 class="project-title-modal">${project.name}</h3>
+      <ul class="card-tech-modal">
+        <li>${project.technologies[0]}</li>
+        <li>${project.technologies[1]}</li>
+        <li>${project.technologies[2]}</li>
+      </ul>
+      <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
+      <p class="project-description">${project.description}</p>
+      <div class="btns-modal">
+        <a href="${project.liveVersion}" target="_blank">
+          <button class="btn-modal seeLive">See live</button>
+        </a>
+        <a href="${project.source}" target="_blank">
+          <button class="btn-modal seeSource">See source</button>
+        </a>
+      </div>
+      <div class="next-prev-proj">
+        <button class="prev-btn" onclick="showModal(${prevIndex})"> &larr; Previous project</button>
+        <button class="prev-btn" onclick="showModal(${nextIndex})">Next Project &rarr;</button>
+      </div>
+    </div>
+  `;
   myModal.innerHTML = modalBody;
 };
 
@@ -222,7 +221,8 @@ projectInfo.forEach((project, index) => {
   gall.appendChild(soloArticle);
   const button = document.getElementById(`btn${projectId}`);
   button.addEventListener('click', () => {
-    showModal(project);
+    const currentIndex = projectInfo.findIndex((project) => project.id === projectId);
+    showModal(currentIndex);
     const closemodalX = document.getElementById('closemodalX');
     closemodalX.addEventListener('click', () => {
       closeModal();

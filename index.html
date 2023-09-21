@@ -11,186 +11,191 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <link rel="icon" href="./images/icon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav id="toolbar">
-      <img src="images/ic_menu.svg" alt="Menu" id="mobile-nav">
+    <nav id="main-menu" class="p-6 w-full z-50 shadow-md flex justify-center items-center">
+      <!-- Botón de hamburger -->
+      <div id="toolbar" class="md:hidden">
+        <img src="images/ic_menu.svg" alt="Menu" id="mobile-nav-button">
+      </div>
+      <div id="top-img" class="img-mobile-container"></div>
+      <div id="bottom-img" class="img-mobile-container"></div>
+      <div id="mobile-menu" class="hidden md:flex md:items-center md:justify-center">
+        <a href="#hello" class="hover:text-gray-300 text-lg mt-2 mx-2">Hello</a>
+        <a href="#projects" class="hover:text-gray-300 text-lg mt-2 mx-2">Portfolio</a>
+        <a href="#about" class="hover:text-gray-300 text-lg mt-2 mx-2">About</a>
+        <a href="#contact" class="hover:text-gray-300 text-lg mt-2 mx-2">Contact</a>
+      </div>
     </nav>
   </header>
+  
+  <div></div>
+  <div class="one-screen">
+    <section class="hello" id="hello">
+      <div class="hello-text">
+        <header>
+          <h1 class="name">Felipe Haybar</h1>
+        </header>
+        <p class="headline">Hello! I am a Full-stack web developer! I can help you build a product, feature, or
+          website.
+          Take a look at my work
 
-  <!-- descktop version -->
-
-  <header class="desk">
-    <div id="top-img" class="img-mobile-container"></div>
-    <div id="bottom-img" class="img-mobile-container"></div>
-    <nav class="menu">
-      <ul>
-        <li class="menues"><a href="#toolbar">Hello</a></li>
-        <li class="menues"><a href="#projects">Portfolio</a></li>
-        <li class="menues"><a href="#about">About</a></li>
-        <li class="menues"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hello" id="hello">
-    <div class="hello-text">
-      <header>
-        <h1 class="name">Felipe Haybar</h1>
-      </header>
-      <p class="headline">Hello! I am a Full-stack web developer! I can help you build a product, feature, or website.
-        Take a look at my work
-
-        <br><br>If you like what you see and have a project you need coded, don’t hesitate and contact me.
-      </p>
-      <a href="#contact">
-        <button class="blackBoton">
-          Start collaboration
-        </button>
-      </a>
-    </div>
-    <div class="imagebox"></div>
-    <div class="bigimage"></div>
-  </section>
-  <!-- project section -->
-  <section class="Projects" id="projects">
-    <div class="gallery" id="gallery">
-      <h2 class="project-title card1">Projects</h2>
-      <div class="caja1-1 card"></div>
-      <div class="card card-back2"></div>
-      <div class="card card-back3"></div>
-      <div class="card card-back4"></div>
-    </div>
-  </section>
-
-  <!-- Modal popup -->
-  <section class="modal-container modal" id="myMOdal">
-
-  </section>
-
-
-  <!-- about section -->
-
-  <section class="about" id="about">
-    <div class="about-cont">
-
-      <div class="about-head">
-        <h2>About</h2>
-
-        <p class="textAbout">I am a Full-stack web developer with 2+ years of experience in Ruby on Rails in the backend and React in the front end.
-          I am writing clean, testable, secure, and dynamic codes based on standard web development best practices.</p>
-
-        <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+          <br><br>If you like what you see and have a project you need coded, don’t hesitate and contact me.
+        </p>
+        <a href="#contact">
           <button class="blackBoton">
-            Get my CV &nbsp &#8690
+            Start collaboration
           </button>
         </a>
       </div>
-      <div class="boxL">
-        <ul class="Box lan">
-          <h4>Languages</h4>
-          <li class="inBox">JavaScript</li>
-          <li class="inBox">Ruby</li>
-          <li class="inBox">HTML</li>
-          <li class="inBox">CSS</li>
-          <li class="inBox">SQL</li>
-        </ul>
-
-        <ul class="Box fra">
-          <h4>Libraries & Frameworks</h4>
-          <li class="inBox">Ruby on rails</li>
-          <li class="inBox">React & Redux</li>
-          <li class="inBox">RSpec</li>
-          <li class="inBox">Bootstrap</li>
-          <li class="inBox">PostgreSQL</li>
-        </ul>
-
-        <ul class="Box ski">
-          <h4>Developer tools and Skills</h4>
-          <li class="inBox">Git</li>
-          <li class="inBox">GitHub</li>
-          <li class="inBox">Ubuntu</li>
-          <li class="inBox">Agile</li>
-          <li class="inBox">Kanban</li>
-        </ul>
-        <div class="Box image-about"></div>
+      <div class="imagebox"></div>
+      <div class="bigimage"></div>
+    </section>
+    <!-- project section -->
+    <section class="Projects" id="projects">
+      <div class="gallery" id="gallery">
+        <h2 class="project-title name card1">Projects</h2>
+        <div class="caja1-1 card"></div>
+        <div class="card card-back2"></div>
+        <div class="card card-back3"></div>
+        <div class="card card-back4"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- form section  -->
+    <!-- Modal popup -->
+    <section class="modal-container modal" id="myMOdal">
 
-  <section class="formulary" id="contact">
-    <div class="space"></div>
-    <div class="cont-form">
-      <div class="form-header">
-        <h2 class="getStar">Get started</h2>
-        <p class="textAbout">I will work with you to discover what you need and create the best solution. My priorities are delivering quality work and respect for deadlines. I love to share my enthusiasm and passion for design, so feel free to contact me.</p>
-      </div>
-      <form class="b" action="https://formspree.io/f/xnqrlgak" method="post">
-        <div class="boxForm">
-          <label class="form-name" for="name">
-            Your name
-            <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
-          </label>
-          <label class="form-name" for="email">
-            <div class="alert">
-              <p>Your email</p>
-              <p class="error-message">Ups, use only lower case</p>
-            </div>
-            <input class="form-name-contend" type="email" id="email" name="user_email" required>
-          </label>
-          <label class="form-name-text">
-            <textarea id="textform" class="form-text" name="user_message" placeholder="Enter your message here..."
-              maxlength="500" required></textarea>
-          </label>
+    </section>
+
+
+    <!-- about section -->
+
+    <section class="about" id="about">
+      <div class="about-cont">
+
+        <div class="about-head">
+          <h2 class="section-title">About</h2>
+
+          <p class="textAbout">I am a Full-stack web developer with 2+ years of experience in Ruby on Rails in the
+            backend
+            and React in the front end.
+            I am writing clean, testable, secure, and dynamic codes based on standard web development best practices.
+          </p>
+
+          <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+            <button class="blackBoton">
+              Get my CV &nbsp &#8690
+            </button>
+          </a>
         </div>
+        <div class="boxL">
+          <ul class="Box lan">
+            <h4>Languages</h4>
+            <li class="inBox">JavaScript</li>
+            <li class="inBox">Ruby</li>
+            <li class="inBox">HTML</li>
+            <li class="inBox">CSS</li>
+            <li class="inBox">SQL</li>
+          </ul>
 
-        <div class="button botonform">
-          <button class="blackBoton textBoton" type="submit">
-            Star collaboration
+          <ul class="Box fra">
+            <h4>Libraries & Frameworks</h4>
+            <li class="inBox">Ruby on rails</li>
+            <li class="inBox">React & Redux</li>
+            <li class="inBox">RSpec</li>
+            <li class="inBox">Bootstrap</li>
+            <li class="inBox">PostgreSQL</li>
+          </ul>
+
+          <ul class="Box ski">
+            <h4>Developer tools and Skills</h4>
+            <li class="inBox">Git</li>
+            <li class="inBox">GitHub</li>
+            <li class="inBox">Ubuntu</li>
+            <li class="inBox">Agile</li>
+            <li class="inBox">Kanban</li>
+          </ul>
+          <div class="Box image-about"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form section  -->
+
+    <section class="formulary" id="contact">
+      <div class="space"></div>
+      <div class="cont-form">
+        <div class="form-header">
+          <h2 class="getStar">Get started</h2>
+          <p class="textAbout">I will work with you to discover what you need and create the best solution. My
+            priorities
+            are delivering quality work and respect for deadlines. I love to share my enthusiasm and passion for
+            design,
+            so feel free to contact me.</p>
+        </div>
+        <form class="b" action="https://formspree.io/f/xnqrlgak" method="post">
+          <div class="boxForm">
+            <label class="form-name" for="name">
+              Your name
+              <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
+            </label>
+            <label class="form-name" for="email">
+              <div class="alert">
+                <p>Your email</p>
+                <p class="error-message">Ups, use only lower case</p>
+              </div>
+              <input class="form-name-contend" type="email" id="email" name="user_email" required>
+            </label>
+            <label class="form-name-text">
+              <textarea id="textform" class="form-text" name="user_message" placeholder="Enter your message here..."
+                maxlength="500" required></textarea>
+            </label>
+          </div>
+
+          <div class="button botonform">
+            <button class="blackBoton textBoton" type="submit">
+              Star collaboration
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!--footer section-->
+
+    <footer class="contenfoo">
+      <div>
+        <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+          <button class="fotter-resume">
+            Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png" alt="Top right arrow">
           </button>
-        </div>
-
-      </form>
-    </div>
-  </section>
-
-  <!--footer section-->
-
-  <footer class="contenfoo">
-    <div>
-      <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
-        <button class="fotter-resume">
-          Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png" alt="Top right arrow">
-        </button>
-      </a>
-    </div>
-    <div>
-      <ul class="rsFooter">
-        <a href="https://github.com/Feliverse">
-          <li class="rrss"><img src="images/redes sociales/Vector (3).png" alt="GitHUB link">
-        </a> </li></a>
-        <a href="https://twitter.com/FelipeHaybar">
-          <li class="rrss"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></li>
         </a>
-        <a href="https://www.linkedin.com/in/felipehaybar/">
-          <li class="rrss"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></li>
-        </a>
-        <a href="https://medium.com/@haybar">
-          <li class="rrss"><img src="images/redes sociales/Vector (6).png" alt="M link"></li>
-        </a>
-        <a href="https://wellfound.com/u/felipe-haybar">
-          <li class="rrss"><img src="images/redes sociales/Vector (7).png" alt="AngelList link"></li>
-        </a>
-      </ul>
-    </div>
-  </footer>
-
-  </section>
-
+      </div>
+      <div>
+        <ul class="rsFooter">
+          <a href="https://github.com/Feliverse">
+            <li class="rrss"><img src="images/redes sociales/Vector (3).png" alt="GitHUB link">
+          </a> </li></a>
+          <a href="https://twitter.com/FelipeHaybar">
+            <li class="rrss"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></li>
+          </a>
+          <a href="https://www.linkedin.com/in/felipehaybar/">
+            <li class="rrss"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></li>
+          </a>
+          <a href="https://medium.com/@haybar">
+            <li class="rrss"><img src="images/redes sociales/Vector (6).png" alt="M link"></li>
+          </a>
+          <a href="https://wellfound.com/u/felipe-haybar">
+            <li class="rrss"><img src="images/redes sociales/Vector (7).png" alt="AngelList link"></li>
+          </a>
+        </ul>
+      </div>
+    </footer>
+  </div>
   <script src="index.js"></script>
 </body>
 

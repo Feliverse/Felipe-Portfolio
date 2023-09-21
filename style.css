@@ -15,7 +15,6 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 16px;
-  padding-right: 16px;
   position: fixed;
   right: 0;
   top: 0;
@@ -25,7 +24,18 @@ body {
   font-size: 21px;
 }
 
-.desk,
+.mobile-menu-active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para oscurecer el contenido detrás del menú */
+  z-index: 999; /* Asegura que el menú esté por encima del contenido */
+  overflow: hidden; /* Evita que el contenido detrás del menú sea desplazable */
+}
+
 .bigmage,
 .form-name-message p {
   display: none;
@@ -88,7 +98,7 @@ body {
   width: 100vw;
 }
 
-h2 {
+.section-title {
   font-family: 'Playfair Display', serif;
   font-size: 3.5em;
   font-weight: 400;
@@ -522,6 +532,10 @@ label {
 
 @media only screen and (min-width: 768px) {
 
+  /* .one-screen {
+    padding-top: 5rem;
+  } */
+
   /* Header change nav  */
   .img-mobile-container {
     display: none;
@@ -529,10 +543,6 @@ label {
 
   #toolbar {
     display: none;
-  }
-
-  body {
-    background: #fff;
   }
 
   .imagebox,
@@ -544,6 +554,17 @@ label {
     font-size: 1.3rem;
   }
 
+  #mobile-menu {
+    display: flex;
+    
+  }
+
+  #top-img,
+  #bottom-img {
+    /* Estilos para las imágenes en pantalla pequeña */
+    width: 100%;
+    height: auto;
+}
   .desk {
     display: block;
     border-bottom: 1px solid #dddfe6;
@@ -655,7 +676,7 @@ label {
   }
 
   .card2 .pData h3 {
-    font-weight: 700;
+    font-weight: 00;
     font-size: 25px;
   }
 
@@ -688,6 +709,7 @@ label {
   }
 
   .caja1-1 {
+    font-family: 'Playfair Display', serif;
     grid-column: 1;
     grid-row: 1;
     background-image: url(images/project/image_dots.png);
@@ -928,7 +950,7 @@ label {
     zoom: 70%;
   }
 
-  h2 {
+  .section-title {
     font-size: 5em;
   }
 
@@ -1091,7 +1113,7 @@ label {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px)  {
   .about {
     zoom: 100%;
   }
@@ -1106,7 +1128,7 @@ label {
   }
 
   .card2 .pData {
-    zoom: 2;
+    zoom: 2.5;
   }
 
   .card4 .pData {

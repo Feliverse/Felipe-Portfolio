@@ -73,7 +73,7 @@ const projectInfo = [
   {
     id: 1,
     name: 'WanderPal Tours',
-    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the Front-end and Ruby on Rails in the Back-end, and it offers various functionalities like logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours",
+    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the front-end and Ruby on Rails in the back-end. It offers various functionalities, such as logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours.",
     image: './images/wanderpal.png',
     alt: 'laptop',
     technologies: [
@@ -86,7 +86,7 @@ const projectInfo = [
   {
     id: 2,
     name: "Space Travelers' Hub",
-    description: "Space Travel Hub's is a Web page developed with React and Redux, in the page you can reserve a rocket and choise a mission.",
+    description: "Space Travel Hub is a web page developed with React and Redux. On the page, you can reserve a rocket and choose a mission.",
     image: './images/space.png',
     alt: 'laptop',
     technologies: [
@@ -99,7 +99,7 @@ const projectInfo = [
   {
     id: 3,
     name: 'Forex - MetricsWebApp',
-    description: 'Metrics Web App is a Forex tool created using React where you can view the official currencies, cryptocurrencies, majors and other financial metrics. Enjoy it. <br> 🛠 Built With React & Redux, tested with Jest, styled in Modular CSS',
+    description: "Metrics Web App is a Forex tool created using React, where you can view the official currencies, cryptocurrencies, majors, and other financial metrics. Enjoy it. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
     image: './images/metrics.png',
     alt: 'laptop',
     technologies: ['API Rest', 'React + Redux', 'Jest Test'],
@@ -109,7 +109,7 @@ const projectInfo = [
   {
     id: 4,
     name: 'Todo List',
-    description: 'To Do List, is a tool created using webpack where you register tasks to do day by day',
+    description: 'To-Do List is a tool created using Webpack where you can register tasks to be done day by day.',
     image: './images/Todo list.png',
     alt: 'laptop',
     technologies: [
@@ -122,7 +122,7 @@ const projectInfo = [
   {
     id: 5,
     name: "Today's Movies and Series",
-    description: 'The JavaScript capstone project is about building our own web application based on two external APIs. First, we retrieve movies and TV Series from the TVmaze API and then record user interactions (likes and comments) using the Involvement API.',
+    description: 'The JavaScript capstone project involves building our web application based on two external APIs. Initially, we retrieve movies and TV series data from the TVmaze API and subsequently record user interactions, such as likes and comments, using the Involvement API.',
     image: './images/movies.png',
     alt: 'laptop',
     technologies: [
@@ -135,7 +135,7 @@ const projectInfo = [
   {
     id: 6,
     name: 'Conference Page',
-    description: 'IDTC2023 Industry 4.0 is a Conference date where people from 20+ countries share experiences about the digital transformation of the industry, The page was built using HTML - CSS & Vanilla JavaScript, and the speakers section is created dynamically.',
+    description: "IDTC2023 Industry 4.0 is a conference where people from 20+ countries come together to share experiences about the digital transformation of the industry. The webpage was built using HTML, CSS, and Vanilla JavaScript, and the speakers' section is generated dynamically.",
     image: './images/conference.png',
     alt: 'laptop',
     technologies: [

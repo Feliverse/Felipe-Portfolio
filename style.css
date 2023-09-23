@@ -120,7 +120,7 @@ body {
 .pData {
   width: 100%;
   height: 156px;
-  background: #1a2236d0;
+  background: #1a2236f6;
   padding-left: 16px;
   bottom: 0;
 }
@@ -205,12 +205,12 @@ h3 {
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
-  margin-top: 50px;
 }
 
 .modal-img {
-  width: 100%;
-  margin: 15px;
+  width: 70%; /* Ajusta el porcentaje de acuerdo a tus necesidades */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .modal-container {
@@ -397,8 +397,6 @@ button:active {
 
 .space {
   height: 106px;
-
-  /* border: #1a2236 dotted 1px; */
 }
 
 .cont-form {
@@ -839,7 +837,7 @@ label {
   /* Modal POPUP */
 
   .modal-container {
-    border: 40px solid #1a2236;
+    border: 140px solid #1a2236;
     display: none;
     flex-direction: row;
     gap: 10px;
@@ -853,7 +851,7 @@ label {
   }
 
   .modal-content {
-    padding: 40px;
+    padding: 1%;
   }
 
   .close-modal {
@@ -869,6 +867,7 @@ label {
     font-size: 60px;
     line-height: 1.5;
     padding: 0;
+    max-width: 80;
   }
 
   .project-description {

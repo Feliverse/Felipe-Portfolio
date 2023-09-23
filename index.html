@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Felipe Haybar Dev</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="navStyles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
@@ -15,23 +16,26 @@
 </head>
 
 <body>
-  <header>
-    <nav id="main-menu" class="sticky top-0 p-6 w-full z-50 shadow-md flex justify-center items-center">
-      <!-- Botón de hamburger -->
-      <div id="toolbar" class="md:hidden">
-        <img src="images/ic_menu.svg" alt="Menu" id="mobile-nav-button">
-      </div>
-      <div id="top-img" class="img-mobile-container"></div>
-      <div id="bottom-img" class="img-mobile-container"></div>
-      <div id="mobile-menu" class="hidden md:flex md:items-center md:justify-center">
-        <a href="#hello" class="hover:text-gray-300 text-lg mt-2 mx-2">Hello</a>
-        <a href="#projects" class="hover:text-gray-300 text-lg mt-2 mx-2">Portfolio</a>
-        <a href="#about" class="hover:text-gray-300 text-lg mt-2 mx-2">About</a>
-        <a href="#contact" class="hover:text-gray-300 text-lg mt-2 mx-2">Contact</a>
-      </div>
-    </nav>
-  </header>
-  
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="#hello">Hello</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
   <div></div>
   <div class="one-screen">
     <section class="hello" id="hello">
@@ -79,10 +83,15 @@
         <div class="about-head">
           <h2 class="section-title">About</h2>
 
-          <p class="textAbout">I am a Full-stack web developer with 2+ years of experience in Ruby on Rails in the backend and React in the front end. 
-            <br><br>I excel in writing clean, testable, secure, and dynamic code based on standard web development best practices. 
-            <br><br>My strong communication and collaboration skills make me an effective team player, and I am dedicated to continuous learning, ensuring I stay updated with the latest industry trends and technologies. 
-            <br><br>Additionally, my problem-solving mindset and attention to detail contribute to the successful completion of projects and delivering high-quality web solutions</p>
+          <p class="textAbout">I am a Full-stack web developer with 2+ years of experience in Ruby on Rails in the
+            backend and React in the front end.
+            <br><br>I excel in writing clean, testable, secure, and dynamic code based on standard web development best
+            practices.
+            <br><br>My strong communication and collaboration skills make me an effective team player, and I am
+            dedicated to continuous learning, ensuring I stay updated with the latest industry trends and technologies.
+            <br><br>Additionally, my problem-solving mindset and attention to detail contribute to the successful
+            completion of projects and delivering high-quality web solutions
+          </p>
 
           <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
             <button class="blackBoton">
@@ -195,6 +204,7 @@
       </div>
     </footer>
   </div>
+  <script src="navScript.js"></script>
   <script src="index.js"></script>
 </body>
 

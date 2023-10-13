@@ -187,14 +187,14 @@ h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 120%;
 }
 
 .modal-img {
-  width: 70%; /* Ajusta el porcentaje de acuerdo a tus necesidades */
-    margin-top: 30px;
-    margin-bottom: 30px;
+  width: 70%;
+  /* Ajusta el porcentaje de acuerdo a tus necesidades */
+  margin: 30px auto;
 }
 
 .modal-container {
@@ -243,6 +243,7 @@ h3 {
 .btns-modal {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .btn-modal {
@@ -558,7 +559,7 @@ label {
     color: #1a2236;
   }
 
-/* hello section */
+  /* hello section */
 
   .hello {
     display: grid;
@@ -837,7 +838,7 @@ label {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 2rem;
     line-height: 1.5;
     padding: 0;
     max-width: 80;
@@ -867,9 +868,8 @@ label {
   }
 
   .modal-img {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 50%;
+    margin: 30px auto;
   }
 
   .btns-modal {
@@ -1085,7 +1085,7 @@ label {
   }
 }
 
-@media only screen and (min-width: 992px)  {
+@media only screen and (min-width: 992px) {
   .about {
     zoom: 100%;
   }
@@ -1124,8 +1124,8 @@ label {
   }
 
   .fotter-resume:hover {
-    background-color:#1a2236;
-    color:#92dcdc;
+    background-color: #1a2236;
+    color: #92dcdc;
     text-decoration: underline 4px;
   }
 }

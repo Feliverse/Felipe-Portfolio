@@ -7,6 +7,10 @@ body {
   font-family: 'segoe ui';
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .nav {
   height: 75px;
   width: 100%;

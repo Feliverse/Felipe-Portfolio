@@ -7,10 +7,6 @@ body {
   font-family: 'segoe ui';
 }
 
-.mobile-nav {
-  display: none;
-}
-
 .nav {
   height: 75px;
   width: 100%;
@@ -27,7 +23,7 @@ body {
   display: inline-block;
   font-size: 22px;
   color: #ac1616;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 
 .nav > .nav-btn {
@@ -46,10 +42,12 @@ body {
   padding: 13px 10px 13px 10px;
   text-decoration: none;
   color: #151329;
+  font-size: 2rem;
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(145, 32, 32, 0.3);
+  background-color: rgba(227, 80, 80, 0.897);
+  color: #fff;
 }
 
 .nav > #nav-check {
@@ -57,6 +55,11 @@ body {
 }
 
 @media (max-width:600px) {
+  .nav {
+    position: fixed;
+    height: 50px;
+  }
+  
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -68,9 +71,11 @@ body {
     width: 50px;
     height: 50px;
     padding: 13px;
+    margin-right: 23px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 153, 0, 0.545);
+    border-radius: 0;
   }
   .nav > .nav-btn > label > span {
     display: block;
@@ -84,7 +89,7 @@ body {
     flex-direction: column;
     width: 100%;
     background-color: #ffffff;
-    height: 0px;
+    height: calc(120%+50px);
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 50px;

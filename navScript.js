@@ -19,30 +19,14 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const navCheck = document.getElementById("nav-check");
   const navLinks = document.querySelectorAll(".nav-links a");
+  const navBtn = document.querySelector(".nav-btn label");
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 600) {
         navCheck.checked = false;
+        navBtn.classList.remove("active");
       }
     });
   });
 });
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navCheck = document.getElementById("nav-check");
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const navBtn = document.querySelector(".nav-btn label");
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        if (window.innerWidth <= 600) {
-          navCheck.checked = false;
-          // Add a class to style the hamburger icon when the nav menu is open
-          navBtn.classList.remove("active");
-        }
-      });
-    });
-  });
-</script>

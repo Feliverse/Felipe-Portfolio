@@ -513,6 +513,20 @@ label {
   border: none;
 }
 
+.fotter-resume {
+  background-color: transparent;
+  color: #98dede;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.fotter-resume:hover {
+  background-color: #1a2236;
+  color: #92dcdc;
+  text-decoration: underline 4px;
+}
+
 @media only screen and (min-width: 768px) {
   .img-mobile-container {
     display: none;
@@ -1039,6 +1053,7 @@ label {
     line-height: 48px;
     border: 1px solid #e0e0e0;
     padding: 0 16px;
+    color: #1a2236;
   }
 
   .form-name-message {
@@ -1113,19 +1128,5 @@ label {
 
   .cont-form {
     zoom: 1;
-  }
-
-  .fotter-resume {
-    background-color: transparent;
-    color: #98dede;
-    border: none;
-    display: flex;
-    align-items: center;
-  }
-
-  .fotter-resume:hover {
-    background-color: #1a2236;
-    color: #92dcdc;
-    text-decoration: underline 4px;
   }
 }

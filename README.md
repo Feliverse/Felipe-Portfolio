@@ -175,6 +175,6 @@ I would like to thank to my code partners who inspared me to do a better code.
 
 ## 📝 License <a name="license"></a>
 
-This project is [Felipe Haybar] (MIT) licensed.
+This project is [Felipe Haybar](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

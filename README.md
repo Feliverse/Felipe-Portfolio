@@ -175,8 +175,6 @@ I would like to thank to my code partners who inspared me to do a better code.
 
 ## 📝 License <a name="license"></a>
 
-This project is Felipe Haybar licensed.
-
-_NOTE: we recommend using the Felipe Haybar (https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use MicroverseInc(https://choosealicense.com/licenses/) if you wish._
+This project is [Felipe Haybar] (MIT) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -101,6 +101,8 @@ const showModal = (currentIndex) => {
       </ul>
       <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
       <p class="project-description">${project.description}</p>
+
+      
       <div class="btns-modal">
         <a href="${project.liveVersion}" target="_blank">
           <button class="btn-modal seeLive">See live</button>

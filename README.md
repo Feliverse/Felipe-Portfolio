@@ -24,10 +24,10 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="images/project/image-geometry_3.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Feliverse Porfolio</b></h3>
+  <h3><b>Feliverse Portfolio</b></h3>
 
 </div>
 
@@ -59,9 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Felipe Portfolio <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**Felipe Portfolio** is a responsive webpage who can open in mobile and desktop too.
+**Felipe Portfolio** is a responsive webpage that can open on mobile and desktop too, and shows you a collection of the best developments created for Felipe Haybar, using Ruby on Rails, React, CSS, HTML, and other technologies.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -84,8 +82,6 @@ HTML5  CSS3 JavaScript
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://feliverse.github.io/Felipe-Portfolio/#)
 - [Video Presentation Link](https://www.loom.com/share/bfc5c15b71f74e70aa311af2bf8c5001)
@@ -128,13 +124,11 @@ Clone this repository to your desired folder:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Felipe Haybar**
 
 - GitHub: [@Feliverse](https://github.com/Feliverse)
 - Twitter: [@FelipeHaybar](https://twitter.com/FelipeHaybar)
-- LinkedIn: [felipehaybar](https://linkedin.com/in/felipehaybar)
+- LinkedIn: [felipehaybar](https://linkedin.com/in/haybar)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,11 +136,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **projects**
-- [ ] **about section**
-- [ ] **formulary**
+- [ ] implement Tailwind
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,8 +163,6 @@ If you like this project bring me a star in GitHub
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank to my code partners who inspared me to do a better code.
 

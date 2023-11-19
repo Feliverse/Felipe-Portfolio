@@ -231,14 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
     interval: 200
   });
 
-  ScrollReveal().reveal('.Box', {
-    delay: 300,
-    distance: '120px',
-    origin: '',
-    duration: 800,
-    easing: 'cubic-bezier(0.5, 0, 0, 1)',
-    interval: 200
-  });
+
 
   ScrollReveal().reveal('.formulary', {
     delay: 300,

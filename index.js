@@ -211,3 +211,51 @@ if (JSON.parse(localStorage.getItem('name')) !== null) {
   emailInput.setAttribute('value', localData.email);
   messageInput.value = localData.message;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  ScrollReveal().reveal('.hello-text', {
+    delay: 300,
+    distance: '120px',
+    origin: 'left',
+    duration: 800,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+  });
+
+  ScrollReveal().reveal('.card', {
+    delay: 300,
+    distance: '40px',
+    origin: '',
+    duration: 800,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+  });
+
+  ScrollReveal().reveal('.Box', {
+    delay: 300,
+    distance: '120px',
+    origin: '',
+    duration: 800,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+  });
+
+  ScrollReveal().reveal('.formulary', {
+    delay: 300,
+    distance: '20px',
+    origin: 'bottom',
+    duration: 800,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+  });
+
+  ScrollReveal().reveal('.bigimage', {
+    delay: 300,
+    distance: '120px',
+    origin: 'right',
+    duration: 800,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+  });
+});
+

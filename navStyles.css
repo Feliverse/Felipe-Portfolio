@@ -8,11 +8,11 @@ body {
 }
 
 .nav {
-  height: 75px;
+  height: 65px;
   width: 100%;
-  background-color: #fff;
   padding: 10px;
   position: relative;
+  background: linear-gradient(to right, transparent, white, transparent);
 }
 
 .nav > .nav-header {
@@ -41,8 +41,8 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #151329;
-  font-size: 2rem;
+  color: #000000;
+  font-size: 1.rem;
 }
 
 .nav > .nav-links > a:hover {

@@ -5,7 +5,7 @@ const projectInfo = [
   {
     id: 1,
     name: 'WanderPal Tours',
-    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the front-end and Ruby on Rails in the back-end. It offers various functionalities, such as logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours.",
+    description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the front-end and Ruby on Rails in the back-end. It offers various functionalities, such as logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours. <br> 🛠 Built with React & Redux, Ruby on Rails tested with Jest, styled with Modular CSS",
     image: './images/wanderpal.png',
     alt: 'laptop',
     technologies: [
@@ -16,9 +16,9 @@ const projectInfo = [
     source: 'https://github.com/danielamoreno699/wanderpal-frontend',
   },
   {
-    id: 2,
+    id: 6,
     name: "Space Travelers' Hub",
-    description: "Space Travel Hub is a web page developed with React and Redux. On the page, you can reserve a rocket and choose a mission.",
+    description: "Space Travel Hub is a web page developed with React and Redux. On the page, you can reserve a rocket and choose a mission. Was built using React and Redux, tested with Jest, styled with Modular CSS. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
     image: './images/space.png',
     alt: 'laptop',
     technologies: [
@@ -41,7 +41,7 @@ const projectInfo = [
   {
     id: 4,
     name: 'Todo List',
-    description: 'To-Do List is a tool created using Webpack where you can register tasks to be done day by day.',
+    description: 'To-Do List is a tool created using Webpack where you can register tasks to be done day by day. We can add, delete, and mark tasks as done. was built using HTML, CSS, and Vanilla JavaScript. my first project using Webpack.',
     image: './images/Todo list.png',
     alt: 'laptop',
     technologies: [
@@ -65,7 +65,7 @@ const projectInfo = [
     source: 'https://github.com/miltonHenschel/JavaScript-Capston-Project',
   },
   {
-    id: 6,
+    id: 2,
     name: 'Conference Page',
     description: "IDTC2023 Industry 4.0 is a conference where people from 20+ countries come together to share experiences about the digital transformation of the industry. The webpage was built using HTML, CSS, and Vanilla JavaScript, and the speakers' section is generated dynamically.",
     image: './images/conference.png',
@@ -99,21 +99,25 @@ const showModal = (currentIndex) => {
         <li>${project.technologies[1]}</li>
         <li>${project.technologies[2]}</li>
       </ul>
-      <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
-      <p class="project-description">${project.description}</p>
-
-      
-      <div class="btns-modal">
-        <a href="${project.liveVersion}" target="_blank">
-          <button class="btn-modal seeLive">See live</button>
-        </a>
-        <a href="${project.source}" target="_blank">
-          <button class="btn-modal seeSource">See source</button>
-        </a>
+      <div class="flex flex-row">
+      <button class="prev-btn" onclick="showModal(${prevIndex})"> &#10096;</button>
+        <div>
+          <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
+          <p class="project-description">${project.description}</p>
+        </div>      
+        <div class="btns-modal">
+          <a href="${project.liveVersion}" target="_blank">
+            <button class="btn-modal seeLive">&#9965; See live </button>
+          </a>
+          <a href="${project.source}" target="_blank">
+            <button class="btn-modal seeSource">&#11027; See source </button>
+          </a>
+        </div>
+        <button class="prev-btn" onclick="showModal(${nextIndex})">&#10097;</button>
       </div>
       <div class="next-prev-proj">
-        <button class="prev-btn" onclick="showModal(${prevIndex})"> &larr; Previous project</button>
-        <button class="prev-btn" onclick="showModal(${nextIndex})">Next Project &rarr;</button>
+        
+        
       </div>
     </div>
   `;

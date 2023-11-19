@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
     delay: 300,
     distance: '120px',
     origin: 'left',
-    duration: 800,
+    duration: 1800,
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
     interval: 200
   });
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
     delay: 300,
     distance: '40px',
     origin: '',
-    duration: 800,
+    duration: 400,
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
     interval: 200
   });

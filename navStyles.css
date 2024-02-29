@@ -13,6 +13,7 @@ body {
   padding: 10px;
   position: relative;
   background: linear-gradient(to right, transparent, white, transparent);
+  z-index: 100;
 }
 
 .nav > .nav-header {

@@ -9,6 +9,7 @@
 body {
   background-image: url(images/image_geometry_1.png);
   background-repeat: no-repeat;
+  background-size: 15vh
 }
 
 #toolbar {
@@ -313,14 +314,14 @@ h3 {
 }
 
 .lan {
-  background: #1c528c;
+  background: #0989b1;
   background-image: url("./images/lfs/hast.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
 
 .fra {
-  background-color: #e2505c;
+  background-color:  #8ab833;
   background-image: url("images/lfs/cuadrado.png");
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -328,7 +329,7 @@ h3 {
 }
 
 .ski {
-  background-color: #febf52;
+  background-color: #c0cf3a;
   background-image: url("images/lfs/foco.png");
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -376,6 +377,7 @@ button:active {
   background: #f9f9fa;
   background-image: url(images/image_geometry_1.png);
   background-repeat: no-repeat;
+  background-size: 10vh;
   padding: 1px;
   height: calc(100vh - 145px);
 }
@@ -800,7 +802,7 @@ label {
       url(images/project/image-geometry_5.png);
     background-repeat: no-repeat;
     background-position: top right, top left;
-    zoom: 110%;
+    background-size: 13vh, 30vh;
     height: 100%;
   }
 
@@ -965,12 +967,11 @@ label {
 
   .image-about {
     display: block;
-    background: #f0f0f0;
+    background: #fdfef4;
     background-image: url("./images/lfs/about/image_dots_with_teal.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    transform: scaleX(-1);
-    background-position: bottom right;    
+    background-size:cover;
+    background-position: center;    
   }
 
   .Box {

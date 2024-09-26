@@ -27,9 +27,5 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
-  },
-  "dependencies": {
-    "postcss": "^8.1.0",
-    "tailwindcss": "^3.3.3"
   }
 }

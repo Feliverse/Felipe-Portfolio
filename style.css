@@ -413,7 +413,7 @@ button:active {
   font-size: 10px;
   padding-left: 16px;
   padding-top: 4px;
-  color: darkgray;
+  color: #000000;
 }
 
 .alert {
@@ -458,6 +458,30 @@ button:active {
   max-width: 400px;
   padding-left: 16px;
   padding-top: 8px;
+}
+
+input[type="email"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+}
+
+input {
+  font-size: 1rem;
+  color: #1a2236;
+}	
+
+input[type="email"] {
+  background-color: #fff !important;
+}
+
+input:focus {
+  outline: none;
+  color: #1a2236;
+  font-size: 1rem;
+}
+
+input:-internal-autofill-selected {
+  background-color: #fff;
 }
 
 label {
@@ -1095,7 +1119,7 @@ label {
   }
 
   label.form-name-contend:focus {
-    border: #1a2236 2px solid;
+    border: none;
   }
 }
 

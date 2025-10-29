@@ -2,18 +2,32 @@
   box-sizing: border-box;
 }
 
+:root{
+  --nav-bg: rgba(10,10,35,0.55);
+  --nav-accent: #7A00FF;
+  --nav-accent-2: #00CFFF;
+  --nav-cta: #FF2D95;
+  --nav-text: rgba(238,246,255,0.95);
+}
+
 body {
   margin: 0px;
-  font-family: 'segoe ui';
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial;
 }
 
 .nav {
-  height: 65px;
+  height: 64px;
   width: 100%;
-  padding: 10px;
+  padding: 8px 20px;
   position: relative;
-  background: linear-gradient(to right, transparent, white, transparent);
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index: 200;
 }
 
 .nav > .nav-header {
@@ -22,9 +36,10 @@ body {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 22px;
-  color: #ac1616;
-  padding: 10px;
+  font-size: 20px;
+  color: var(--nav-text);
+  padding: 6px 8px;
+  font-weight: 700;
 }
 
 .nav > .nav-btn {
@@ -40,15 +55,32 @@ body {
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 10px 14px;
   text-decoration: none;
-  color: #000000;
-  font-size: 1.rem;
+  color: var(--nav-text);
+  position: relative;
+  transition: color 160ms ease, transform 160ms ease;
 }
-
-.nav > .nav-links > a:hover {
-  background-color: rgba(227, 80, 80, 0.897);
-  color: #fff;
+.nav > .nav-links > a::after{
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 3px;
+  background: linear-gradient(90deg,var(--nav-accent-2),var(--nav-accent));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1);
+  border-radius: 4px;
+  opacity: 0;
+}
+.nav > .nav-links > a:hover{
+  color: var(--nav-accent-2);
+}
+.nav > .nav-links > a:hover::after{
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .nav > #nav-check {
@@ -58,57 +90,66 @@ body {
 @media (max-width:600px) {
   .nav {
     position: fixed;
-    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    padding: 6px 14px;
   }
-  
+
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 8px;
+    top: 6px;
   }
+
   .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-    margin-right: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    margin-right: 6px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 180ms ease;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(255, 153, 0, 0.545);
-    border-radius: 0;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #121212;
-  }
+
+  .nav > .nav-btn > label:hover { background: rgba(255,255,255,0.02); }
+
+  /* hamburger lines */
+  .nav > .nav-btn > label > span { position: relative; width:22px; height:2px; background:var(--nav-text); display:block; border-radius:2px; transition: all 220ms ease; }
+  .nav > .nav-btn > label > span::before, .nav > .nav-btn > label > span::after { content:''; position:absolute; left:0; right:0; height:2px; background:var(--nav-text); border-radius:2px; transition: all 220ms ease; }
+  .nav > .nav-btn > label > span::before { top:-7px; }
+  .nav > .nav-btn > label > span::after { top:7px; }
+
+  /* transform hamburger to X when checked */
+  .nav > #nav-check:checked ~ .nav-btn > label > span { transform: rotate(45deg); background:var(--nav-accent); }
+  .nav > #nav-check:checked ~ .nav-btn > label > span::before { transform: rotate(-90deg) translateX(-7px); top:0; background:var(--nav-accent); }
+  .nav > #nav-check:checked ~ .nav-btn > label > span::after { transform: rotate(-90deg) translateX(7px); top:0; background:var(--nav-accent); }
+
   .nav > .nav-links {
     position: absolute;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #ffffff;
-    height: calc(120%+50px);
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
+    background: linear-gradient(180deg, rgba(10,10,35,0.98), rgba(10,10,35,0.95));
+    height: 0;
+    transition: height 0.32s ease-in-out, opacity 0.22s ease;
+    overflow: hidden;
+    top: 56px;
     left: 0px;
+    padding: 8px 12px;
+    gap: 6px;
+    opacity: 0;
   }
-  .nav > .nav-links > a {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    line-height: 3;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
+
+  .nav > .nav-links > a { display:flex; justify-content:center; width:100%; line-height:2.8; color:var(--nav-text); padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.02); }
+
+  .nav > #nav-check:not(:checked) ~ .nav-links { height: 0px; opacity: 0; pointer-events: none; }
+  .nav > #nav-check:checked ~ .nav-links { height: calc(100vh - 56px); opacity: 1; pointer-events: auto; overflow-y: auto; }
 }
 
 @media (min-width: 601px) {

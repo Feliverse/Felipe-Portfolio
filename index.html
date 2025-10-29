@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <link rel="icon" href="./images/icon.svg">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Tailwind removed: using custom CSS -->
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB8BSE6YYZ"></script>
@@ -26,6 +26,7 @@
   gtag('config', 'G-SB8BSE6YYZ');
 </script>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="nav">
     <input type="checkbox" id="nav-check">
     <div class="nav-btn">
@@ -45,7 +46,7 @@
   </div>
 
   <div></div>
-  <div class="one-screen">
+  <div class="one-screen" id="main-content" role="main">
     <section class="hello" id="hello">
       <div class="hello-text">
         <header>
@@ -101,10 +102,8 @@
             completion of projects and delivering high-quality web solutions
           </p>
 
-          <a href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
-            <button class="blackBoton">
-              Get my CV &nbsp &#8690
-            </button>
+          <a class="blackBoton" href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+            Get my CV &nbsp; &#8690;
           </a>
         </div>
         <div class="boxL">
@@ -152,7 +151,7 @@
             design,
             so feel free to contact me.</p>
         </div>
-        <form class="b" action="https://formspree.io/f/xnqrlgak" method="post">
+  <form id="contact-form" class="b" action="https://formspree.io/f/xnqrlgak" method="post">
           <div class="boxForm">
             <label class="form-name" for="name">
               Your name
@@ -161,9 +160,9 @@
             <label class="form-name" for="email">
               <div class="alert">
                 <p>Your email</p>
-                <p class="error-message">Ups, use only lower case</p>
+                <p id="email-error" class="error-message" aria-live="assertive">Ups, use only lower case</p>
               </div>
-              <input class="form-name-contend" type="email" id="email" name="user_email" required>
+              <input class="form-name-contend" type="email" id="email" name="user_email" required aria-describedby="email-error">
             </label>
             <label class="form-name-text">
               <textarea id="textform" class="form-text" name="user_message" placeholder="Enter your message here..."
@@ -193,25 +192,17 @@
       </div>
       <div>
         <ul class="rsFooter">
-          <a href="https://github.com/Feliverse">
-            <li class="rrss"><img src="images/redes sociales/Vector (3).png" alt="GitHUB link">
-          </a> </li></a>
-          <a href="https://twitter.com/FelipeHaybar">
-            <li class="rrss"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></li>
-          </a>
-          <a href="https://www.linkedin.com/in/haybar/">
-            <li class="rrss"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></li>
-          </a>
-          <a href="https://medium.com/@haybar">
-            <li class="rrss"><img src="images/redes sociales/Vector (6).png" alt="M link"></li>
-          </a>
-          <a href="https://wellfound.com/u/felipe-haybar">
-            <li class="rrss"><img src="images/redes sociales/Vector (7).png" alt="AngelList link"></li>
-          </a>
+          <li class="rrss"><a href="https://github.com/Feliverse"><img src="images/redes sociales/Vector (3).png" alt="GitHub link"></a></li>
+          <li class="rrss"><a href="https://twitter.com/FelipeHaybar"><img src="images/redes sociales/Vector (4).png" alt="Twitter link"></a></li>
+          <li class="rrss"><a href="https://www.linkedin.com/in/haybar/"><img src="images/redes sociales/Vector (5).png" alt="LinkedIn link"></a></li>
+          <li class="rrss"><a href="https://medium.com/@haybar"><img src="images/redes sociales/Vector (6).png" alt="Medium link"></a></li>
+          <li class="rrss"><a href="https://wellfound.com/u/felipe-haybar"><img src="images/redes sociales/Vector (7).png" alt="AngelList link"></a></li>
         </ul>
       </div>
     </footer>
   </div>
+  <!-- Form submission confirmation modal -->
+  <section id="formModal" class="form-modal" aria-hidden="true"></section>
   <script src="navScript.js"></script>
   <script src="index.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>

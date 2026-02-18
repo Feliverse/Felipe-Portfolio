@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 
-:root{
-  --nav-bg: rgba(10,10,35,0.55);
+:root {
+  --nav-bg: rgba(10, 10, 35, 0.55);
   --nav-accent: #7A00FF;
   --nav-accent-2: #00CFFF;
   --nav-cta: #FF2D95;
-  --nav-text: rgba(238,246,255,0.95);
+  --nav-text: rgba(238, 246, 255, 0.95);
 }
 
 body {
@@ -22,19 +22,19 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: var(--nav-bg);
   backdrop-filter: blur(8px) saturate(120%);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   z-index: 200;
 }
 
-.nav > .nav-header {
+.nav>.nav-header {
   display: inline;
 }
 
-.nav > .nav-header > .nav-title {
+.nav>.nav-header>.nav-title {
   display: inline-block;
   font-size: 20px;
   color: var(--nav-text);
@@ -42,18 +42,18 @@ body {
   font-weight: 700;
 }
 
-.nav > .nav-btn {
+.nav>.nav-btn {
   display: none;
 }
 
-.nav > .nav-links {
+.nav>.nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
 }
 
-.nav > .nav-links > a {
+.nav>.nav-links>a {
   display: inline-block;
   padding: 10px 14px;
   text-decoration: none;
@@ -61,29 +61,32 @@ body {
   position: relative;
   transition: color 160ms ease, transform 160ms ease;
 }
-.nav > .nav-links > a::after{
+
+.nav>.nav-links>a::after {
   content: '';
   position: absolute;
   left: 14px;
   right: 14px;
   bottom: 6px;
   height: 3px;
-  background: linear-gradient(90deg,var(--nav-accent-2),var(--nav-accent));
+  background: linear-gradient(90deg, var(--nav-accent-2), var(--nav-accent));
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform 220ms cubic-bezier(.2,.9,.2,1);
+  transition: transform 220ms cubic-bezier(.2, .9, .2, 1);
   border-radius: 4px;
   opacity: 0;
 }
-.nav > .nav-links > a:hover{
+
+.nav>.nav-links>a:hover {
   color: var(--nav-accent-2);
 }
-.nav > .nav-links > a:hover::after{
+
+.nav>.nav-links>a:hover::after {
   transform: scaleX(1);
   opacity: 1;
 }
 
-.nav > #nav-check {
+.nav>#nav-check {
   display: none;
 }
 
@@ -97,14 +100,14 @@ body {
     padding: 6px 14px;
   }
 
-  .nav > .nav-btn {
+  .nav>.nav-btn {
     display: inline-block;
     position: absolute;
     right: 8px;
     top: 6px;
   }
 
-  .nav > .nav-btn > label {
+  .nav>.nav-btn>label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,25 +120,65 @@ body {
     transition: background 180ms ease;
   }
 
-  .nav > .nav-btn > label:hover { background: rgba(255,255,255,0.02); }
+  .nav>.nav-btn>label:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
 
   /* hamburger lines */
-  .nav > .nav-btn > label > span { position: relative; width:22px; height:2px; background:var(--nav-text); display:block; border-radius:2px; transition: all 220ms ease; }
-  .nav > .nav-btn > label > span::before, .nav > .nav-btn > label > span::after { content:''; position:absolute; left:0; right:0; height:2px; background:var(--nav-text); border-radius:2px; transition: all 220ms ease; }
-  .nav > .nav-btn > label > span::before { top:-7px; }
-  .nav > .nav-btn > label > span::after { top:7px; }
+  .nav>.nav-btn>label>span {
+    position: relative;
+    width: 22px;
+    height: 2px;
+    background: var(--nav-text);
+    display: block;
+    border-radius: 2px;
+    transition: all 220ms ease;
+  }
+
+  .nav>.nav-btn>label>span::before,
+  .nav>.nav-btn>label>span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: all 220ms ease;
+  }
+
+  .nav>.nav-btn>label>span::before {
+    top: -7px;
+  }
+
+  .nav>.nav-btn>label>span::after {
+    top: 7px;
+  }
 
   /* transform hamburger to X when checked */
-  .nav > #nav-check:checked ~ .nav-btn > label > span { transform: rotate(45deg); background:var(--nav-accent); }
-  .nav > #nav-check:checked ~ .nav-btn > label > span::before { transform: rotate(-90deg) translateX(-7px); top:0; background:var(--nav-accent); }
-  .nav > #nav-check:checked ~ .nav-btn > label > span::after { transform: rotate(-90deg) translateX(7px); top:0; background:var(--nav-accent); }
+  .nav>#nav-check:checked~.nav-btn>label>span {
+    transform: rotate(45deg);
+    background: var(--nav-accent);
+  }
 
-  .nav > .nav-links {
+  .nav>#nav-check:checked~.nav-btn>label>span::before {
+    transform: rotate(-90deg) translateX(-7px);
+    top: 0;
+    background: var(--nav-accent);
+  }
+
+  .nav>#nav-check:checked~.nav-btn>label>span::after {
+    transform: rotate(-90deg) translateX(7px);
+    top: 0;
+    background: var(--nav-accent);
+  }
+
+  .nav>.nav-links {
     position: absolute;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: linear-gradient(180deg, rgba(10,10,35,0.98), rgba(10,10,35,0.95));
+    background: linear-gradient(180deg, rgba(10, 10, 35, 0.98), rgba(10, 10, 35, 0.95));
     height: 0;
     transition: height 0.32s ease-in-out, opacity 0.22s ease;
     overflow: hidden;
@@ -146,16 +189,34 @@ body {
     opacity: 0;
   }
 
-  .nav > .nav-links > a { display:flex; justify-content:center; width:100%; line-height:2.8; color:var(--nav-text); padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.02); }
+  .nav>.nav-links>a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    line-height: 2.8;
+    color: var(--nav-text);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  }
 
-  .nav > #nav-check:not(:checked) ~ .nav-links { height: 0px; opacity: 0; pointer-events: none; }
-  .nav > #nav-check:checked ~ .nav-links { height: calc(100vh - 56px); opacity: 1; pointer-events: auto; overflow-y: auto; }
+  .nav>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav>#nav-check:checked~.nav-links {
+    height: calc(100vh - 56px);
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+  }
 }
 
 @media (min-width: 601px) {
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
+}

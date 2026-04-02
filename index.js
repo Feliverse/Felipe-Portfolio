@@ -84,11 +84,19 @@ const projectInfo = [
 
 const showModal = (currentIndex) => {
   const myModal = document.getElementById('myMOdal');
+  const isFreshOpen = myModal.style.display !== 'flex';
   myModal.style.display = 'flex';
   myModal.setAttribute('role', 'dialog');
   myModal.setAttribute('aria-modal', 'true');
+  myModal.setAttribute('aria-labelledby', 'proj-modal-title');
+  myModal.setAttribute('aria-describedby', 'proj-modal-description');
+  myModal.setAttribute('aria-hidden', 'false');
+  myModal.dataset.currentIndex = String(currentIndex);
+  document.body.classList.add('modal-open');
   // remember the element that had focus to restore later
-  myModal.__previouslyFocused = document.activeElement;
+  if (isFreshOpen) {
+    myModal.__previouslyFocused = document.activeElement;
+  }
   
   const nextIndex = (currentIndex + 1) % projectInfo.length;
   const prevIndex = (currentIndex - 1 + projectInfo.length) % projectInfo.length;
@@ -109,15 +117,15 @@ const showModal = (currentIndex) => {
             <li>${project.technologies[1] || ''}</li>
             <li>${project.technologies[2] || ''}</li>
           </ul>
-          <p class="project-description">${project.description}</p>
+          <p class="project-description" id="proj-modal-description">${project.description}</p>
           <div class="btns-modal">
             <a class="btn-modal primary" href="${project.liveVersion}" target="_blank" rel="noopener noreferrer">&#128065; See live</a>
             <a class="btn-modal" href="${project.source}" target="_blank" rel="noopener noreferrer">&#128187; See source</a>
           </div>
         </div>
       </div>
-      <button class="nav-btn prev-btn" aria-label="Previous project" onclick="showModal(${prevIndex})">&#10096;</button>
-      <button class="nav-btn next-btn" aria-label="Next project" onclick="showModal(${nextIndex})">&#10097;</button>
+      <button class="nav-btn prev-btn" aria-label="Previous project" data-modal-nav="prev" data-target-index="${prevIndex}">&#10096;</button>
+      <button class="nav-btn next-btn" aria-label="Next project" data-modal-nav="next" data-target-index="${nextIndex}">&#10097;</button>
     </div>
   `;
   myModal.innerHTML = modalBody;
@@ -136,6 +144,11 @@ const closeModal = () => {
   myModal.style.display = 'none';
   myModal.removeAttribute('role');
   myModal.removeAttribute('aria-modal');
+  myModal.removeAttribute('aria-labelledby');
+  myModal.removeAttribute('aria-describedby');
+  myModal.setAttribute('aria-hidden', 'true');
+  delete myModal.dataset.currentIndex;
+  document.body.classList.remove('modal-open');
   // restore focus to previous element
   try {
     if (myModal.__previouslyFocused) myModal.__previouslyFocused.focus();
@@ -196,8 +209,16 @@ document.addEventListener('click', (e) => {
   const target = e.target;
   const modal = document.getElementById('myMOdal');
   if (!modal) return;
+  const navButton = target.closest('.nav-btn');
+  if (modal.style.display === 'flex' && navButton) {
+    const targetIndex = Number(navButton.dataset.targetIndex);
+    if (!Number.isNaN(targetIndex)) {
+      showModal(targetIndex);
+      return;
+    }
+  }
   // close when clicking the close button or outside modal-content
-  if (target.id === 'closemodalX') {
+  if (target.id === 'closemodalX' || target.closest('#closemodalX')) {
     closeModal();
   } else if (modal.style.display === 'flex' && target === modal) {
     closeModal();

@@ -1132,7 +1132,7 @@ label {
     color: var(--accent-1);
   }
 
-  .card-tech-modal {
+  .project-modal .card-tech-modal {
     display: flex;
     gap: 8px;
     padding: 0;
@@ -1140,7 +1140,7 @@ label {
     list-style: none;
   }
 
-  .card-tech-modal li {
+  .project-modal .card-tech-modal li {
     padding: 6px 10px;
     background: var(--muted);
     border-radius: 6px;

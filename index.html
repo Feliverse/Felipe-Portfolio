@@ -27,7 +27,7 @@
   gtag('config', 'G-SB8BSE6YYZ');
 </script>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a id="skipLink" class="skip-link" href="#main-content">Skip to content</a>
   <div class="nav">
     <input type="checkbox" id="nav-check">
     <div class="nav-btn">
@@ -39,10 +39,14 @@
     </div>
 
     <div class="nav-links">
-      <a href="#hello">Hello</a>
-      <a href="#projects">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a id="navHello" href="#hello">Hello</a>
+      <a id="navPortfolio" href="#projects">Portfolio</a>
+      <a id="navAbout" href="#about">About</a>
+      <a id="navContact" href="#contact">Contact</a>
+      <div class="lang-switch" aria-label="Language selector">
+        <button id="langEnBtn" class="lang-btn" type="button">EN</button>
+        <button id="langEsBtn" class="lang-btn" type="button">ES</button>
+      </div>
     </div>
   </div>
 
@@ -53,13 +57,13 @@
         <header>
           <h1 class="name">Felipe Haybar</h1>
         </header>
-        <p class="headline">Hello! I am a Full-stack web developer! I can help you build a product, feature, or
+        <p id="heroHeadline" class="headline">Hello! I am a Full-stack web developer! I can help you build a product, feature, or
           website.
           Take a look at my work
 
           <br><br>If you like what you see and have a project you need coded, don’t hesitate and contact me.
         </p>
-        <a class="blackBoton textBoton" href="#contact">
+        <a id="heroCta" class="blackBoton textBoton" href="#contact">
           Start collaboration
         </a>
       </div>
@@ -69,7 +73,7 @@
     <!-- project section -->
     <section class="Projects" id="projects">
       <div class="gallery" id="gallery">
-        <h2 class="project-title name card1">Projects</h2>
+        <h2 id="projectsTitle" class="project-title name card1">Projects</h2>
         <div class="caja1-1 card"></div>
         <div class="card card-back2"></div>
         <div class="card card-back3"></div>
@@ -89,25 +93,25 @@
       <div class="about-cont">
 
         <div class="about-head">
-          <h2 class="section-title">About</h2>
+          <h2 id="aboutTitle" class="section-title">About</h2>
 
-          <p class="textAbout">I am a Full-stack web developer with 2+ years of experience in Ruby on Rails in the
-            backend and React in the front end.
-            <br><br>I excel in writing clean, testable, secure, and dynamic code based on standard web development best
-            practices.
-            <br><br>My strong communication and collaboration skills make me an effective team player, and I am
-            dedicated to continuous learning, ensuring I stay updated with the latest industry trends and technologies.
-            <br><br>Additionally, my problem-solving mindset and attention to detail contribute to the successful
-            completion of projects and delivering high-quality web solutions
+          <p id="aboutText" class="textAbout">I am an Industrial Engineer specialized in full-stack software development, combining
+            systems thinking with hands-on technical execution to build products that create real business impact.
+            <br><br>Working with Ruby on Rails on the backend and React on the frontend, I design and deliver scalable,
+            secure, and user-focused digital solutions.
+            <br><br>My engineering background helps me turn complex challenges into clear, efficient workflows, while my
+            product mindset keeps every decision aligned with performance, usability, and growth.
+            <br><br>I bring strong collaboration, clear communication, and a continuous-improvement approach to every
+            project, helping teams ship high-quality software faster and with confidence.
           </p>
 
-          <a class="blackBoton textBoton " href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+          <a id="aboutCta" class="blackBoton textBoton " href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
             Get my CV &nbsp; <i class="fa-duotone fa-solid fa-download"></i>
           </a>
         </div>
         <div class="boxL">
           <ul class="Box lan">
-            <h4 class="font-bold text-xl p-2">Languages</h4>
+            <h4 id="skillsLanguagesTitle" class="font-bold text-xl p-2">Languages</h4>
             <li class="inBox">JavaScript (ES16)</li>
             <li class="inBox">Ruby</li>
             <li class="inBox">HTML 5</li>
@@ -116,7 +120,7 @@
           </ul>
 
           <ul class="Box fra">
-            <h4 class="font-bold text-xl p-2">Libraries & Frameworks</h4>
+            <h4 id="skillsFrameworksTitle" class="font-bold text-xl p-2">Libraries & Frameworks</h4>
             <li class="inBox">Ruby on rails</li>
             <li class="inBox">React & Redux</li>
             <li class="inBox">RSpec</li>
@@ -125,7 +129,7 @@
           </ul>
 
           <ul class="Box ski">
-            <h4 class="font-bold text-xl p-2">Developer tools and Skills</h4>
+            <h4 id="skillsToolsTitle" class="font-bold text-xl p-2">Developer tools and Skills</h4>
             <li class="inBox">Git</li>
             <li class="inBox">GitHub</li>
             <li class="inBox">Ubuntu</li>
@@ -143,37 +147,42 @@
       <div class="space"></div>
       <div class="cont-form">
         <div class="form-header">
-          <h2 class="getStar">Get started</h2>
-          <p class="textAbout">I will work with you to discover what you need and create the best solution. My
-            priorities
-            are delivering quality work and respect for deadlines. I love to share my enthusiasm and passion for
-            design,
-            so feel free to contact me.</p>
+          <h2 id="contactTitle" class="getStar">Get started</h2>
+          <p id="contactValueProposition" class="textAbout">I help teams turn complex operational challenges into scalable digital products.
+            As an Industrial Engineer specialized in full-stack software development, I combine process optimization,
+            technical execution, and product thinking to deliver software that drives real business results.</p>
+          <p id="contactChannelNote" class="contact-note">Prefer WhatsApp, the form below, or LinkedIn. I usually reply within 24 hours.</p>
+          <a id="whatsappLeadBtn" class="blackBoton textBoton whatsapp-btn" href="https://wa.me/59172204904?text=Hi%20Felipe%2C%20I%27d%20like%20to%20talk%20about%20a%20software%20project." target="_blank" rel="noopener noreferrer" aria-label="Contact me on WhatsApp at +591 72204904">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span id="whatsappLeadBtnText">Message me on WhatsApp</span>
+          </a>
+          <p id="contactLinkedinNote" class="contact-alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/haybar/" target="_blank" rel="noopener noreferrer">Let us connect</a>.</p>
         </div>
   <form id="contact-form" class="b" action="https://formspree.io/f/xnqrlgak" method="post">
           <div class="boxForm">
             <label class="form-name" for="name">
-              Your name
+              <span id="nameLabel">Your name</span>
               <input class="form-name-contend" type="text" id="name" name="user-name" maxlength="30" required>
             </label>
             <label class="form-name" for="email">
               <div class="alert">
-                <p>Your email</p>
-                <p id="email-error" class="error-message" aria-live="assertive">Ups, use only lower case</p>
+                <p id="emailLabel">Your email</p>
+                <p id="email-error" class="error-message" aria-live="assertive">Please enter a valid email address.</p>
               </div>
               <input class="form-name-contend" type="email" id="email" name="user_email" required aria-describedby="email-error">
             </label>
             <label class="form-name-text">
-              <textarea id="textform" class="form-text" name="user_message" placeholder="Enter your message here..."
+              <textarea id="textform" class="form-text" name="user_message" placeholder="Tell me about your project goals..."
                 maxlength="500" required></textarea>
             </label>
           </div>
 
           <div class="button botonform">
-            <button class="blackBoton textBoton" type="submit">
-              Start collaboration
+            <button id="contactSubmitBtn" class="blackBoton textBoton" type="submit">
+              Send message
             </button>
           </div>
+          <p id="contactPrivacyNote" class="contact-note">No spam. Your information is only used to reply to your message.</p>
 
         </form>
       </div>
@@ -183,7 +192,7 @@
 
     <footer class="contenfoo">
       <div>
-        <a class="fotter-resume" href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
+        <a id="footerResumeCta" class="fotter-resume" href="https://docs.google.com/document/d/1rZerRUndS1YHC3IDffMYG55OeUhkdTD_0fxYtjRvMZo/edit?usp=sharing">
           Get my Resume &nbsp <img class="get-my-resume-image" src="./images/Union (2).png" alt="Top right arrow">
         </a>
       </div>

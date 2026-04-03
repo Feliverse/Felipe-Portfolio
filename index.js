@@ -6,6 +6,7 @@ const projectInfo = [
     id: 1,
     name: 'WanderPal Tours',
     description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the front-end and Ruby on Rails in the back-end. It offers various functionalities, such as logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours. <br> 🛠 Built with React & Redux, Ruby on Rails tested with Jest, styled with Modular CSS",
+    descriptionEs: "WanderPal Tours es una aplicacion web para reservar tours. Esta construida con React y Vite en el frontend y Ruby on Rails en el backend. Incluye funcionalidades como iniciar sesion, crear reservas, consultar detalles, eliminar reservas y gestionar informacion de tours. <br> 🛠 Construido con React & Redux, Ruby on Rails, pruebas con Jest y estilos en Modular CSS",
     image: './images/wanderpal.png',
     alt: 'laptop',
     technologies: [
@@ -20,6 +21,7 @@ const projectInfo = [
     id: 6,
     name: "Space Travelers' Hub",
     description: "Space Travel Hub is a web page developed with React and Redux. On the page, you can reserve a rocket and choose a mission. Was built using React and Redux, tested with Jest, styled with Modular CSS. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
+    descriptionEs: "Space Travelers' Hub es una web desarrollada con React y Redux donde puedes reservar un cohete y elegir una mision. Fue construida con React y Redux, probada con Jest y estilizada con Modular CSS. <br> 🛠 Construido con React & Redux, pruebas con Jest y estilos en Modular CSS",
     image: './images/space.png',
     alt: 'laptop',
     technologies: [
@@ -33,6 +35,7 @@ const projectInfo = [
     id: 3,
     name: 'Forex - MetricsWebApp',
     description: "Metrics Web App is a Forex tool created using React, where you can view the official currencies, cryptocurrencies, majors, and other financial metrics. Enjoy it. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
+    descriptionEs: "Metrics Web App es una herramienta financiera creada con React para visualizar monedas oficiales, criptomonedas, pares mayores y otros indicadores del mercado. <br> 🛠 Construido con React & Redux, pruebas con Jest y estilos en Modular CSS",
     image: './images/metrics.png',
     alt: 'laptop',
     technologies: ['API Rest', 'React + Redux', 'Jest Test'],
@@ -43,6 +46,7 @@ const projectInfo = [
     id: 4,
     name: 'Todo List',
     description: 'To-Do List is a tool created using Webpack where you can register tasks to be done day by day. We can add, delete, and mark tasks as done. was built using HTML, CSS, and Vanilla JavaScript. my first project using Webpack.',
+    descriptionEs: 'To-Do List es una herramienta creada con Webpack para registrar tareas diarias, agregarlas, eliminarlas y marcarlas como completadas. Fue construida con HTML, CSS y JavaScript Vanilla, y fue mi primer proyecto con Webpack.',
     image: './images/Todo list.png',
     alt: 'laptop',
     technologies: [
@@ -56,6 +60,7 @@ const projectInfo = [
     id: 5,
     name: "Today's Movies and Series",
     description: 'The JavaScript capstone project involves building our web application based on two external APIs. Initially, we retrieve movies and TV series data from the TVmaze API and subsequently record user interactions, such as likes and comments, using the Involvement API.',
+    descriptionEs: 'Este proyecto capstone de JavaScript consiste en construir una aplicacion web basada en dos APIs externas. Primero obtenemos datos de peliculas y series desde TVmaze y luego registramos interacciones de usuarios, como likes y comentarios, usando la Involvement API.',
     image: './images/movies.png',
     alt: 'laptop',
     technologies: [
@@ -69,6 +74,7 @@ const projectInfo = [
     id: 2,
     name: 'Conference Page',
     description: "IDTC2023 Industry 4.0 is a conference where people from 20+ countries come together to share experiences about the digital transformation of the industry. The webpage was built using HTML, CSS, and Vanilla JavaScript, and the speakers' section is generated dynamically.",
+    descriptionEs: 'IDTC2023 Industry 4.0 es una conferencia donde personas de mas de 20 paises comparten experiencias sobre transformacion digital en la industria. La web fue construida con HTML, CSS y JavaScript Vanilla, y la seccion de speakers se genera de forma dinamica.',
     image: './images/conference.png',
     alt: 'laptop',
     technologies: [
@@ -79,6 +85,182 @@ const projectInfo = [
     source: 'https://github.com/Feliverse/conference-page',
   },
 ];
+
+const LANGUAGE_KEY = 'preferredLanguage';
+let currentLanguage = 'en';
+
+const I18N = {
+  en: {
+    skipLink: 'Skip to content',
+    navHello: 'Hello',
+    navPortfolio: 'Portfolio',
+    navAbout: 'About',
+    navContact: 'Contact',
+    heroHeadline: 'Hello! I am a Full-stack web developer! I can help you build a product, feature, or website. Take a look at my work <br><br>If you like what you see and have a project you need coded, do not hesitate to contact me.',
+    heroCta: 'Start collaboration',
+    projectsTitle: 'Projects',
+    aboutTitle: 'About',
+    aboutText: 'I am an Industrial Engineer specialized in full-stack software development, combining systems thinking with hands-on technical execution to build products that create real business impact.<br><br>Working with Ruby on Rails on the backend and React on the frontend, I design and deliver scalable, secure, and user-focused digital solutions.<br><br>My engineering background helps me turn complex challenges into clear, efficient workflows, while my product mindset keeps every decision aligned with performance, usability, and growth.<br><br>I bring strong collaboration, clear communication, and a continuous-improvement approach to every project, helping teams ship high-quality software faster and with confidence.',
+    aboutCta: 'Get my CV',
+    skillsLanguagesTitle: 'Languages',
+    skillsFrameworksTitle: 'Libraries & Frameworks',
+    skillsToolsTitle: 'Developer tools and Skills',
+    contactTitle: 'Get started',
+    nameLabel: 'Your name',
+    emailLabel: 'Your email',
+    emailError: 'Please enter a valid email address.',
+    textareaPlaceholder: 'Tell me about your project goals...',
+    contactPrivacyNote: 'No spam. Your information is only used to reply to your message.',
+    footerResumeCta: 'Get my Resume',
+    seeProject: 'See this project',
+    modalClose: 'Close dialog',
+    modalTech: 'Technologies used',
+    modalSeeLive: 'See live',
+    modalSeeSource: 'See source',
+    modalPrev: 'Previous project',
+    modalNext: 'Next project',
+    modalSent: 'Message sent',
+    modalError: 'Submission error',
+    modalCloseBtn: 'Close',
+    formSuccess: 'Thank you! Your message has been sent.',
+    formHttpError: 'Sorry, there was an error sending your message. Please try again later.',
+    formNetworkError: 'Network error. Please check your connection and try again.'
+  },
+  es: {
+    skipLink: 'Saltar al contenido',
+    navHello: 'Inicio',
+    navPortfolio: 'Portafolio',
+    navAbout: 'Sobre mi',
+    navContact: 'Contacto',
+    heroHeadline: 'Hola! Soy desarrollador Full-stack. Puedo ayudarte a construir un producto, una funcionalidad o un sitio web. Mira mi trabajo.<br><br>Si te gusta lo que ves y tienes un proyecto por desarrollar, no dudes en contactarme.',
+    heroCta: 'Iniciar colaboracion',
+    projectsTitle: 'Proyectos',
+    aboutTitle: 'Sobre mi',
+    aboutText: 'Soy Ingeniero Industrial especializado en desarrollo de software full-stack, combinando pensamiento sistemico con ejecucion tecnica para crear productos con impacto real en el negocio.<br><br>Trabajando con Ruby on Rails en backend y React en frontend, diseno y entrego soluciones escalables, seguras y centradas en el usuario.<br><br>Mi enfoque de ingenieria me permite convertir desafios complejos en flujos claros y eficientes, alineando cada decision con rendimiento, usabilidad y crecimiento.<br><br>Aporto colaboracion efectiva, comunicacion clara y mejora continua para ayudar a los equipos a lanzar software de alta calidad con mayor velocidad y confianza.',
+    aboutCta: 'Descargar CV',
+    skillsLanguagesTitle: 'Lenguajes',
+    skillsFrameworksTitle: 'Librerias y Frameworks',
+    skillsToolsTitle: 'Herramientas y habilidades',
+    contactTitle: 'Comencemos',
+    nameLabel: 'Tu nombre',
+    emailLabel: 'Tu correo',
+    emailError: 'Por favor ingresa un correo valido.',
+    textareaPlaceholder: 'Cuentame los objetivos de tu proyecto...',
+    contactPrivacyNote: 'Sin spam. Tu informacion solo se usa para responderte.',
+    footerResumeCta: 'Ver mi CV',
+    seeProject: 'Ver este proyecto',
+    modalClose: 'Cerrar dialogo',
+    modalTech: 'Tecnologias utilizadas',
+    modalSeeLive: 'Ver demo',
+    modalSeeSource: 'Ver codigo',
+    modalPrev: 'Proyecto anterior',
+    modalNext: 'Proyecto siguiente',
+    modalSent: 'Mensaje enviado',
+    modalError: 'Error en el envio',
+    modalCloseBtn: 'Cerrar',
+    formSuccess: 'Gracias! Tu mensaje fue enviado correctamente.',
+    formHttpError: 'Lo siento, hubo un error al enviar tu mensaje. Intenta nuevamente en unos minutos.',
+    formNetworkError: 'Error de red. Revisa tu conexion e intenta nuevamente.'
+  }
+};
+
+function t(key) {
+  return I18N[currentLanguage][key] || I18N.en[key] || key;
+}
+
+function applyStaticTranslations() {
+  const setText = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  };
+
+  const setHTML = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = t(key);
+  };
+
+  setText('skipLink', 'skipLink');
+  setText('navHello', 'navHello');
+  setText('navPortfolio', 'navPortfolio');
+  setText('navAbout', 'navAbout');
+  setText('navContact', 'navContact');
+  setHTML('heroHeadline', 'heroHeadline');
+  setText('heroCta', 'heroCta');
+  setText('projectsTitle', 'projectsTitle');
+  setText('aboutTitle', 'aboutTitle');
+  setHTML('aboutText', 'aboutText');
+  setText('aboutCta', 'aboutCta');
+  setText('skillsLanguagesTitle', 'skillsLanguagesTitle');
+  setText('skillsFrameworksTitle', 'skillsFrameworksTitle');
+  setText('skillsToolsTitle', 'skillsToolsTitle');
+  setText('contactTitle', 'contactTitle');
+  setText('nameLabel', 'nameLabel');
+  setText('emailLabel', 'emailLabel');
+  setText('email-error', 'emailError');
+  setText('contactPrivacyNote', 'contactPrivacyNote');
+  setText('footerResumeCta', 'footerResumeCta');
+
+  const resumeLink = document.getElementById('footerResumeCta');
+  if (resumeLink) {
+    const iconImg = resumeLink.querySelector('img');
+    resumeLink.textContent = `${t('footerResumeCta')} `;
+    if (iconImg) resumeLink.appendChild(iconImg);
+  }
+
+  const textArea = document.getElementById('textform');
+  if (textArea) textArea.setAttribute('placeholder', t('textareaPlaceholder'));
+
+  document.documentElement.setAttribute('lang', currentLanguage);
+
+  const enBtn = document.getElementById('langEnBtn');
+  const esBtn = document.getElementById('langEsBtn');
+  if (enBtn && esBtn) {
+    enBtn.classList.toggle('active', currentLanguage === 'en');
+    esBtn.classList.toggle('active', currentLanguage === 'es');
+  }
+}
+
+function setLanguage(language) {
+  currentLanguage = language === 'es' ? 'es' : 'en';
+  try {
+    localStorage.setItem(LANGUAGE_KEY, currentLanguage);
+  } catch (err) {
+    // ignore storage restrictions
+  }
+
+  applyStaticTranslations();
+  renderProjectCards();
+  applyContactCopyVariant();
+
+  const modal = document.getElementById('myModal');
+  if (modal && modal.style.display === 'flex') {
+    const currentIndex = Number(modal.dataset.currentIndex || 0);
+    if (!Number.isNaN(currentIndex)) showModal(currentIndex);
+  }
+}
+
+function initializeLanguage() {
+  let storedLanguage = null;
+  try {
+    storedLanguage = localStorage.getItem(LANGUAGE_KEY);
+  } catch (err) {
+    // ignore storage restrictions
+  }
+
+  const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
+  const initialLanguage = storedLanguage === 'es' || storedLanguage === 'en' ? storedLanguage : browserLanguage;
+
+  const enBtn = document.getElementById('langEnBtn');
+  const esBtn = document.getElementById('langEsBtn');
+  if (enBtn) enBtn.addEventListener('click', () => setLanguage('en'));
+  if (esBtn) esBtn.addEventListener('click', () => setLanguage('es'));
+
+  setLanguage(initialLanguage);
+}
+
+function getLocalizedProjectDescription(project) {
+  return currentLanguage === 'es' && project.descriptionEs ? project.descriptionEs : project.description;
+}
 
 // project seccion dynamic Html
 
@@ -105,27 +287,27 @@ const showModal = (currentIndex) => {
 
   const modalBody = `
     <div class="modal-content project-modal">
-      <button id="closemodalX" class="close-modal close" aria-label="Close dialog">&times;</button>
+      <button id="closemodalX" class="close-modal close" aria-label="${t('modalClose')}">&times;</button>
       <div class="project-modal-grid">
         <div class="project-media">
           <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
         </div>
         <div class="project-body">
           <h3 class="project-title-modal" id="proj-modal-title">${project.name}</h3>
-          <ul class="card-tech-modal" aria-label="Technologies used">
+          <ul class="card-tech-modal" aria-label="${t('modalTech')}">
             <li>${project.technologies[0] || ''}</li>
             <li>${project.technologies[1] || ''}</li>
             <li>${project.technologies[2] || ''}</li>
           </ul>
-          <p class="project-description" id="proj-modal-description">${project.description}</p>
+          <p class="project-description" id="proj-modal-description">${getLocalizedProjectDescription(project)}</p>
           <div class="btns-modal">
-            <a class="btn-modal primary" href="${project.liveVersion}" target="_blank" rel="noopener noreferrer">&#128065; See live</a>
-            <a class="btn-modal" href="${project.source}" target="_blank" rel="noopener noreferrer">&#128187; See source</a>
+            <a class="btn-modal primary" href="${project.liveVersion}" target="_blank" rel="noopener noreferrer">&#128065; ${t('modalSeeLive')}</a>
+            <a class="btn-modal" href="${project.source}" target="_blank" rel="noopener noreferrer">&#128187; ${t('modalSeeSource')}</a>
           </div>
         </div>
       </div>
-      <button class="nav-btn prev-btn" aria-label="Previous project" data-modal-nav="prev" data-target-index="${prevIndex}">&#10096;</button>
-      <button class="nav-btn next-btn" aria-label="Next project" data-modal-nav="next" data-target-index="${nextIndex}">&#10097;</button>
+      <button class="nav-btn prev-btn" aria-label="${t('modalPrev')}" data-modal-nav="prev" data-target-index="${prevIndex}">&#10096;</button>
+      <button class="nav-btn next-btn" aria-label="${t('modalNext')}" data-modal-nav="next" data-target-index="${nextIndex}">&#10097;</button>
     </div>
   `;
   myModal.innerHTML = modalBody;
@@ -157,52 +339,57 @@ const closeModal = () => {
   }
 };
 
-projectInfo.forEach((project, index) => {
-  const projectId = project.id;
-  const projectName = project.name;
-  const projectImage = project.image;
-  const projectTech = project.technologies;
-  const projectImgAlt = project.alt;
+function renderProjectCards() {
+  const previousCards = gall.querySelectorAll('.dynamic-project-card');
+  previousCards.forEach((card) => card.remove());
 
-  const soloArticle = document.createElement('article');
-  soloArticle.classList.add('card', `card${index + 2}`);
+  projectInfo.forEach((project, index) => {
+    const projectId = project.id;
+    const projectName = project.name;
+    const projectImage = project.image;
+    const projectTech = project.technologies;
+    const projectImgAlt = project.alt;
 
-  const cardContainer =
-    `<div class="card-inner">
-      <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
-      <div class="pData">
-        <h3 id="project-title-${projectId}">${projectName}</h3>
-        <ul class="projectUl">
-          <li class="projectLi">${projectTech[0]}</li>
-          <li class="projectLi">${projectTech[1]}</li>
-          <li class="projectLi">${projectTech[2]}</li>
-        </ul>
+    const soloArticle = document.createElement('article');
+    soloArticle.classList.add('card', `card${index + 2}`, 'dynamic-project-card');
+
+    const cardContainer =
+      `<div class="card-inner">
+        <img class="imgp" src="${projectImage}" alt="${projectImgAlt}" width="100%">
+        <div class="pData">
+          <h3 id="project-title-${projectId}">${projectName}</h3>
+          <ul class="projectUl">
+            <li class="projectLi">${projectTech[0]}</li>
+            <li class="projectLi">${projectTech[1]}</li>
+            <li class="projectLi">${projectTech[2]}</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <button class="see see-outside myBtn" id="btn${projectId}">See this project &nbsp; →</button>
-    </article>`;
-  soloArticle.innerHTML = `${cardContainer}`;
-  gall.appendChild(soloArticle);
-  // make the article keyboard-focusable and accessible
-  soloArticle.setAttribute('tabindex', '0');
-  soloArticle.setAttribute('role', 'group');
-  soloArticle.setAttribute('aria-labelledby', `project-title-${projectId}`);
+      <button class="see see-outside myBtn" id="btn${projectId}">${t('seeProject')} &nbsp; →</button>
+      </article>`;
+    soloArticle.innerHTML = `${cardContainer}`;
+    gall.appendChild(soloArticle);
+    // make the article keyboard-focusable and accessible
+    soloArticle.setAttribute('tabindex', '0');
+    soloArticle.setAttribute('role', 'group');
+    soloArticle.setAttribute('aria-labelledby', `project-title-${projectId}`);
 
-  const button = document.getElementById(`btn${projectId}`);
-  if (button) {
-    button.addEventListener('click', () => {
-      const currentIndex = projectInfo.findIndex((project) => project.id === projectId);
-      showModal(currentIndex);
-    });
-  }
-  // open modal on Enter or Space when card is focused
-  soloArticle.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      if (button) button.click();
+    const button = document.getElementById(`btn${projectId}`);
+    if (button) {
+      button.addEventListener('click', () => {
+        const currentIndex = projectInfo.findIndex((proj) => proj.id === projectId);
+        showModal(currentIndex);
+      });
     }
+    // open modal on Enter or Space when card is focused
+    soloArticle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (button) button.click();
+      }
+    });
   });
-});
+}
 
 // single delegated listener for modal close (prevents duplicate listeners)
 document.addEventListener('click', (e) => {
@@ -262,7 +449,122 @@ document.addEventListener('keydown', (e) => {
 const errorMessage = document.querySelector('.error-message');
 const form = document.getElementById('contact-form'); // actual <form> element
 const email = document.getElementById('email');
-const emailRegex = /^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z0-9_.]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CONTACT_AB_KEY = 'contactCopyVariant';
+let currentContactVariant = 'corporate';
+
+function trackLeadEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+}
+
+function applyContactCopyVariant() {
+  const valueProposition = document.getElementById('contactValueProposition');
+  const channelNote = document.getElementById('contactChannelNote');
+  const whatsappBtn = document.getElementById('whatsappLeadBtn');
+  const whatsappBtnText = document.getElementById('whatsappLeadBtnText');
+  const linkedinNote = document.getElementById('contactLinkedinNote');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const messageField = document.getElementById('textform');
+
+  if (!valueProposition || !channelNote || !whatsappBtn || !whatsappBtnText || !linkedinNote || !submitBtn || !messageField) {
+    return;
+  }
+
+  const variantsByLanguage = {
+    en: {
+      corporate: {
+        value: 'I help engineering and product teams turn operational complexity into scalable software systems. As an Industrial Engineer specialized in full-stack development, I bridge process optimization, technical delivery, and business outcomes to ship solutions that improve performance and decision-making.',
+        note: 'Prefer WhatsApp, the form below, or LinkedIn. I usually reply within 24 hours.',
+        whatsappText: 'Discuss your team needs on WhatsApp',
+        whatsappHref: 'https://wa.me/59172204904?text=Hi%20Felipe%2C%20we%20want%20to%20improve%20a%20product%20or%20process.%20Can%20we%20talk%3F',
+        submit: 'Send project brief',
+        placeholder: 'Share your current challenge, goals, and expected timeline...'
+      },
+      startup: {
+        value: 'I partner with founders and fast-moving teams to transform ideas into reliable, high-impact digital products. With an Industrial Engineering mindset and full-stack execution, I focus on building solutions that launch faster, scale smoothly, and support growth from day one.',
+        note: 'Quickest way to start: WhatsApp. You can also use the form below or LinkedIn.',
+        whatsappText: 'Pitch your idea on WhatsApp',
+        whatsappHref: 'https://wa.me/59172204904?text=Hi%20Felipe%2C%20I%20have%20a%20startup%20idea%20and%20want%20to%20build%20it.%20Can%20we%20talk%3F',
+        submit: 'Send message',
+        placeholder: 'Tell me what you are building and where you need support...'
+      }
+    },
+    es: {
+      corporate: {
+        value: 'Ayudo a equipos de ingenieria y producto a transformar complejidad operativa en sistemas de software escalables. Como Ingeniero Industrial especializado en desarrollo full-stack, conecto optimizacion de procesos, ejecucion tecnica y resultados de negocio para entregar soluciones que elevan el rendimiento y la toma de decisiones.',
+        note: 'Puedes escribirme por WhatsApp, por el formulario o por LinkedIn. Normalmente respondo en menos de 24 horas.',
+        whatsappText: 'Conversemos sobre tu equipo por WhatsApp',
+        whatsappHref: 'https://wa.me/59172204904?text=Hola%20Felipe%2C%20queremos%20mejorar%20un%20producto%20o%20proceso.%20Podemos%20hablar%3F',
+        submit: 'Enviar brief del proyecto',
+        placeholder: 'Comparte tu reto actual, objetivos y plazo estimado...'
+      },
+      startup: {
+        value: 'Trabajo con founders y equipos agiles para convertir ideas en productos digitales confiables y de alto impacto. Con mentalidad de Ingenieria Industrial y ejecucion full-stack, construyo soluciones que lanzan mas rapido, escalan mejor y respaldan el crecimiento desde el primer dia.',
+        note: 'La forma mas rapida de iniciar es WhatsApp. Tambien puedes usar el formulario o LinkedIn.',
+        whatsappText: 'Cuentame tu idea por WhatsApp',
+        whatsappHref: 'https://wa.me/59172204904?text=Hola%20Felipe%2C%20tengo%20una%20idea%20de%20startup%20y%20quiero%20desarrollarla.%20Podemos%20hablar%3F',
+        submit: 'Enviar mensaje',
+        placeholder: 'Cuentame que estas construyendo y en que necesitas apoyo...'
+      }
+    }
+  };
+
+  const queryVariant = new URLSearchParams(window.location.search).get('ab');
+  let storedVariant = null;
+  try {
+    storedVariant = localStorage.getItem(CONTACT_AB_KEY);
+  } catch (err) {
+    // ignore storage restrictions
+  }
+
+  const variantFromQuery = queryVariant === 'corporate' || queryVariant === 'startup' ? queryVariant : null;
+  const variantFromStorage = storedVariant === 'corporate' || storedVariant === 'startup' ? storedVariant : null;
+  const variantKey = variantFromQuery || variantFromStorage || (Math.random() < 0.5 ? 'corporate' : 'startup');
+
+  try {
+    localStorage.setItem(CONTACT_AB_KEY, variantKey);
+  } catch (err) {
+    // ignore storage restrictions
+  }
+
+  const selected = variantsByLanguage[currentLanguage][variantKey];
+  valueProposition.textContent = selected.value;
+  channelNote.textContent = selected.note;
+  whatsappBtnText.textContent = selected.whatsappText;
+  whatsappBtn.setAttribute('href', selected.whatsappHref);
+  linkedinNote.innerHTML = currentLanguage === 'es'
+    ? 'Prefieres LinkedIn? <a href="https://www.linkedin.com/in/haybar/" target="_blank" rel="noopener noreferrer">Conectemos</a>.'
+    : 'Prefer LinkedIn? <a href="https://www.linkedin.com/in/haybar/" target="_blank" rel="noopener noreferrer">Let us connect</a>.';
+  submitBtn.textContent = selected.submit;
+  messageField.setAttribute('placeholder', selected.placeholder);
+
+  currentContactVariant = variantKey;
+  trackLeadEvent('contact_variant_view', { variant: variantKey });
+
+  if (whatsappBtn.dataset.trackingBound !== 'true') {
+    whatsappBtn.addEventListener('click', () => {
+      trackLeadEvent('contact_whatsapp_click', {
+        variant: currentContactVariant,
+        channel: 'whatsapp'
+      });
+    });
+    whatsappBtn.dataset.trackingBound = 'true';
+  }
+}
+
+initializeLanguage();
+
+if (email && errorMessage) {
+  email.addEventListener('input', () => {
+    const current = email.value.trim();
+    if (emailRegex.test(current)) {
+      errorMessage.style.display = 'none';
+      email.style.border = 'none';
+    }
+  });
+}
 
 // handle form submission via fetch and show a confirmation modal instead of navigating away
 const formModal = document.getElementById('formModal');
@@ -279,7 +581,7 @@ function showFormModal(message, success = true) {
   formModal.classList.add(success ? 'success' : 'error');
   formModal.innerHTML = `
     <div class="modal-content form-modal-card" role="document">
-      <button id="closeFormModal" class="close-modal close" aria-label="Close dialog">&times;</button>
+      <button id="closeFormModal" class="close-modal close" aria-label="${t('modalClose')}">&times;</button>
       <div class="form-modal-visual ${success ? 'success' : 'error'}" aria-hidden="true">
         ${success ? `
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -328,6 +630,9 @@ if (form) {
       return;
     }
 
+    errorMessage.style.display = 'none';
+    emailInput.style.border = 'none';
+
     // disable submit button to prevent double sends
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) submitBtn.disabled = true;
@@ -340,18 +645,32 @@ if (form) {
       });
 
       if (res.ok) {
+        trackLeadEvent('contact_form_submit_success', {
+          variant: currentContactVariant,
+          channel: 'form'
+        });
         // clear local data and form
         localData = { name: '', email: '', message: '' };
         dataLocalStore();
         if (nameInput) nameInput.value = '';
         if (emailInput) emailInput.value = '';
         if (messageInput) messageInput.value = '';
-        showFormModal('Thank you! Your message has been sent.', true);
+        showFormModal(t('formSuccess'), true);
       } else {
-        showFormModal('Sorry, there was an error sending your message. Please try again later.', false);
+        trackLeadEvent('contact_form_submit_error', {
+          variant: currentContactVariant,
+          channel: 'form',
+          error_type: 'http'
+        });
+        showFormModal(t('formHttpError'), false);
       }
     } catch (err) {
-      showFormModal('Network error. Please check your connection and try again.', false);
+      trackLeadEvent('contact_form_submit_error', {
+        variant: currentContactVariant,
+        channel: 'form',
+        error_type: 'network'
+      });
+      showFormModal(t('formNetworkError'), false);
     } finally {
       if (submitBtn) submitBtn.disabled = false;
     }

@@ -5,6 +5,8 @@ const projectInfo = [
   {
     id: 1,
     name: 'WanderPal Tours',
+    impact: 'Business impact: streamlined reservation workflows and improved booking efficiency for tour management.',
+    impactEs: 'Impacto de negocio: optimizacion del flujo de reservas y mejora de la eficiencia operativa en la gestion de tours.',
     description: "In essence, the 'WanderPal Tours' app appears to be a web application that serves as the user interface for booking tours. It is built using React and Vite in the front-end and Ruby on Rails in the back-end. It offers various functionalities, such as logging in, creating reservations, getting reservation details, deleting reservations, and managing items related to the tours. <br> 🛠 Built with React & Redux, Ruby on Rails tested with Jest, styled with Modular CSS",
     descriptionEs: "WanderPal Tours es una aplicacion web para reservar tours. Esta construida con React y Vite en el frontend y Ruby on Rails en el backend. Incluye funcionalidades como iniciar sesion, crear reservas, consultar detalles, eliminar reservas y gestionar informacion de tours. <br> 🛠 Construido con React & Redux, Ruby on Rails, pruebas con Jest y estilos en Modular CSS",
     image: './images/wanderpal.png',
@@ -20,6 +22,8 @@ const projectInfo = [
   {
     id: 6,
     name: "Space Travelers' Hub",
+    impact: 'Business impact: increased user engagement through mission and reservation flows with real-time interaction.',
+    impactEs: 'Impacto de negocio: mayor engagement de usuarios mediante flujos de misiones y reservas con interaccion en tiempo real.',
     description: "Space Travel Hub is a web page developed with React and Redux. On the page, you can reserve a rocket and choose a mission. Was built using React and Redux, tested with Jest, styled with Modular CSS. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
     descriptionEs: "Space Travelers' Hub es una web desarrollada con React y Redux donde puedes reservar un cohete y elegir una mision. Fue construida con React y Redux, probada con Jest y estilizada con Modular CSS. <br> 🛠 Construido con React & Redux, pruebas con Jest y estilos en Modular CSS",
     image: './images/space.png',
@@ -34,6 +38,8 @@ const projectInfo = [
   {
     id: 3,
     name: 'Forex - MetricsWebApp',
+    impact: 'Business impact: faster decision-making by centralizing market indicators in a single, intuitive dashboard.',
+    impactEs: 'Impacto de negocio: decisiones mas rapidas al centralizar indicadores del mercado en un solo dashboard intuitivo.',
     description: "Metrics Web App is a Forex tool created using React, where you can view the official currencies, cryptocurrencies, majors, and other financial metrics. Enjoy it. <br> 🛠 Built with React & Redux, tested with Jest, styled with Modular CSS",
     descriptionEs: "Metrics Web App es una herramienta financiera creada con React para visualizar monedas oficiales, criptomonedas, pares mayores y otros indicadores del mercado. <br> 🛠 Construido con React & Redux, pruebas con Jest y estilos en Modular CSS",
     image: './images/metrics.png',
@@ -45,6 +51,8 @@ const projectInfo = [
   {
     id: 4,
     name: 'Todo List',
+    impact: 'Business impact: better day-to-day execution through a clear and reliable task management workflow.',
+    impactEs: 'Impacto de negocio: mejor ejecucion diaria mediante un flujo claro y confiable de gestion de tareas.',
     description: 'To-Do List is a tool created using Webpack where you can register tasks to be done day by day. We can add, delete, and mark tasks as done. was built using HTML, CSS, and Vanilla JavaScript. my first project using Webpack.',
     descriptionEs: 'To-Do List es una herramienta creada con Webpack para registrar tareas diarias, agregarlas, eliminarlas y marcarlas como completadas. Fue construida con HTML, CSS y JavaScript Vanilla, y fue mi primer proyecto con Webpack.',
     image: './images/Todo list.png',
@@ -59,6 +67,8 @@ const projectInfo = [
   {
     id: 5,
     name: "Today's Movies and Series",
+    impact: 'Business impact: stronger community interaction by combining content discovery with likes and comments.',
+    impactEs: 'Impacto de negocio: mayor interaccion de comunidad al combinar descubrimiento de contenido con likes y comentarios.',
     description: 'The JavaScript capstone project involves building our web application based on two external APIs. Initially, we retrieve movies and TV series data from the TVmaze API and subsequently record user interactions, such as likes and comments, using the Involvement API.',
     descriptionEs: 'Este proyecto capstone de JavaScript consiste en construir una aplicacion web basada en dos APIs externas. Primero obtenemos datos de peliculas y series desde TVmaze y luego registramos interacciones de usuarios, como likes y comentarios, usando la Involvement API.',
     image: './images/movies.png',
@@ -73,6 +83,8 @@ const projectInfo = [
   {
     id: 2,
     name: 'Conference Page',
+    impact: 'Business impact: expanded event reach and credibility with a dynamic, information-rich conference website.',
+    impactEs: 'Impacto de negocio: mayor alcance y credibilidad del evento con una web dinamica y rica en informacion.',
     description: "IDTC2023 Industry 4.0 is a conference where people from 20+ countries come together to share experiences about the digital transformation of the industry. The webpage was built using HTML, CSS, and Vanilla JavaScript, and the speakers' section is generated dynamically.",
     descriptionEs: 'IDTC2023 Industry 4.0 es una conferencia donde personas de mas de 20 paises comparten experiencias sobre transformacion digital en la industria. La web fue construida con HTML, CSS y JavaScript Vanilla, y la seccion de speakers se genera de forma dinamica.',
     image: './images/conference.png',
@@ -112,11 +124,11 @@ const I18N = {
     textareaPlaceholder: 'Tell me about your project goals...',
     contactPrivacyNote: 'No spam. Your information is only used to reply to your message.',
     footerResumeCta: 'View my impact-focused resume',
-    seeProject: 'See this project',
+    seeProject: 'View case study',
     modalClose: 'Close dialog',
     modalTech: 'Technologies used',
-    modalSeeLive: 'See live',
-    modalSeeSource: 'See source',
+    modalSeeLive: 'Live demo',
+    modalSeeSource: 'Source code',
     modalPrev: 'Previous project',
     modalNext: 'Next project',
     modalSent: 'Message sent',
@@ -148,11 +160,11 @@ const I18N = {
     textareaPlaceholder: 'Cuentame los objetivos de tu proyecto...',
     contactPrivacyNote: 'Sin spam. Tu informacion solo se usa para responderte.',
     footerResumeCta: 'Ver mi CV orientado a impacto',
-    seeProject: 'Ver este proyecto',
+    seeProject: 'Ver caso',
     modalClose: 'Cerrar dialogo',
     modalTech: 'Tecnologias utilizadas',
-    modalSeeLive: 'Ver demo',
-    modalSeeSource: 'Ver codigo',
+    modalSeeLive: 'Ver demo en vivo',
+    modalSeeSource: 'Ver codigo fuente',
     modalPrev: 'Proyecto anterior',
     modalNext: 'Proyecto siguiente',
     modalSent: 'Mensaje enviado',
@@ -262,6 +274,10 @@ function getLocalizedProjectDescription(project) {
   return currentLanguage === 'es' && project.descriptionEs ? project.descriptionEs : project.description;
 }
 
+function getLocalizedProjectImpact(project) {
+  return currentLanguage === 'es' && project.impactEs ? project.impactEs : project.impact;
+}
+
 // project seccion dynamic Html
 
 const showModal = (currentIndex) => {
@@ -289,21 +305,24 @@ const showModal = (currentIndex) => {
     <div class="modal-content project-modal">
       <button id="closemodalX" class="close-modal close" aria-label="${t('modalClose')}">&times;</button>
       <div class="project-modal-grid">
-        <div class="project-media">
-          <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
-        </div>
-        <div class="project-body">
+        <div class="project-header-block">
           <h3 class="project-title-modal" id="proj-modal-title">${project.name}</h3>
           <ul class="card-tech-modal" aria-label="${t('modalTech')}">
             <li>${project.technologies[0] || ''}</li>
             <li>${project.technologies[1] || ''}</li>
             <li>${project.technologies[2] || ''}</li>
           </ul>
+        </div>
+        <div class="project-media">
+          <img class="project-image modal-img" src="${project.image}" alt="${project.alt}">
+        </div>
+        <div class="project-summary">
+          <p class="project-impact">${getLocalizedProjectImpact(project) || ''}</p>
           <p class="project-description" id="proj-modal-description">${getLocalizedProjectDescription(project)}</p>
-          <div class="btns-modal">
-            <a class="btn-modal primary" href="${project.liveVersion}" target="_blank" rel="noopener noreferrer">&#128065; ${t('modalSeeLive')}</a>
-            <a class="btn-modal" href="${project.source}" target="_blank" rel="noopener noreferrer">&#128187; ${t('modalSeeSource')}</a>
-          </div>
+        </div>
+        <div class="btns-modal">
+          <a class="btn-modal primary" href="${project.liveVersion}" target="_blank" rel="noopener noreferrer">&#128065; ${t('modalSeeLive')}</a>
+          <a class="btn-modal" href="${project.source}" target="_blank" rel="noopener noreferrer">&#128187; ${t('modalSeeSource')}</a>
         </div>
       </div>
       <button class="nav-btn prev-btn" aria-label="${t('modalPrev')}" data-modal-nav="prev" data-target-index="${prevIndex}">&#10096;</button>
@@ -397,6 +416,18 @@ document.addEventListener('click', (e) => {
   const modal = document.getElementById('myModal');
   if (!modal) return;
   const navButton = target.closest('.nav-btn');
+  const modalCta = target.closest('.project-modal .btn-modal');
+  if (modal.style.display === 'flex' && modalCta) {
+    const projectIndex = Number(modal.dataset.currentIndex || 0);
+    const project = projectInfo[projectIndex];
+    const ctaType = modalCta.classList.contains('primary') ? 'live_demo' : 'source_code';
+    trackLeadEvent('project_modal_cta_click', {
+      language: currentLanguage,
+      project_name: project ? project.name : 'unknown',
+      cta_type: ctaType
+    });
+  }
+
   if (modal.style.display === 'flex' && navButton) {
     const targetIndex = Number(navButton.dataset.targetIndex);
     if (!Number.isNaN(targetIndex)) {

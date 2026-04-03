@@ -150,7 +150,8 @@ body.modal-open {
 .gallery {
   display: grid;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
 }
 
 .section-title {
@@ -169,7 +170,7 @@ body.modal-open {
 .card {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
 }
 
 .pData {
@@ -217,8 +218,10 @@ h3 {
   border: #fff solid 0.5px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 7px 10px;
+  padding: 8px 12px;
   color: #dddfe6;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 /* =========================
@@ -287,8 +290,8 @@ h3 {
 }
 
 .project-modal .modal-img {
-  width: 70%;
-    margin: 30px auto;
+  width: 100%;
+  margin: 0;
 }
 
 .modal-content {
@@ -304,7 +307,7 @@ h3 {
 
 .project-image {
   align-self: center;
-  width: 90%;
+  width: 100%;
 }
 
 .project-modal .card-tech-modal li {
@@ -327,6 +330,18 @@ h3 {
   color: #1a2236;
   padding-left: 40px;
   padding-right: 30px;
+}
+
+.project-modal .project-impact {
+  margin: 0 40px 10px 40px;
+  padding: 8px 10px;
+  border-left: 3px solid #1f6f80;
+  background: rgba(31, 111, 128, 0.08);
+  color: #0e3f4a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  font-weight: 600;
 }
 
 .project-modal .btns-modal {
@@ -1047,6 +1062,13 @@ label {
     z-index: 40;
     /* ensure it's above clip-path and accents */
     box-shadow: 0 10px 30px rgba(122, 0, 255, 0.12);
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  }
+
+  .see-outside:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+    box-shadow: 0 12px 32px rgba(122, 0, 255, 0.2);
   }
 
   /* visible focus on card container for keyboard users */
@@ -1192,8 +1214,8 @@ label {
 
   /* Project modal specific styling */
   .project-modal {
-    max-width: 1000px;
-    width: calc(100% - 48px);
+    max-width: 1120px;
+    width: calc(100% - 32px);
     padding: 18px 22px;
     position: relative;
     display: grid;
@@ -1202,16 +1224,41 @@ label {
 
   .project-modal-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header summary"
+      "media summary"
+      "actions actions";
+    gap: 28px;
     align-items: start;
+  }
+
+  .project-modal .project-header-block {
+    grid-area: header;
+    align-self: start;
+  }
+
+  .project-modal .project-summary {
+    grid-area: summary;
+    align-self: start;
+  }
+
+  .project-modal .project-media {
+    grid-area: media;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .project-media .project-image {
     width: 100%;
+    max-height: min(62vh, 520px);
     height: auto;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    background: rgba(26, 34, 54, 0.03);
+    padding: 6px;
   }
 
   /* gentle float on project modal image */
@@ -1224,14 +1271,11 @@ label {
     box-shadow: 0 18px 40px rgba(26, 34, 54, 0.12);
   }
 
-  .project-body {
-    text-align: left;
-  }
-
-  .project-body .project-title-modal {
+  .project-modal .project-title-modal {
     font-size: 1.8rem;
     margin-bottom: 8px;
     color: var(--accent-1);
+    padding-left: 0;
   }
 
   .project-modal .card-tech-modal {
@@ -1250,10 +1294,13 @@ label {
   }
 
   .project-modal .btns-modal {
+    grid-area: actions;
     display: flex;
-    gap: 12px;
-    margin-top: 14px;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 6px;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .project-modal .btn-modal {
@@ -1317,6 +1364,15 @@ label {
 
     .project-modal-grid {
       grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "media"
+        "summary"
+        "actions";
+    }
+
+    .project-media .project-image {
+      max-height: 320px;
     }
 
     .project-modal .nav-btn {
@@ -1364,12 +1420,16 @@ label {
   }
 
   .project-modal .project-description {
-    display: flex;
+    display: block;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
     color: #1a2236;
-    align-self: center;
+    margin: 0;
+  }
+
+  .project-modal .project-impact {
+    margin: 0 0 12px 0;
   }
 
   .project-modal .card-tech-modal {
@@ -1385,8 +1445,8 @@ label {
   }
 
   .project-modal .modal-img {
-    width: 50%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 0;
   }
 
   .project-modal .btns-modal {
@@ -1396,11 +1456,12 @@ label {
   }
 
   .project-modal .btn-modal {
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 0;
+    margin-right: 0;
     cursor: pointer;
-    text-align: left;
-    padding-left: 25px;
+    text-align: center;
+    padding: 10px 16px;
+    min-width: 220px;
   }
 
   .project-modal .btn-modal:hover {

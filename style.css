@@ -642,22 +642,52 @@ label {
 .rsFooter {
   align-self: center;
   background: #1a2236;
-  width: 100vw;
-  max-width: 320px;
-  padding: 20px 30px 30px 30px;
+  width: 100%;
+  max-width: 420px;
+  padding: 16px 18px 24px 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 14px;
 }
 
 .rrss {
   background-color: transparent;
   list-style: none;
-  transition-duration: 1.7s;
+  transition: transform 180ms ease;
   cursor: pointer;
 }
 
 .rrss:hover {
-  zoom: 1.15;
+  transform: translateY(-2px) scale(1.07);
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-link:hover {
+  background: rgba(0, 207, 255, 0.16);
+  border-color: rgba(0, 207, 255, 0.8);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icon-x {
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 1px;
 }
 
 .form-name-contend:hover {
@@ -672,6 +702,11 @@ label {
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  gap: 6px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 .fotter-resume:hover {
@@ -723,6 +758,14 @@ label {
     font-size: 1em;
     line-height: 24px;
     color: #1a2236;
+  }
+
+  .rsFooter {
+    max-width: none;
+    width: auto;
+    padding: 8px 0;
+    justify-content: flex-end;
+    gap: 16px;
   }
 
   /* hello section */
@@ -1664,6 +1707,8 @@ label {
   .contenfoo {
     height: 123px;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
   }
 
   .card .pData {

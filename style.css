@@ -28,11 +28,7 @@
   text-decoration: none;
 }
 
-/* Ensure focused elements are clearly visible */
-*:focus {
-  outline: 3px solid #98dede;
-  outline-offset: 2px;
-}
+
 
 body {
   /* Celestial Reflections palette (from user's mock) */
@@ -239,13 +235,31 @@ h3 {
 
 .close-modal {
   position: absolute;
-  right: 25px;
+  top: 20px;
+  right: 20px;
   font-family: inherit;
   font-size: 40px;
   color: #1a2236;
   cursor: pointer;
   border: none;
   background: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.close-modal:focus {
+  outline: none;
 }
 
 .project-title-modal {
@@ -272,6 +286,7 @@ h3 {
 
 .modal-content {
   background-color: #fff;
+  position: relative;
 }
 
 .card-tech-modal {
@@ -611,7 +626,6 @@ label {
 .fotter-resume:hover {
   background-color: #1a2236;
   color: #92dcdc;
-  text-decoration: underline 4px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -940,8 +954,7 @@ label {
 
   /* visible focus on card container for keyboard users */
   .card:focus {
-    outline: 3px solid #98dede;
-    outline-offset: 4px;
+    outline: none;
   }
 
   /* Responsive adjustments for smaller screens */
@@ -1111,8 +1124,7 @@ label {
     transition: transform 420ms cubic-bezier(.22, .9, .13, 1), box-shadow 240ms ease;
   }
 
-  .project-media .project-image:hover,
-  .project-media .project-image:focus {
+  .project-media .project-image:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 18px 40px rgba(26, 34, 54, 0.12);
   }
@@ -1173,28 +1185,32 @@ label {
   }
 
   .btn-modal:focus {
-    outline: 3px solid rgba(102, 191, 191, 0.25);
-    outline-offset: 4px;
+    outline: none;
   }
 
-  .nav-btn {
+  .project-modal .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(26, 34, 54, 0.92);
     color: #fff;
     border: none;
-    padding: 12px 14px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     font-size: 20px;
     border-radius: 6px;
     cursor: pointer;
   }
 
-  .prev-btn {
+  .project-modal .prev-btn {
     left: 8px;
   }
 
-  .next-btn {
+  .project-modal .next-btn {
     right: 8px;
   }
 
@@ -1208,7 +1224,7 @@ label {
       grid-template-columns: 1fr;
     }
 
-    .nav-btn {
+    .project-modal .nav-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1218,11 +1234,11 @@ label {
       padding: 10px 12px;
     }
 
-    .prev-btn {
+    .project-modal .prev-btn {
       left: 12px;
     }
 
-    .next-btn {
+    .project-modal .next-btn {
       right: 12px;
     }
 
@@ -1309,9 +1325,13 @@ label {
   }
 
   .close-modal {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    padding: 6px 10px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .project-title-modal {
@@ -1367,7 +1387,14 @@ label {
 
   .btn-modal:hover {
     background-color: #1a2236;
+    transform: translateY(-3px);
+    filter: brightness(1.06);
+    box-shadow: 0 10px 24px rgba(26, 34, 54, 0.12);
     color: white;
+  }
+
+  .btn-modal.primary:hover {
+    background: linear-gradient(135deg, #0f6f88, #3d2778);
   }
 
   .next-prev-proj {
@@ -1379,7 +1406,7 @@ label {
     gap: 220px;
   }
 
-  .prev-btn {
+  .next-prev-proj .prev-btn {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;

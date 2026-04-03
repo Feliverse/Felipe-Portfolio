@@ -83,7 +83,7 @@ const projectInfo = [
 // project seccion dynamic Html
 
 const showModal = (currentIndex) => {
-  const myModal = document.getElementById('myMOdal');
+  const myModal = document.getElementById('myModal');
   const isFreshOpen = myModal.style.display !== 'flex';
   myModal.style.display = 'flex';
   myModal.setAttribute('role', 'dialog');
@@ -140,7 +140,7 @@ const showModal = (currentIndex) => {
 const gall = document.querySelector('.gallery');
 
 const closeModal = () => {
-  const myModal = document.getElementById('myMOdal');
+  const myModal = document.getElementById('myModal');
   myModal.style.display = 'none';
   myModal.removeAttribute('role');
   myModal.removeAttribute('aria-modal');
@@ -207,7 +207,7 @@ projectInfo.forEach((project, index) => {
 // single delegated listener for modal close (prevents duplicate listeners)
 document.addEventListener('click', (e) => {
   const target = e.target;
-  const modal = document.getElementById('myMOdal');
+  const modal = document.getElementById('myModal');
   if (!modal) return;
   const navButton = target.closest('.nav-btn');
   if (modal.style.display === 'flex' && navButton) {
@@ -227,7 +227,7 @@ document.addEventListener('click', (e) => {
 
 // trap focus inside modal and close on Escape
 document.addEventListener('keydown', (e) => {
-  const modal = document.getElementById('myMOdal');
+  const modal = document.getElementById('myModal');
   if (!modal) return;
   if (modal.style.display !== 'flex') return;
 

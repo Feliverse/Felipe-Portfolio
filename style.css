@@ -210,7 +210,9 @@ h3 {
   color: #dddfe6;
 }
 
-/* Popup Project Mobile */
+/* =========================
+  Project Modal - Base
+  ========================= */
 
 .next-prev-proj {
   display: none;
@@ -344,6 +346,10 @@ h3 {
   float: right;
   padding-right: 14px;
 }
+
+/* =========================
+   About Section
+   ========================= */
 
 /* about section */
 
@@ -1036,7 +1042,9 @@ label {
     transform: translateY(-4px);
   }
 
-  /* Modal POPUP */
+    /* =========================
+      Project Modal - Desktop Overrides
+      ========================= */
 
   .modal-container {
     border: 80px solid #1a2236;
@@ -1313,7 +1321,9 @@ label {
     background: linear-gradient(135deg, #0f6f88, #3d2778);
   }
 
-  /* Form confirmation modal styles */
+    /* =========================
+      Form Modal - Confirmation
+      ========================= */
   .form-modal {
     display: none;
     position: fixed;
@@ -1390,7 +1400,11 @@ label {
     cursor: pointer;
   }
 
-  .next-prev-proj {
+    /* =========================
+      Legacy Prev/Next Group
+      ========================= */
+
+    .next-prev-proj {
     margin-top: 80px;
     margin-bottom: 80px;
     display: flex;
@@ -1411,7 +1425,9 @@ label {
     cursor: pointer;
   }
 
-  /* about responsive */
+    /* =========================
+      About Section - Responsive
+      ========================= */
 
   .about {
     max-width: 1400px;

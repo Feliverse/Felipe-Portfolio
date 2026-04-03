@@ -87,12 +87,18 @@ body {
 }
 
 .lang-switch {
+  position: fixed;
+  top: 12px;
+  right: 14px;
+  z-index: 350;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 4px 6px;
+  border-radius: 20px;
+  background: rgba(10, 10, 35, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .lang-btn {
@@ -150,22 +156,33 @@ body {
     padding: 8px;
     margin-right: 6px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background 180ms ease;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    transition: transform 160ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
   }
 
   .nav>.nav-btn>label:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: linear-gradient(180deg, rgba(0, 207, 255, 0.2), rgba(122, 0, 255, 0.14));
+    border-color: rgba(0, 207, 255, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  }
+
+  .nav>.nav-btn>label:active {
+    transform: translateY(0) scale(0.97);
   }
 
   /* hamburger lines */
   .nav>.nav-btn>label>span {
     position: relative;
     width: 22px;
-    height: 2px;
+    height: 2.5px;
     background: var(--nav-text);
     display: block;
     border-radius: 2px;
+    transform-origin: center;
     transition: all 220ms ease;
   }
 
@@ -175,9 +192,10 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 2.5px;
     background: var(--nav-text);
     border-radius: 2px;
+    transform-origin: center;
     transition: all 220ms ease;
   }
 
@@ -191,20 +209,24 @@ body {
 
   /* transform hamburger to X when checked */
   .nav>#nav-check:checked~.nav-btn>label>span {
-    transform: rotate(45deg);
-    background: var(--nav-accent);
+    background: transparent;
   }
 
   .nav>#nav-check:checked~.nav-btn>label>span::before {
-    transform: rotate(-90deg) translateX(-7px);
+    transform: rotate(45deg);
     top: 0;
-    background: var(--nav-accent);
+    background: var(--nav-accent-2);
   }
 
   .nav>#nav-check:checked~.nav-btn>label>span::after {
-    transform: rotate(-90deg) translateX(7px);
+    transform: rotate(-45deg);
     top: 0;
-    background: var(--nav-accent);
+    background: var(--nav-accent-2);
+  }
+
+  .nav>#nav-check:checked~.nav-btn>label {
+    border-color: rgba(0, 207, 255, 0.9);
+    background: linear-gradient(180deg, rgba(0, 207, 255, 0.22), rgba(122, 0, 255, 0.18));
   }
 
   .nav>.nav-links {
@@ -234,9 +256,8 @@ body {
   }
 
   .lang-switch {
-    margin: 6px auto 0 auto;
-    padding-left: 0;
-    border-left: none;
+    top: 64px;
+    right: 10px;
   }
 
   .nav>#nav-check:not(:checked)~.nav-links {

@@ -410,6 +410,10 @@ if (saved !== null) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  if (typeof window.ScrollReveal !== 'function') {
+    return;
+  }
+
   ScrollReveal().reveal('.hello-text', {
     delay: 300,
     distance: '120px',

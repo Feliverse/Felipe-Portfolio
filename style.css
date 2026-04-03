@@ -221,15 +221,17 @@ h3 {
   /* to none */
   flex-direction: column;
   gap: 10px;
-  background-color: white;
+  background-color: #000000e3;
   position: fixed;
   inset: 0;
   visibility: visible;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1200;
+  justify-content: center;
 }
 
 .close-modal {
@@ -261,7 +263,7 @@ h3 {
   outline: none;
 }
 
-.project-title-modal {
+.project-modal .project-title-modal {
   padding-left: 20px;
   color: #1a2236;
   font-family: 'Poppins', sans-serif;
@@ -271,16 +273,10 @@ h3 {
   line-height: 120%;
 }
 
-.modal-img {
+.project-modal .modal-img {
   width: 70%;
   /* Ajusta el porcentaje de acuerdo a tus necesidades */
   margin: 30px auto;
-}
-
-.modal-container {
-  background-color: #000000e3;
-  height: 100%;
-  justify-content: center;
 }
 
 .modal-content {
@@ -288,7 +284,7 @@ h3 {
   position: relative;
 }
 
-.card-tech-modal {
+.project-modal .card-tech-modal {
   display: flex;
   gap: 5px;
   padding: 10px;
@@ -299,7 +295,7 @@ h3 {
   width: 90%;
 }
 
-.card-tech-modal li {
+.project-modal .card-tech-modal li {
   padding: 5px 10px 5px 10px;
   list-style: none;
   color: #1a2236;
@@ -311,7 +307,7 @@ h3 {
   line-height: 80%;
 }
 
-.project-description {
+.project-modal .project-description {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -321,13 +317,13 @@ h3 {
   padding-right: 30px;
 }
 
-.btns-modal {
+.project-modal .btns-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.btn-modal {
+.project-modal .btn-modal {
   align-self: center;
   background: none;
   margin-top: 10px;
@@ -620,6 +616,8 @@ label {
   border: none;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .fotter-resume:hover {
@@ -1055,10 +1053,6 @@ label {
     overflow-x: hidden;
   }
 
-  .modal-content {
-    padding: 3%;
-  }
-
   /* subtle pop for modal visuals and icons */
   .form-modal-visual {
     display: flex;
@@ -1153,14 +1147,14 @@ label {
     font-size: 0.9rem;
   }
 
-  .btns-modal {
+  .project-modal .btns-modal {
     display: flex;
     gap: 12px;
     margin-top: 14px;
     align-items: center;
   }
 
-  .btn-modal {
+  .project-modal .btn-modal {
     display: inline-block;
     padding: 10px 14px;
     border-radius: 8px;
@@ -1172,18 +1166,18 @@ label {
     will-change: transform;
   }
 
-  .btn-modal.primary {
+  .project-modal .btn-modal.primary {
     background: linear-gradient(135deg, #145e72, #4b2f90);
   }
 
-  .btn-modal:hover {
+  .project-modal .btn-modal:hover {
     transform: translateY(-3px);
     filter: brightness(1.03);
     box-shadow: 0 10px 24px rgba(26, 34, 54, 0.12);
     color: white;
   }
 
-  .btn-modal:focus {
+  .project-modal .btn-modal:focus {
     outline: none;
   }
 
@@ -1244,6 +1238,79 @@ label {
     .form-modal .modal-content {
       padding: 12px;
     }
+  }
+
+  .project-modal .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    padding: 6px 10px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .project-modal .project-title-modal {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 0;
+    max-width: 80;
+    color: var(--accent-1);
+  }
+
+  .project-modal .project-description {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #1a2236;
+    align-self: center;
+  }
+
+  .project-modal .card-tech-modal {
+    padding: 0;
+  }
+
+  .project-modal .card-tech-modal li {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 80%;
+    gap: 10px;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .project-modal .modal-img {
+    width: 50%;
+    margin: 30px auto;
+  }
+
+  .project-modal .btns-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-modal .btn-modal {
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  .project-modal .btn-modal:hover {
+    background-color: #1a2236;
+    transform: translateY(-3px);
+    filter: brightness(1.06);
+    box-shadow: 0 10px 24px rgba(26, 34, 54, 0.12);
+    color: white;
+  }
+
+  .project-modal .btn-modal.primary:hover {
+    background: linear-gradient(135deg, #0f6f88, #3d2778);
   }
 
   /* Form confirmation modal styles */
@@ -1321,79 +1388,6 @@ label {
     background: none;
     border: none;
     cursor: pointer;
-  }
-
-  .close-modal {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 28px;
-    padding: 6px 10px;
-    min-width: 44px;
-    min-height: 44px;
-  }
-
-  .project-title-modal {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1.5;
-    padding: 0;
-    max-width: 80;
-    color: var(--accent-1);
-  }
-
-  .project-description {
-    display: flex;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    color: #1a2236;
-    align-self: center;
-  }
-
-  .card-tech-modal {
-    padding: 0;
-  }
-
-  .card-tech-modal li {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 80%;
-    gap: 10px;
-    padding: 10px 15px 10px 15px;
-  }
-
-  .modal-img {
-    width: 50%;
-    margin: 30px auto;
-  }
-
-  .btns-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn-modal {
-    margin-top: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    text-align: left;
-    padding-left: 25px;
-  }
-
-  .btn-modal:hover {
-    background-color: #1a2236;
-    transform: translateY(-3px);
-    filter: brightness(1.06);
-    box-shadow: 0 10px 24px rgba(26, 34, 54, 0.12);
-    color: white;
-  }
-
-  .btn-modal.primary:hover {
-    background: linear-gradient(135deg, #0f6f88, #3d2778);
   }
 
   .next-prev-proj {

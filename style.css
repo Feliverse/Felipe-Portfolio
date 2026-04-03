@@ -56,8 +56,7 @@ body {
 
   background-color: var(--midnight-navy);
   background-image: radial-gradient(circle at 12% 20%, rgba(0, 207, 255, 0.04) 0%, transparent 18%),
-    linear-gradient(135deg, rgba(122, 0, 255, 0.03) 0%, transparent 40%),
-    url(images/image_geometry_1.png);
+    linear-gradient(135deg, rgba(122, 0, 255, 0.03) 0%, transparent 40%);
   background-repeat: no-repeat;
   color: rgba(238, 246, 255, 0.95);
 }
@@ -452,7 +451,7 @@ button:active {
 .formulary {
   display: flex;
   flex-direction: column;
-  background-image: url(images/image_geometry_1.png);
+  background-image: none;
   background-repeat: no-repeat;
   padding: 1px;
   height: calc(100vh - 145px);
